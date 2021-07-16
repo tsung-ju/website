@@ -1,5 +1,5 @@
 ---
-title: Tsung-Ju Chiang
+title: Home
 layout: page
 ---
 
