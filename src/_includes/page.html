@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+    <title>{{ title }} - Tsung-Ju Chiang</title>
     <style>
       body {
         font-family: serif;
@@ -24,13 +24,13 @@
   </head>
   <body>
     <nav>
-      <a href="/index.html">Home</a>
-      <a href="/links.html">Links</a>
-      <a href="/posts.html">Posts</a>
-      <a href="/publications.html">Publications</a>
+      <a href="/">Home</a>
+      <a href="/links/">Links</a>
+      <a href="/posts/">Posts</a>
+      <a href="/publications/">Publications</a>
     </nav>
     <main>
-      {{ content }}
+      {{ content | safe }}
     </main>
   </body>
 </html>
