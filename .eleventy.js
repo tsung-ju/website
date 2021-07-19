@@ -1,8 +1,10 @@
-const formatDate = require("date-fns/format");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.addFilter("date", formatDate);
+  eleventyConfig.addFilter("date", (date, format, options) =>
+    DateTime.fromJSDate(date, { zone: "utc" }).toFormat(format, options)
+  );
   eleventyConfig.addPassthroughCopy("src/CNAME");
   return {
     dir: {

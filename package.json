@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "date-fns": "^2.22.1"
+    "luxon": "^1.28.0"
   }
 }
