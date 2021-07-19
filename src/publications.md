@@ -3,5 +3,4 @@ title: Publications
 layout: page
 ---
 
-Publications
-============
+# Publications

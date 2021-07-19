@@ -3,10 +3,9 @@ title: Links
 layout: page
 ---
 
-Links
-=====
+# Links
 
-Email: mail@ *(this domain)*
+Email: mail@ _(this domain)_
 
 GitHub: <https://github.com/tsung-ju>
 

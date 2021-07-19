@@ -6,4 +6,6 @@ layout: page
 
 {{ content | safe }}
 
-<time datetime="{{ page.date | date("yyyy-MM-dd") }}">{{ page.date | date("MMM d, yyyy") }}</time>
+<time datetime="{{ page.date | date('yyyy-MM-dd') }}">
+  {{ page.date | date("MMM d, yyyy") }}
+</time>

@@ -3,8 +3,7 @@ title: Posts
 layout: page
 ---
 
-Posts
-=====
+# Posts
 
 {% for post in collections.posts | reverse %}
 [{{ post.data.title }}]({{ post.url }})

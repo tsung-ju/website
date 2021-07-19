@@ -3,7 +3,6 @@ title: Home
 layout: page
 ---
 
-Hello!
-======
+# Hello!
 
 hello
