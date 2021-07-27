@@ -4,6 +4,9 @@ layout: page
 ---
 
 <style>
+table {
+  border-collapse: collapse;
+}
 td {
   padding-right: 1em;
   padding-bottom: 1em;
