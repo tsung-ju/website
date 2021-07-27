@@ -5,7 +5,7 @@ layout: page
 
 # Links
 
-Email: mail@ _(this domain)_
+Email: mail @ _"this domain"_
 
 GitHub: <https://github.com/tsung-ju>
 
