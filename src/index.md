@@ -11,7 +11,7 @@ I enjoy coding and am also interested in theoretical computer science, in partic
 
 Currently I am doing my master's degree in Computer Science at Columbia University.
 
-[Links](/links/) - My contact information & other online identities
+[Links](/links/) - Contact information & my other online identities
 
 [Posts](/posts/) - (preallocated space for) My blog posts
 
