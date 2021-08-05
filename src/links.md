@@ -17,7 +17,7 @@ td {
 
 |||
 |-|-|
-| Email    | mail @ _"this domain"_ |
+| Email    | mail @ _this domain_ |
 | GitHub   | [tsung-ju](https://github.com/tsung-ju) |
 | ORCID    | [0000-0003-1252-6424](https://orcid.org/0000-0003-1252-6424) |
 | LinkedIn | [in/tsung-ju](https://www.linkedin.com/in/tsung-ju/) |
