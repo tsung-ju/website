@@ -8,7 +8,7 @@
     "serve": "eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "luxon": "^1.28.0"
+    "@11ty/eleventy": "^1.0.0",
+    "luxon": "^2.3.0"
   }
 }
