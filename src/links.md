@@ -1,17 +1,10 @@
 ---
 title: Links
 layout: page
+css: |
+  table { border-collapse: collapse; }
+  td { padding-right: 1em; padding-bottom: 1em; }
 ---
-
-<style>
-table {
-  border-collapse: collapse;
-}
-td {
-  padding-right: 1em;
-  padding-bottom: 1em;
-}
-</style>
 
 # Links
 
