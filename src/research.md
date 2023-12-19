@@ -23,7 +23,7 @@ Additionally, I am exploring effects and coeffects.
 
 - Longest segment of balanced parentheses: an exercise in program inversion in a segment problem.\
   Shin-Cheng Mu and **Tsung-Ju Chiang**\
-  [Journal of Functional Programming 2021](https://www.cambridge.org/core/journals/journal-of-functional-programming)
+  [JFP 2021](https://www.cambridge.org/core/journals/journal-of-functional-programming)
   [\[doi\]](https://doi.org/10.1017/S0956796821000253)
   [\[arXiv\]](https://arxiv.org/abs/2101.09699)
 
