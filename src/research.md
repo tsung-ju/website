@@ -16,19 +16,19 @@ Additionally, I am exploring effects and coeffects.
 
 ## Talks
 
-- MacoCaml: Combining Macros and Module Functors.
-  _Jane Street Programming Language Colloquium (JSPLC) 2023_.
+- MacoCaml: Combining Macros and Module Functors.\
+  Jane Street Programming Language Colloquium (JSPLC) 2023
 
 ## Publications
 
-- Shin-Cheng Mu and Tsung-Ju Chiang. 2021.
-  Longest segment of balanced parentheses: an exercise in program inversion in a segment problem.
-  _Journal of Functional Programming_ 31, (ed 2021).
-  \[[doi](https://doi.org/10.1017/S0956796821000253)\]
-  \[[arXiv](https://arxiv.org/abs/2101.09699)\]
+- Longest segment of balanced parentheses: an exercise in program inversion in a segment problem.\
+  Shin-Cheng Mu and **Tsung-Ju Chiang**\
+  [Journal of Functional Programming 2021](https://www.cambridge.org/core/journals/journal-of-functional-programming)
+  [\[doi\]](https://doi.org/10.1017/S0956796821000253)
+  [\[arXiv\]](https://arxiv.org/abs/2101.09699)
 
-- Shin-Cheng Mu and Tsung-Ju Chiang. 2020.
-  Declarative Pearl: Deriving Monadic Quicksort.
-  In _Functional and Logic Programming_, Keisuke Nakano and Konstantinos Sagonas (eds.). Springer International Publishing, Cham, 124–138.
-  \[[doi](https://doi.org/10.1007/978-3-030-59025-3_8)\]
-  \[[arXiv](https://arxiv.org/abs/2101.11421)\]
+- Declarative Pearl: Deriving Monadic Quicksort.\
+  Shin-Cheng Mu and **Tsung-Ju Chiang**\
+  [FLOPS 2020](https://www.ipl.riec.tohoku.ac.jp/FLOPS2020/)
+  [\[doi\]](https://doi.org/10.1007/978-3-030-59025-3_8)
+  [\[arXiv\]](https://arxiv.org/abs/2101.11421)
