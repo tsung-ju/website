@@ -1,9 +1,13 @@
 ---
-title: Publications
+title: Research
 layout: page
 ---
 
-# Publications
+# Research
+
+
+
+## Publications
 
 - Shin-Cheng Mu and Tsung-Ju Chiang. 2021.
   Longest segment of balanced parentheses: an exercise in program inversion in a segment problem.
