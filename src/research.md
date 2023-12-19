@@ -5,7 +5,19 @@ layout: page
 
 # Research
 
+I am interseted in programming languages, logic, and type theory,
+with a focus on applying these techniques for precise program modeling.
+My current research centers on modal type theories and their use in typed meta-programming.
+Additionally, I am exploring effects and coeffects.
 
+I am currently pursuing my Ph.D. at the [University of Toronto](https://www.utoronto.ca/),
+affiliated with the [PLSE group](https://www.cs.toronto.edu/~prose/),
+under the supervision of [Professor Ningning Xie](https://xnning.github.io).
+
+## Talks
+
+- MacoCaml: Combining Macros and Module Functors.
+  _Jane Street Programming Language Colloquium (JSPLC) 2023_.
 
 ## Publications
 
