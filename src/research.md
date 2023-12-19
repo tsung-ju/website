@@ -17,7 +17,7 @@ Additionally, I am exploring effects and coeffects.
 ## Talks
 
 - MacoCaml: Combining Macros and Module Functors.\
-  Jane Street Programming Language Colloquium (JSPLC) 2023
+  Jane Street Programming Language Colloquium 2023
 
 ## Publications
 
