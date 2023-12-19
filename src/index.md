@@ -5,11 +5,13 @@ layout: page
 
 # Tsung-Ju Chiang
 
-Hello! Welcome to my personal website.
+Hello and welcome to my personal website!
 
-I enjoy coding and am also interested in theoretical computer science, in particular programming language theory and type theory.
+I am passionate about programming and have a keen interest in theoretical computer science,
+particularly programming language theory and type theory.
 
-Currently I am doing my master's degree at Columbia University, studying Computer Science.
+Currently, I am pursuing my Ph.D. at the University of Toronto under the supervision of [Professor Ningning Xie](https://xnning.github.io).
+You can find more information about our group on our [group website](https://www.cs.toronto.edu/~prose/).
 
 [Links](/links/) - Contact information & my other online identities
 
