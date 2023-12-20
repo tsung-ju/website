@@ -9,7 +9,7 @@ I am a Ph.D. student in the [PLSE group](https://www.cs.toronto.edu/~prose/)
 at the [University of Toronto](https://www.utoronto.ca/),
 supervised by [Ningning Xie](https://xnning.github.io).
 
-I am interseted in programming languages, logic, and type theory,
+I am interested in programming languages, logic, and type theory,
 with a focus on applying these techniques for precise program modeling.
 My current research centers on modal type theories and their use in typed meta-programming.
 
