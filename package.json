@@ -12,6 +12,6 @@
     "luxon": "^3.4.4"
   },
   "dependencies": {
-    "@fontsource-variable/playpen-sans": "^5.0.2"
+    "@fontsource/playpen-sans": "^5.0.2"
   }
 }

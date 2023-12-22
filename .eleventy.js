@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
     DateTime.fromJSDate(date, { zone: "utc" }).toFormat(format, options)
   );
   eleventyConfig.addPassthroughCopy("src/CNAME");
-  eleventyConfig.addPassthroughCopy("node_modules/@fontsource-variable/playpen-sans");
+  eleventyConfig.addPassthroughCopy("node_modules/@fontsource/playpen-sans");
   return {
     dir: {
       input: "src",
