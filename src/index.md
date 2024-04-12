@@ -16,6 +16,8 @@ especially programming languages, logic, and type theory.
 I like visual arts, for their beauty and expressiveness.
 I draw occasionally.
 
+I like coffee that is not sour.
+
 Currently I am pursuing my Ph.D. at the University of Toronto in Canada.
 
 [Links](/links/) - Contact information & my other online identities
