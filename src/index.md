@@ -10,8 +10,8 @@ Hello and welcome to my personal website!
 I like programming.
 I write short hacks and small programs when I feel like it.
 
-I also like math and computer science,
-especially logic, type theory, and programming language theory.
+I also like computer science and math,
+especially programming languages, logic, and type theory.
 
 Currently I am pursuing my Ph.D. at the University of Toronto.
 
