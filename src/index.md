@@ -7,6 +7,12 @@ layout: page
 
 Hello and welcome to my personal website!
 
+|||
+|-|-|
+| [Links](/links/) | - Contact information & my other online identities |
+| [Posts](/posts/) | - Preallocated space for my blog posts |
+| [Research](/research/) | - More on my research |
+
 ## About Me
 
 I like programming.
@@ -21,11 +27,3 @@ I draw occasionally.
 I like coffee that is not sour.
 
 Currently I am pursuing my Ph.D. at the University of Toronto in Canada.
-
-## Site Map
-
-[Links](/links/) - Contact information & my other online identities
-
-[Posts](/posts/) - Preallocated space for my blog posts
-
-[Research](/research/) - More on my research
