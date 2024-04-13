@@ -7,6 +7,8 @@ layout: page
 
 Hello and welcome to my personal website!
 
+## About Me
+
 I like programming.
 I write short hacks and small programs when I feel like it (check out my GitHub!).
 
@@ -19,6 +21,8 @@ I draw occasionally.
 I like coffee that is not sour.
 
 Currently I am pursuing my Ph.D. at the University of Toronto in Canada.
+
+## Site Map
 
 [Links](/links/) - Contact information & my other online identities
 
