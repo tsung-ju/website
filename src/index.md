@@ -7,11 +7,9 @@ layout: page
 
 Hello and welcome to my personal website!
 
-|||
-|-|-|
-| [Links](/links/) | - Contact information & my other online identities |
-| [Posts](/posts/) | - Preallocated space for my blog posts |
-| [Research](/research/) | - More on my research |
+[Links](/links/) - Contact information & my other online identities \
+[Posts](/posts/) - Preallocated space for my blog posts \
+[Research](/research/) - More on my research
 
 ## About Me
 
