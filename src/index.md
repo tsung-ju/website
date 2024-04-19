@@ -11,15 +11,17 @@ Hello and welcome to my personal website!
 
 [Posts](/posts/) - Preallocated space for my blog posts
 
-[Research](/research/) - More on my research
+[Research](/research/) - Research interests & publications
 
 ## About Me
 
 I like programming.
-I write short hacks and small programs when I feel like it (check out my GitHub!).
+I write short hacks and small programs when I feel like it.
+Check out my [GitHub](https://github.com/tsung-ju)!
 
 I also like theoretical computer science,
 especially programming languages, logic, and type theory.
+I study them in my [research](/research/).
 
 I like visual arts, for their beauty and expressiveness.
 I draw occasionally.
