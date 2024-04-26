@@ -11,7 +11,7 @@ Hello and welcome to my personal website!
 
 [Posts](/posts/) - Preallocated space for my blog posts
 
-[Research](/research/) - Research interests & publications
+[Research](/research/) - Research related stuff
 
 ## About Me
 
