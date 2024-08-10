@@ -28,4 +28,4 @@ I draw occasionally.
 
 I like coffee that is not sour.
 
-Currently I am pursuing my Ph.D. at the University of Toronto in Canada.
+Currently I am finishing my MSc in Computer Science at the University of Toronto.
