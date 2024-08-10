@@ -5,7 +5,8 @@ layout: page
 
 # Research
 
-I am a MSc student in the [PLSE group](https://www.cs.toronto.edu/~prose/)
+I am a master's student
+in the [PLSE group](https://www.cs.toronto.edu/~prose/)
 at the [University of Toronto](https://www.utoronto.ca/),
 working with [Prof. Ningning Xie](https://xnning.github.io).
 
