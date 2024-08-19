@@ -26,6 +26,7 @@ My current research focuses on modal type theory and its use in typed meta-progr
 - Staged Compilation with Module Functors.\
   **Tsung-Ju Chiang**, Jeremy Yallop, Leo White and Ningning Xie\
   [ICFP 2024](https://icfp24.sigplan.org/)
+  [\[doi\]](https://doi.org/10.1145/3674649)
 
 - Longest segment of balanced parentheses: an exercise in program inversion in a segment problem.\
   Shin-Cheng Mu and **Tsung-Ju Chiang**\
