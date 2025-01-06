@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>Everything</title>
+  </head>
+  <body>
+    <pre class="Agda"><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Pragma">--safe</a> <a id="20" class="Symbol">#-}</a>   <a id="26" class="Comment">-- This ensures everything imported in this module is safe.</a>
+<a id="86" class="Symbol">{-#</a> <a id="90" class="Keyword">OPTIONS</a> <a id="98" class="Pragma">--with-K</a> <a id="107" class="Symbol">#-}</a> <a id="111" class="Comment">-- This is for the pattern calculus only.</a>
+<a id="153" class="Keyword">module</a> <a id="160" href="Everything.html" class="Module">Everything</a> <a id="171" class="Keyword">where</a>
+
+<a id="178" class="Comment">-- Well-staged lists and trees. Used to define the typing contexts.</a>
+<a id="246" class="Keyword">import</a> <a id="253" href="Data.StagedList.html" class="Module">Data.StagedList</a>
+
+<a id="270" class="Keyword">import</a> <a id="277" href="Data.StagedTree.html" class="Module">Data.StagedTree</a>
+
+<a id="294" class="Comment">-- Simplified core calculus, without contextual types</a>
+<a id="348" class="Keyword">import</a> <a id="355" href="Core.Context.html" class="Module">Core.Context</a>
+
+<a id="369" class="Keyword">import</a> <a id="376" href="Core.Term.html" class="Module">Core.Term</a>
+
+<a id="387" class="Keyword">import</a> <a id="394" href="Core.Depth.html" class="Module">Core.Depth</a>
+
+<a id="406" class="Keyword">import</a> <a id="413" href="Core.Substitution.html" class="Module">Core.Substitution</a>
+
+<a id="432" class="Keyword">import</a> <a id="439" href="Core.Reduction.html" class="Module">Core.Reduction</a>
+
+<a id="455" class="Keyword">import</a> <a id="462" href="Core.Examples.html" class="Module">Core.Examples</a>
+
+<a id="477" class="Keyword">import</a> <a id="484" href="Core.Denotational.html" class="Module">Core.Denotational</a>
+
+<a id="503" class="Comment">-- Core calculus with contextual arrow type</a>
+<a id="547" class="Keyword">import</a> <a id="554" href="CtxArr2.Context.html" class="Module">CtxArr2.Context</a>
+
+<a id="571" class="Keyword">import</a> <a id="578" href="CtxArr2.Term.html" class="Module">CtxArr2.Term</a>
+
+<a id="592" class="Keyword">import</a> <a id="599" href="CtxArr2.Depth.html" class="Module">CtxArr2.Depth</a>
+
+<a id="614" class="Keyword">import</a> <a id="621" href="CtxArr2.Substitution.html" class="Module">CtxArr2.Substitution</a>
+
+<a id="643" class="Keyword">import</a> <a id="650" href="CtxArr2.Reduction.html" class="Module">CtxArr2.Reduction</a>
+
+<a id="669" class="Keyword">import</a> <a id="676" href="CtxArr2.Examples.html" class="Module">CtxArr2.Examples</a>
+
+<a id="694" class="Keyword">import</a> <a id="701" href="CtxArr2.Denotational.html" class="Module">CtxArr2.Denotational</a>
+
+<a id="723" class="Comment">-- Core calculus with contextual arrow type and its dual</a>
+<a id="780" class="Keyword">import</a> <a id="787" href="CtxTyp.Context.html" class="Module">CtxTyp.Context</a>
+
+<a id="803" class="Keyword">import</a> <a id="810" href="CtxTyp.Term.html" class="Module">CtxTyp.Term</a>
+
+<a id="823" class="Keyword">import</a> <a id="830" href="CtxTyp.Depth.html" class="Module">CtxTyp.Depth</a>
+
+<a id="844" class="Keyword">import</a> <a id="851" href="CtxTyp.Substitution.html" class="Module">CtxTyp.Substitution</a>
+
+<a id="872" class="Keyword">import</a> <a id="879" href="CtxTyp.Reduction.html" class="Module">CtxTyp.Reduction</a>
+
+<a id="897" class="Keyword">import</a> <a id="904" href="CtxTyp.Examples.html" class="Module">CtxTyp.Examples</a>
+
+<a id="921" class="Keyword">import</a> <a id="928" href="CtxTyp.Denotational.html" class="Module">CtxTyp.Denotational</a>
+
+<a id="949" class="Comment">-- Translation from CtxTyp to λ◯</a>
+
+<a id="983" class="Keyword">import</a> <a id="990" href="Splice.Context.html" class="Module">Splice.Context</a>
+
+<a id="1006" class="Keyword">import</a> <a id="1013" href="Splice.Term.html" class="Module">Splice.Term</a>
+
+<a id="1026" class="Keyword">import</a> <a id="1033" href="Splice.Translate.html" class="Module">Splice.Translate</a>
+
+<a id="1051" class="Comment">-- Pattern calculus</a>
+<a id="1071" class="Keyword">import</a> <a id="1078" href="Pat.Context.html" class="Module">Pat.Context</a>
+
+<a id="1091" class="Keyword">import</a> <a id="1098" href="Pat.Context.Equality.html" class="Module">Pat.Context.Equality</a>
+
+<a id="1120" class="Keyword">import</a> <a id="1127" href="Pat.Term.html" class="Module">Pat.Term</a>
+
+<a id="1137" class="Keyword">import</a> <a id="1144" href="Pat.Term.Equality.html" class="Module">Pat.Term.Equality</a>
+
+<a id="1163" class="Keyword">import</a> <a id="1170" href="Pat.Matching.html" class="Module">Pat.Matching</a>
+
+<a id="1184" class="Keyword">import</a> <a id="1191" href="Pat.Rewriting.html" class="Module">Pat.Rewriting</a>
+
+<a id="1206" class="Keyword">import</a> <a id="1213" href="Pat.Depth.html" class="Module">Pat.Depth</a>
+
+<a id="1224" class="Keyword">import</a> <a id="1231" href="Pat.Substitution.html" class="Module">Pat.Substitution</a>
+
+<a id="1249" class="Keyword">import</a> <a id="1256" href="Pat.Reduction.html" class="Module">Pat.Reduction</a>
+
+<a id="1271" class="Keyword">import</a> <a id="1278" href="Pat.Examples.html" class="Module">Pat.Examples</a>
+
+<a id="1292" class="Keyword">import</a> <a id="1299" href="Pat.Denotational.html" class="Module">Pat.Denotational</a></pre>
+  </body>
+</html>
