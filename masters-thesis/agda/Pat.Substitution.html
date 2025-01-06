@@ -5,8 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./Agda.css" />
     <title>Pat.Substitution</title>
+    <style>
+      body {
+        font-family: Playpen Sans, "Playpen Sans Fallback: Chalkboard SE", "Playpen Sans Fallback: Comic Sans MS", sans-serif;
+        font-size: 16px;
+      }
+      @font-face {
+        font-family: "Playpen Sans Fallback: Chalkboard SE";
+        src: local("Chalkboard SE Light");
+        ascent-override: 108.463%;
+        descent-override: 31.5192%;
+        size-adjust: 107.8709%;
+        font-weight: normal;
+      }
+      @font-face {
+        font-family: "Playpen Sans Fallback: Chalkboard SE";
+        src: local("Chalkboard SE Bold");
+        ascent-override: 108.463%;
+        descent-override: 31.5192%;
+        size-adjust: 107.8709%;
+        font-weight: bold;
+      }
+      @font-face {
+        font-family: "Playpen Sans Fallback: Comic Sans MS";
+        src: local("Comic Sans MS");
+        ascent-override: 108.8061%;
+        descent-override: 31.6189%;
+        size-adjust: 107.5307%;
+        font-weight: normal;
+      }
+      @font-face {
+        font-family: "Playpen Sans Fallback: Comic Sans MS";
+        src: local("Comic Sans MS Bold");
+        ascent-override: 108.8061%;
+        descent-override: 31.6189%;
+        size-adjust: 107.5307%;
+        font-weight: bold;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        text-align: center;
+        position: sticky;
+        top: 0;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0 0.2em;
+        color: unset;
+      }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: unset;
+        }
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <a href="#">Fork me on GitHub (TBA)</a>
+      <a href="Everything.html">Index</a>
+      <a href="/">Back to Home</a>
+    </nav>
     <pre class="Agda"><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Pragma">--safe</a> <a id="20" class="Symbol">#-}</a>
 <a id="24" class="Symbol">{-#</a> <a id="28" class="Keyword">OPTIONS</a> <a id="36" class="Pragma">--with-K</a> <a id="45" class="Symbol">#-}</a>
 <a id="49" class="Keyword">module</a> <a id="56" href="Pat.Substitution.html" class="Module">Pat.Substitution</a> <a id="73" class="Keyword">where</a>
