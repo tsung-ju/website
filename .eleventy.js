@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("node_modules/@fontsource/playpen-sans");
+  eleventyConfig.addPassthroughCopy("src/thesis/agda/Agda.css");
   return {
     dir: {
       input: "src",
