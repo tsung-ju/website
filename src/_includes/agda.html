@@ -52,7 +52,7 @@
             {% else %}
               <a>{{ name }}</a>
             {% endif %}
-            {% if submodules %}
+            {% if submodules.size > 0 %}
               {{ moduleTree(submodules) }}
             {% endif %}
           </li>
