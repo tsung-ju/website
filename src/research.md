@@ -23,6 +23,12 @@ My current research focuses on modal type theory and its use in typed meta-progr
 
 ## Publications
 
+- Typed Meta-Programming with Splice Variables.\
+  **Tsung-Ju Chiang**\
+  Master's thesis
+  [\[draft\]](/masters-thesis/thesis.pdf)
+  <a href="/masters-thesis/agda/Everything.html" target="_blank">[formalization]</a>
+
 - Staged Compilation with Module Functors.\
   **Tsung-Ju Chiang**, Jeremy Yallop, Leo White and Ningning Xie\
   [ICFP 2024](https://icfp24.sigplan.org/)
