@@ -33,11 +33,14 @@
       }
       .module-tree {
         list-style-type: none;
-        padding-left: 0;
+        padding-left: 2ch;
         margin: 0;
       }
-      .module-tree .module-tree {
-        padding-left: 2ch;
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
       }
       .module-tree a:any-link:hover {
         color: #A020F0 !important;
