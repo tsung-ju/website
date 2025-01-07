@@ -10,6 +10,8 @@
       body {
         font-family: JuliaMono, monospace;
         font-size: 14px;
+        display: flex;
+        flex-flow: row nowrap;
       }
       h1, h2, h3, h4, h5, h6 {
         font-weight: unset;
@@ -19,27 +21,607 @@
         text-wrap: pretty;
       }
       nav {
-        text-align: center;
-        position: sticky;
-        top: 0;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-right: 2em;
       }
       nav a {
-        display: inline-block;
-        margin: 0 0.2em;
+        display: block;
         color: unset;
       }
-      @media (prefers-color-scheme: dark) {
-        a {
-          color: unset;
-        }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+      }
+      .module-tree .module-tree {
+        padding-left: 2ch;
+      }
+      .Agda {
+        margin: 0;
       }
     </style>
   </head>
   <body>
+    
     <nav>
-      <a href="#">Fork me on GitHub (TBA)</a>
-      <a href="Everything.html">Index</a>
-      <a href="/">Back to Home</a>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html">Everything</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html">StagedList</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html">StagedTree</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Core</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Core.Context.html">Context</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Core.Term.html">Term</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Core.Depth.html">Depth</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Core.Substitution.html">Substitution</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Core.Reduction.html">Reduction</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Core.Examples.html">Examples</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Core.Denotational.html">Denotational</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxArr2</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxArr2.Context.html">Context</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxArr2.Term.html">Term</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxArr2.Depth.html">Depth</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxArr2.Substitution.html">Substitution</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxArr2.Reduction.html">Reduction</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxArr2.Examples.html">Examples</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxArr2.Denotational.html">Denotational</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html">Context</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html">Term</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html">Depth</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html">Substitution</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html">Reduction</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html">Examples</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html">Denotational</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html">Context</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html">Term</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html">Translate</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html">Context</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html">Equality</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html">Term</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html">Equality</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html">Matching</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html">Rewriting</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html">Depth</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html">Substitution</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html">Reduction</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html">Examples</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html">Denotational</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
     </nav>
     <pre class="Agda"><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Pragma">--safe</a> <a id="20" class="Symbol">#-}</a>
 <a id="24" class="Keyword">module</a> <a id="31" href="Core.Context.html" class="Module">Core.Context</a> <a id="44" class="Keyword">where</a>
