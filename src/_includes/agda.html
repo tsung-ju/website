@@ -21,8 +21,10 @@
         text-wrap: pretty;
       }
       nav {
+        position: relative;
         font-size: 0.8rem;
         line-height: 1.5;
+        padding: 2px;
         margin-right: 2em;
       }
       nav a {
@@ -37,6 +39,12 @@
       .module-tree .module-tree {
         padding-left: 2ch;
       }
+      .module-tree a:link:hover {
+        background-color: rgba(255, 255, 0, 0.4);
+      }
+      .current-module {
+        background-color: yellow !important;
+      }
       .Agda {
         margin: 0;
       }
@@ -48,7 +56,9 @@
         {% for name, submodules in modules %}
           <li>
             {% if submodules.href %}
-              <a href="{{ submodules.href }}">{{ name }}</a>
+              <a href="{{ submodules.href }}" class="{% if submodules.name == page.fileSlug %}current-module{% endif %}">
+                {{ name }}
+              </a>
             {% else %}
               <a>{{ name }}</a>
             {% endif %}

@@ -44,6 +44,7 @@ function toTrie(modules) {
       current = current.get(part);
     }
     current.href = module.href;
+    current.name = module.name;
   }
   return trie;
 }
