@@ -10,6 +10,8 @@
       body {
         font-family: JuliaMono, monospace;
         font-size: 14px;
+        display: flex;
+        flex-flow: row nowrap;
       }
       h1, h2, h3, h4, h5, h6 {
         font-weight: unset;
@@ -19,27 +21,46 @@
         text-wrap: pretty;
       }
       nav {
-        text-align: center;
-        position: sticky;
-        top: 0;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-right: 2em;
       }
       nav a {
-        display: inline-block;
-        margin: 0 0.2em;
+        display: block;
         color: unset;
       }
-      @media (prefers-color-scheme: dark) {
-        a {
-          color: unset;
-        }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+      }
+      .module-tree .module-tree {
+        padding-left: 2ch;
+      }
+      .Agda {
+        margin: 0;
       }
     </style>
   </head>
   <body>
+    {% macro moduleTree(modules) %}
+      <ul class="module-tree">
+        {% for name, submodules in modules %}
+          <li>
+            {% if submodules.href %}
+              <a href="{{ submodules.href }}">{{ name }}</a>
+            {% else %}
+              <a>{{ name }}</a>
+            {% endif %}
+            {% if submodules %}
+              {{ moduleTree(submodules) }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endmacro %}
     <nav>
-      <a href="#">Fork me on GitHub (TBA)</a>
-      <a href="Everything.html">Index</a>
-      <a href="/">Back to Home</a>
+      {{ moduleTree(agdaModules) }}
     </nav>
     <pre class="Agda">{{ content | safe }}</pre>
   </body>
