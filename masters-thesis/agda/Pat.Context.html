@@ -21,8 +21,10 @@
         text-wrap: pretty;
       }
       nav {
+        position: relative;
         font-size: 0.8rem;
         line-height: 1.5;
+        padding: 2px;
         margin-right: 2em;
       }
       nav a {
@@ -37,6 +39,12 @@
       .module-tree .module-tree {
         padding-left: 2ch;
       }
+      .module-tree a:link:hover {
+        background-color: rgba(255, 255, 0, 0.4);
+      }
+      .current-module {
+        background-color: yellow !important;
+      }
       .Agda {
         margin: 0;
       }
@@ -50,7 +58,9 @@
         
           <li>
             
-              <a href="Everything.html">Everything</a>
+              <a href="Everything.html" class="">
+                Everything
+              </a>
             
             
           </li>
@@ -65,14 +75,18 @@
         
           <li>
             
-              <a href="Data.StagedList.html">StagedList</a>
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Data.StagedTree.html">StagedTree</a>
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
             
             
           </li>
@@ -92,49 +106,63 @@
         
           <li>
             
-              <a href="Core.Context.html">Context</a>
+              <a href="Core.Context.html" class="">
+                Context
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Core.Term.html">Term</a>
+              <a href="Core.Term.html" class="">
+                Term
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Core.Depth.html">Depth</a>
+              <a href="Core.Depth.html" class="">
+                Depth
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Core.Substitution.html">Substitution</a>
+              <a href="Core.Substitution.html" class="">
+                Substitution
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Core.Reduction.html">Reduction</a>
+              <a href="Core.Reduction.html" class="">
+                Reduction
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Core.Examples.html">Examples</a>
+              <a href="Core.Examples.html" class="">
+                Examples
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Core.Denotational.html">Denotational</a>
+              <a href="Core.Denotational.html" class="">
+                Denotational
+              </a>
             
             
           </li>
@@ -154,49 +182,63 @@
         
           <li>
             
-              <a href="CtxArr2.Context.html">Context</a>
+              <a href="CtxArr2.Context.html" class="">
+                Context
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxArr2.Term.html">Term</a>
+              <a href="CtxArr2.Term.html" class="">
+                Term
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxArr2.Depth.html">Depth</a>
+              <a href="CtxArr2.Depth.html" class="">
+                Depth
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxArr2.Substitution.html">Substitution</a>
+              <a href="CtxArr2.Substitution.html" class="">
+                Substitution
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxArr2.Reduction.html">Reduction</a>
+              <a href="CtxArr2.Reduction.html" class="">
+                Reduction
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxArr2.Examples.html">Examples</a>
+              <a href="CtxArr2.Examples.html" class="">
+                Examples
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxArr2.Denotational.html">Denotational</a>
+              <a href="CtxArr2.Denotational.html" class="">
+                Denotational
+              </a>
             
             
           </li>
@@ -216,49 +258,63 @@
         
           <li>
             
-              <a href="CtxTyp.Context.html">Context</a>
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxTyp.Term.html">Term</a>
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxTyp.Depth.html">Depth</a>
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxTyp.Substitution.html">Substitution</a>
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxTyp.Reduction.html">Reduction</a>
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxTyp.Examples.html">Examples</a>
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="CtxTyp.Denotational.html">Denotational</a>
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
             
             
           </li>
@@ -278,21 +334,27 @@
         
           <li>
             
-              <a href="Splice.Context.html">Context</a>
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Splice.Term.html">Term</a>
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Splice.Translate.html">Translate</a>
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
             
             
           </li>
@@ -312,7 +374,9 @@
         
           <li>
             
-              <a href="Pat.Context.html">Context</a>
+              <a href="Pat.Context.html" class="current-module">
+                Context
+              </a>
             
             
               
@@ -320,7 +384,9 @@
         
           <li>
             
-              <a href="Pat.Context.Equality.html">Equality</a>
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
             
             
           </li>
@@ -332,7 +398,9 @@
         
           <li>
             
-              <a href="Pat.Term.html">Term</a>
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
             
             
               
@@ -340,7 +408,9 @@
         
           <li>
             
-              <a href="Pat.Term.Equality.html">Equality</a>
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
             
             
           </li>
@@ -352,49 +422,63 @@
         
           <li>
             
-              <a href="Pat.Matching.html">Matching</a>
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Pat.Rewriting.html">Rewriting</a>
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Pat.Depth.html">Depth</a>
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Pat.Substitution.html">Substitution</a>
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Pat.Reduction.html">Reduction</a>
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Pat.Examples.html">Examples</a>
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
             
             
           </li>
         
           <li>
             
-              <a href="Pat.Denotational.html">Denotational</a>
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
             
             
           </li>
