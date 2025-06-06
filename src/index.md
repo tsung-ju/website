@@ -27,5 +27,3 @@ I like visual arts, for their beauty and expressiveness.
 I draw occasionally.
 
 I enjoy drinking coffee and tea.
-
-Currently I am finishing my MSc in Computer Science at the University of Toronto.
