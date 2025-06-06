@@ -1,6 +1,6 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addFilter("date", (date, format, options) =>
     DateTime.fromJSDate(date, { zone: "utc" }).toFormat(format, options)

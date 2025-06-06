@@ -1,7 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-const { finished } = require("stream/promises");
-const { WritableStream: ParserStream } = require("htmlparser2/WritableStream");
+import * as fs from "fs";
+import * as path from "path";
+import { finished } from "stream/promises";
+import { WritableStream as ParserStream } from "htmlparser2/WritableStream";
 
 async function getModules() {
   const modules = [];
@@ -27,7 +27,7 @@ async function getModules() {
       }
     }
   });
-  const stream = fs.createReadStream(path.join(__dirname, "Everything.html"));
+  const stream = fs.createReadStream(path.join(import.meta.dirname, "Everything.html"));
   stream.pipe(parserStream);
   await finished(stream);
   return modules;
@@ -50,7 +50,7 @@ function toTrie(modules) {
 }
 
 
-module.exports = async function () {
+export default async function () {
   return {
     layout: "agda",
     templateEngineOverride: false,
