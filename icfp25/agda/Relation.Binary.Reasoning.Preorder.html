@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>Relation.Binary.Reasoning.Preorder</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Comment">------------------------------------------------------------------------</a>
+<a id="74" class="Comment">-- The Agda standard library</a>
+<a id="103" class="Comment">--</a>
+<a id="106" class="Comment">-- Convenient syntax for &quot;equational reasoning&quot; using a preorder</a>
+<a id="171" class="Comment">------------------------------------------------------------------------</a>
+
+<a id="245" class="Comment">-- Example uses:</a>
+<a id="262" class="Comment">--</a>
+<a id="265" class="Comment">--    u∼y : u ∼ y</a>
+<a id="283" class="Comment">--    u∼y = begin</a>
+<a id="301" class="Comment">--      u  ≈⟨ u≈v ⟩</a>
+<a id="321" class="Comment">--      v  ≡⟨ v≡w ⟩</a>
+<a id="341" class="Comment">--      w  ∼⟨ w∼y ⟩</a>
+<a id="361" class="Comment">--      y  ≈⟨ z≈y ⟩</a>
+<a id="381" class="Comment">--      z  ∎</a>
+<a id="394" class="Comment">--</a>
+<a id="397" class="Comment">--    u≈w : u ≈ w</a>
+<a id="415" class="Comment">--    u≈w = begin-equality</a>
+<a id="442" class="Comment">--      u  ≈⟨ u≈v ⟩</a>
+<a id="462" class="Comment">--      v  ≡⟨ v≡w ⟩</a>
+<a id="482" class="Comment">--      w  ≡⟨ x≡w ⟨</a>
+<a id="502" class="Comment">--      x  ∎</a>
+
+<a id="516" class="Symbol">{-#</a> <a id="520" class="Keyword">OPTIONS</a> <a id="528" class="Pragma">--cubical-compatible</a> <a id="549" class="Pragma">--safe</a> <a id="556" class="Symbol">#-}</a>
+
+<a id="561" class="Keyword">open</a> <a id="566" class="Keyword">import</a> <a id="573" href="Relation.Binary.Bundles.html" class="Module">Relation.Binary.Bundles</a> <a id="597" class="Keyword">using</a> <a id="603" class="Symbol">(</a><a id="604" href="Relation.Binary.Bundles.html#2245" class="Record">Preorder</a><a id="612" class="Symbol">)</a>
+
+<a id="615" class="Keyword">module</a> <a id="622" href="Relation.Binary.Reasoning.Preorder.html" class="Module">Relation.Binary.Reasoning.Preorder</a>
+  <a id="659" class="Symbol">{</a><a id="660" href="Relation.Binary.Reasoning.Preorder.html#660" class="Bound">p₁</a> <a id="663" href="Relation.Binary.Reasoning.Preorder.html#663" class="Bound">p₂</a> <a id="666" href="Relation.Binary.Reasoning.Preorder.html#666" class="Bound">p₃</a><a id="668" class="Symbol">}</a> <a id="670" class="Symbol">(</a><a id="671" href="Relation.Binary.Reasoning.Preorder.html#671" class="Bound">P</a> <a id="673" class="Symbol">:</a> <a id="675" href="Relation.Binary.Bundles.html#2245" class="Record">Preorder</a> <a id="684" href="Relation.Binary.Reasoning.Preorder.html#660" class="Bound">p₁</a> <a id="687" href="Relation.Binary.Reasoning.Preorder.html#663" class="Bound">p₂</a> <a id="690" href="Relation.Binary.Reasoning.Preorder.html#666" class="Bound">p₃</a><a id="692" class="Symbol">)</a> <a id="694" class="Keyword">where</a>
+
+<a id="701" class="Keyword">open</a> <a id="706" href="Relation.Binary.Bundles.html#2245" class="Module">Preorder</a> <a id="715" href="Relation.Binary.Reasoning.Preorder.html#671" class="Bound">P</a>
+
+<a id="718" class="Comment">------------------------------------------------------------------------</a>
+<a id="791" class="Comment">-- Publicly re-export the contents of the base module</a>
+
+<a id="846" class="Keyword">open</a> <a id="851" class="Keyword">import</a> <a id="858" href="Relation.Binary.Reasoning.Base.Double.html" class="Module">Relation.Binary.Reasoning.Base.Double</a> <a id="896" href="Relation.Binary.Bundles.html#2458" class="Field">isPreorder</a> <a id="907" class="Keyword">public</a>
+</pre>
+  </body>
+</html>

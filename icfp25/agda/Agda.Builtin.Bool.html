@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>Agda.Builtin.Bool</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Pragma">--cubical-compatible</a> <a id="34" class="Pragma">--safe</a> <a id="41" class="Pragma">--no-universe-polymorphism</a>
+            <a id="80" class="Pragma">--no-sized-types</a> <a id="97" class="Pragma">--no-guardedness</a> <a id="114" class="Pragma">--level-universe</a> <a id="131" class="Symbol">#-}</a>
+
+<a id="136" class="Keyword">module</a> <a id="143" href="Agda.Builtin.Bool.html" class="Module">Agda.Builtin.Bool</a> <a id="161" class="Keyword">where</a>
+
+<a id="168" class="Keyword">data</a> <a id="Bool"></a><a id="173" href="Agda.Builtin.Bool.html#173" class="Datatype">Bool</a> <a id="178" class="Symbol">:</a> <a id="180" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="184" class="Keyword">where</a>
+  <a id="Bool.false"></a><a id="192" href="Agda.Builtin.Bool.html#192" class="InductiveConstructor">false</a> <a id="Bool.true"></a><a id="198" href="Agda.Builtin.Bool.html#198" class="InductiveConstructor">true</a> <a id="203" class="Symbol">:</a> <a id="205" href="Agda.Builtin.Bool.html#173" class="Datatype">Bool</a>
+
+<a id="211" class="Symbol">{-#</a> <a id="215" class="Keyword">BUILTIN</a> <a id="223" class="Keyword">BOOL</a>  <a id="229" href="Agda.Builtin.Bool.html#173" class="Datatype">Bool</a>  <a id="235" class="Symbol">#-}</a>
+<a id="239" class="Symbol">{-#</a> <a id="243" class="Keyword">BUILTIN</a> <a id="251" class="Keyword">FALSE</a> <a id="257" href="Agda.Builtin.Bool.html#192" class="InductiveConstructor">false</a> <a id="263" class="Symbol">#-}</a>
+<a id="267" class="Symbol">{-#</a> <a id="271" class="Keyword">BUILTIN</a> <a id="279" class="Keyword">TRUE</a>  <a id="285" href="Agda.Builtin.Bool.html#198" class="InductiveConstructor">true</a>  <a id="291" class="Symbol">#-}</a>
+
+<a id="296" class="Symbol">{-#</a> <a id="300" class="Keyword">COMPILE</a> <a id="308" class="Keyword">JS</a> <a id="311" href="Agda.Builtin.Bool.html#173" class="Datatype">Bool</a>  <a id="317" class="Pragma">=</a> <a id="319" class="Pragma">function</a> <a id="328" class="Pragma">(x,v)</a> <a id="334" class="Pragma">{</a> <a id="336" class="Pragma">return</a> <a id="343" class="Pragma">((x)?</a> <a id="349" class="Pragma">v[&quot;true&quot;]()</a> <a id="361" class="Pragma">:</a> <a id="363" class="Pragma">v[&quot;false&quot;]());</a> <a id="378" class="Pragma">}</a> <a id="380" class="Symbol">#-}</a>
+<a id="384" class="Symbol">{-#</a> <a id="388" class="Keyword">COMPILE</a> <a id="396" class="Keyword">JS</a> <a id="399" href="Agda.Builtin.Bool.html#192" class="InductiveConstructor">false</a> <a id="405" class="Pragma">=</a> <a id="407" class="Pragma">false</a> <a id="413" class="Symbol">#-}</a>
+<a id="417" class="Symbol">{-#</a> <a id="421" class="Keyword">COMPILE</a> <a id="429" class="Keyword">JS</a> <a id="432" href="Agda.Builtin.Bool.html#198" class="InductiveConstructor">true</a>  <a id="438" class="Pragma">=</a> <a id="440" class="Pragma">true</a>  <a id="446" class="Symbol">#-}</a>
+</pre>
+  </body>
+</html>

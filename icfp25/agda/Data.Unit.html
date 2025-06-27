@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>Data.Unit</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Comment">------------------------------------------------------------------------</a>
+<a id="74" class="Comment">-- The Agda standard library</a>
+<a id="103" class="Comment">--</a>
+<a id="106" class="Comment">-- The unit type, Level-monomorphic version</a>
+<a id="150" class="Comment">------------------------------------------------------------------------</a>
+
+<a id="224" class="Symbol">{-#</a> <a id="228" class="Keyword">OPTIONS</a> <a id="236" class="Pragma">--cubical-compatible</a> <a id="257" class="Pragma">--safe</a> <a id="264" class="Symbol">#-}</a>
+
+<a id="269" class="Keyword">module</a> <a id="276" href="Data.Unit.html" class="Module">Data.Unit</a> <a id="286" class="Keyword">where</a>
+
+<a id="293" class="Comment">------------------------------------------------------------------------</a>
+<a id="366" class="Comment">-- Re-export contents of base module</a>
+
+<a id="404" class="Keyword">open</a> <a id="409" class="Keyword">import</a> <a id="416" href="Data.Unit.Base.html" class="Module">Data.Unit.Base</a> <a id="431" class="Keyword">public</a>
+
+<a id="439" class="Comment">------------------------------------------------------------------------</a>
+<a id="512" class="Comment">-- Re-export query operations</a>
+
+<a id="543" class="Keyword">open</a> <a id="548" class="Keyword">import</a> <a id="555" href="Data.Unit.Properties.html" class="Module">Data.Unit.Properties</a> <a id="576" class="Keyword">public</a>
+  <a id="585" class="Keyword">using</a> <a id="591" class="Symbol">(</a><a id="592" href="Data.Unit.Properties.html#1158" class="Function Operator">_≟_</a><a id="595" class="Symbol">)</a>
+</pre>
+  </body>
+</html>

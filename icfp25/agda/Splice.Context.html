@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>Splice.Context</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="current-module">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Comment">{-|
+This module defines types and contexts for Davies&#39; λ○ calculus,
+as described in &quot;A Temporal-Logic Approach to Binding-Time Analysis.&quot;
+We use a single base type `Bool to match with λ○▷.
+-}</a>
+
+<a id="194" class="Symbol">{-#</a> <a id="198" class="Keyword">OPTIONS</a> <a id="206" class="Pragma">--safe</a> <a id="213" class="Symbol">#-}</a>
+<a id="217" class="Keyword">module</a> <a id="224" href="Splice.Context.html" class="Module">Splice.Context</a> <a id="239" class="Keyword">where</a>
+
+<a id="246" class="Keyword">open</a> <a id="251" class="Keyword">import</a> <a id="258" href="Data.Nat.html" class="Module">Data.Nat</a> <a id="267" class="Keyword">using</a> <a id="273" class="Symbol">(</a><a id="274" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="275" class="Symbol">;</a> <a id="277" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a><a id="280" class="Symbol">;</a> <a id="282" href="Agda.Builtin.Nat.html#221" class="InductiveConstructor">zero</a><a id="286" class="Symbol">;</a> <a id="288" href="Data.Nat.Base.html#8799" class="Function Operator">_≥‴_</a><a id="292" class="Symbol">;</a> <a id="294" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a><a id="301" class="Symbol">;</a> <a id="303" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a><a id="310" class="Symbol">)</a>
+
+<a id="313" class="Keyword">variable</a>
+  <a id="324" href="Splice.Context.html#324" class="Generalizable">n</a> <a id="326" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="328" href="Splice.Context.html#328" class="Generalizable">n′</a> <a id="331" href="Splice.Context.html#331" class="Generalizable">m′</a> <a id="334" href="Splice.Context.html#334" class="Generalizable">n″</a> <a id="337" href="Splice.Context.html#337" class="Generalizable">m″</a> <a id="340" class="Symbol">:</a> <a id="342" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a>
+  <a id="346" href="Splice.Context.html#346" class="Generalizable">m≥n</a> <a id="350" href="Splice.Context.html#350" class="Generalizable">m′≥n</a> <a id="355" class="Symbol">:</a> <a id="357" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="359" href="Data.Nat.Base.html#8799" class="Function Operator">≥‴</a> <a id="362" href="Splice.Context.html#324" class="Generalizable">n</a>
+
+<a id="365" class="Keyword">data</a> <a id="Type"></a><a id="370" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="375" class="Symbol">:</a> <a id="377" class="Symbol">(</a><a id="378" href="Splice.Context.html#378" class="Bound">n</a> <a id="380" class="Symbol">:</a> <a id="382" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="383" class="Symbol">)</a> <a id="385" class="Symbol">→</a> <a id="387" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="391" class="Keyword">where</a>
+  <a id="Type.◯"></a><a id="399" href="Splice.Context.html#399" class="InductiveConstructor">◯</a> <a id="401" class="Symbol">:</a> <a id="403" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="408" class="Symbol">(</a><a id="409" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a> <a id="413" href="Splice.Context.html#324" class="Generalizable">n</a><a id="414" class="Symbol">)</a> <a id="416" class="Symbol">→</a> <a id="418" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="423" href="Splice.Context.html#324" class="Generalizable">n</a>
+  <a id="Type.`Bool"></a><a id="427" href="Splice.Context.html#427" class="InductiveConstructor">`Bool</a> <a id="433" class="Symbol">:</a> <a id="435" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="440" href="Splice.Context.html#324" class="Generalizable">n</a>
+  <a id="Type._⇒_"></a><a id="444" href="Splice.Context.html#444" class="InductiveConstructor Operator">_⇒_</a> <a id="448" class="Symbol">:</a> <a id="450" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="455" href="Splice.Context.html#324" class="Generalizable">n</a> <a id="457" class="Symbol">→</a> <a id="459" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="464" href="Splice.Context.html#324" class="Generalizable">n</a> <a id="466" class="Symbol">→</a> <a id="468" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="473" href="Splice.Context.html#324" class="Generalizable">n</a>
+
+<a id="476" class="Keyword">variable</a>
+  <a id="487" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="489" href="Splice.Context.html#489" class="Generalizable">B</a> <a id="491" href="Splice.Context.html#491" class="Generalizable">A′</a> <a id="494" href="Splice.Context.html#494" class="Generalizable">B′</a> <a id="497" class="Symbol">:</a> <a id="499" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="504" href="Splice.Context.html#324" class="Generalizable">n</a>
+
+<a id="507" class="Comment">-- | Context is a list of types</a>
+<a id="539" class="Comment">-- As in StagedList, we represent concatenation as a constructor </a>
+<a id="605" class="Comment">-- to simplify proofs (see Data.StagedList for details).</a>
+<a id="662" class="Keyword">infixl</a> <a id="669" class="Number">5</a> <a id="671" href="Splice.Context.html#764" class="InductiveConstructor Operator">_++_</a>
+<a id="676" class="Keyword">data</a> <a id="Context"></a><a id="681" href="Splice.Context.html#681" class="Datatype">Context</a> <a id="689" class="Symbol">:</a> <a id="691" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="695" class="Keyword">where</a>
+  <a id="Context.∅"></a><a id="703" href="Splice.Context.html#703" class="InductiveConstructor">∅</a> <a id="705" class="Symbol">:</a> <a id="707" href="Splice.Context.html#681" class="Datatype">Context</a>
+  <a id="Context._,_"></a><a id="717" href="Splice.Context.html#717" class="InductiveConstructor Operator">_,_</a> <a id="721" class="Symbol">:</a> <a id="723" class="Symbol">(</a><a id="724" href="Splice.Context.html#724" class="Bound">Γ</a> <a id="726" class="Symbol">:</a> <a id="728" href="Splice.Context.html#681" class="Datatype">Context</a><a id="735" class="Symbol">)</a> <a id="737" class="Symbol">→</a> <a id="739" class="Symbol">(</a><a id="740" href="Splice.Context.html#740" class="Bound">A</a> <a id="742" class="Symbol">:</a> <a id="744" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="749" href="Splice.Context.html#326" class="Generalizable">m</a><a id="750" class="Symbol">)</a> <a id="752" class="Symbol">→</a> <a id="754" href="Splice.Context.html#681" class="Datatype">Context</a>
+  <a id="Context._++_"></a><a id="764" href="Splice.Context.html#764" class="InductiveConstructor Operator">_++_</a> <a id="769" class="Symbol">:</a> <a id="771" href="Splice.Context.html#681" class="Datatype">Context</a> <a id="779" class="Symbol">→</a> <a id="781" href="Splice.Context.html#681" class="Datatype">Context</a> <a id="789" class="Symbol">→</a> <a id="791" href="Splice.Context.html#681" class="Datatype">Context</a>
+
+<a id="800" class="Keyword">infixl</a> <a id="807" class="Number">5</a> <a id="809" href="Splice.Context.html#823" class="InductiveConstructor Operator">_,_^_</a>
+<a id="815" class="Keyword">pattern</a> <a id="_,_^_"></a><a id="823" href="Splice.Context.html#823" class="InductiveConstructor Operator">_,_^_</a> <a id="829" href="Splice.Context.html#849" class="Bound">Γ</a> <a id="831" href="Splice.Context.html#851" class="Bound">A</a> <a id="833" href="Splice.Context.html#846" class="Bound">m</a> <a id="835" class="Symbol">=</a> <a id="837" href="Splice.Context.html#717" class="InductiveConstructor Operator">_,_</a> <a id="841" class="Symbol">{</a><a id="842" class="Argument">m</a> <a id="844" class="Symbol">=</a> <a id="846" href="Splice.Context.html#846" class="Bound">m</a><a id="847" class="Symbol">}</a> <a id="849" href="Splice.Context.html#849" class="Bound">Γ</a> <a id="851" href="Splice.Context.html#851" class="Bound">A</a> 
+
+<a id="855" class="Keyword">variable</a>
+  <a id="866" href="Splice.Context.html#866" class="Generalizable">Γ</a> <a id="868" href="Splice.Context.html#868" class="Generalizable">Δ</a> <a id="870" href="Splice.Context.html#870" class="Generalizable">Γ′</a> <a id="873" href="Splice.Context.html#873" class="Generalizable">Δ′</a> <a id="876" class="Symbol">:</a> <a id="878" href="Splice.Context.html#681" class="Datatype">Context</a>
+  <a id="888" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="891" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="894" href="Splice.Context.html#894" class="Generalizable">Γ₃</a> <a id="897" class="Symbol">:</a> <a id="899" href="Splice.Context.html#681" class="Datatype">Context</a>
+
+<a id="908" class="Comment">-- | Membership relation for contexts</a>
+<a id="946" class="Keyword">infix</a> <a id="952" class="Number">4</a> <a id="954" href="Splice.Context.html#1008" class="Datatype">Contains</a>
+<a id="963" class="Keyword">syntax</a> <a id="970" href="Splice.Context.html#1008" class="Datatype">Contains</a> <a id="979" class="Symbol">{</a><a id="980" class="Argument">m</a> <a id="982" class="Symbol">=</a> <a id="984" class="Bound">m</a><a id="985" class="Symbol">}</a> <a id="987" class="Bound">Γ</a> <a id="989" class="Bound">A</a> <a id="991" class="Symbol">=</a> <a id="993" class="Bound">Γ</a> <a id="995" class="Datatype">∋</a> <a id="997" class="Bound">A</a> <a id="999" class="Datatype">^</a> <a id="1001" class="Bound">m</a>
+<a id="1003" class="Keyword">data</a> <a id="Contains"></a><a id="1008" href="Splice.Context.html#1008" class="Datatype">Contains</a> <a id="1017" class="Symbol">:</a> <a id="1019" href="Splice.Context.html#681" class="Datatype">Context</a> <a id="1027" class="Symbol">→</a> <a id="1029" href="Splice.Context.html#370" class="Datatype">Type</a> <a id="1034" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1036" class="Symbol">→</a> <a id="1038" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="1042" class="Keyword">where</a>
+  <a id="Contains.Z"></a><a id="1050" href="Splice.Context.html#1050" class="InductiveConstructor">Z</a> <a id="1052" class="Symbol">:</a> <a id="1054" href="Splice.Context.html#866" class="Generalizable">Γ</a> <a id="1056" href="Splice.Context.html#823" class="InductiveConstructor Operator">,</a> <a id="1058" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1060" href="Splice.Context.html#823" class="InductiveConstructor Operator">^</a> <a id="1062" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1064" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1066" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1068" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1070" href="Splice.Context.html#326" class="Generalizable">m</a>
+  <a id="Contains.S"></a><a id="1074" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1076" class="Symbol">:</a> <a id="1078" class="Symbol">(</a><a id="1079" href="Splice.Context.html#1079" class="Bound">x</a> <a id="1081" class="Symbol">:</a> <a id="1083" href="Splice.Context.html#866" class="Generalizable">Γ</a> <a id="1085" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1087" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1089" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1091" href="Splice.Context.html#326" class="Generalizable">m</a><a id="1092" class="Symbol">)</a> <a id="1094" class="Symbol">→</a> <a id="1096" href="Splice.Context.html#866" class="Generalizable">Γ</a> <a id="1098" href="Splice.Context.html#823" class="InductiveConstructor Operator">,</a> <a id="1100" href="Splice.Context.html#491" class="Generalizable">A′</a> <a id="1103" href="Splice.Context.html#823" class="InductiveConstructor Operator">^</a> <a id="1105" href="Splice.Context.html#331" class="Generalizable">m′</a> <a id="1108" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1110" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1112" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1114" href="Splice.Context.html#326" class="Generalizable">m</a>
+  <a id="Contains.L"></a><a id="1118" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1120" class="Symbol">:</a> <a id="1122" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1125" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1127" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1129" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1131" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1133" class="Symbol">→</a> <a id="1135" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1138" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1141" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1144" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1146" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1148" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1150" href="Splice.Context.html#326" class="Generalizable">m</a>
+  <a id="Contains.R"></a><a id="1154" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1156" class="Symbol">:</a> <a id="1158" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1161" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1163" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1165" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1167" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1169" class="Symbol">→</a> <a id="1171" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1174" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1177" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1180" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1182" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1184" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1186" href="Splice.Context.html#326" class="Generalizable">m</a>
+
+<a id="1189" class="Comment">-- | Renaming functions between contexts, i.e. ⊆</a>
+<a id="Rename"></a><a id="1238" href="Splice.Context.html#1238" class="Function">Rename</a> <a id="1245" class="Symbol">:</a> <a id="1247" href="Splice.Context.html#681" class="Datatype">Context</a> <a id="1255" class="Symbol">→</a> <a id="1257" href="Splice.Context.html#681" class="Datatype">Context</a> <a id="1265" class="Symbol">→</a> <a id="1267" href="Agda.Primitive.html#388" class="Primitive">Set</a>
+<a id="1271" href="Splice.Context.html#1238" class="Function">Rename</a> <a id="1278" href="Splice.Context.html#1278" class="Bound">Γ</a> <a id="1280" href="Splice.Context.html#1280" class="Bound">Γ′</a> <a id="1283" class="Symbol">=</a> <a id="1285" class="Symbol">∀</a> <a id="1287" class="Symbol">{</a><a id="1288" href="Splice.Context.html#1288" class="Bound">m</a><a id="1289" class="Symbol">}</a> <a id="1291" class="Symbol">{</a><a id="1292" href="Splice.Context.html#1292" class="Bound">A</a><a id="1293" class="Symbol">}</a> <a id="1295" class="Symbol">→</a> <a id="1297" href="Splice.Context.html#1278" class="Bound">Γ</a> <a id="1299" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1301" href="Splice.Context.html#1292" class="Bound">A</a> <a id="1303" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1305" href="Splice.Context.html#1288" class="Bound">m</a> <a id="1307" class="Symbol">→</a> <a id="1309" href="Splice.Context.html#1280" class="Bound">Γ′</a> <a id="1312" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1314" href="Splice.Context.html#1292" class="Bound">A</a> <a id="1316" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1318" href="Splice.Context.html#1288" class="Bound">m</a>
+
+<a id="1321" class="Comment">-- | (Γ₁ ++ Γ₂) , A′ ⊆ Γ₁ ++ (Γ₂ , A′)</a>
+<a id="∋-++-,"></a><a id="1360" href="Splice.Context.html#1360" class="Function">∋-++-,</a> <a id="1367" class="Symbol">:</a> <a id="1369" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1372" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1375" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1378" href="Splice.Context.html#823" class="InductiveConstructor Operator">,</a> <a id="1380" href="Splice.Context.html#491" class="Generalizable">A′</a> <a id="1383" href="Splice.Context.html#823" class="InductiveConstructor Operator">^</a> <a id="1385" href="Splice.Context.html#331" class="Generalizable">m′</a> <a id="1388" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1390" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1392" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1394" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1396" class="Symbol">→</a> <a id="1398" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1401" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1404" class="Symbol">(</a><a id="1405" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1408" href="Splice.Context.html#823" class="InductiveConstructor Operator">,</a> <a id="1410" href="Splice.Context.html#491" class="Generalizable">A′</a> <a id="1413" href="Splice.Context.html#823" class="InductiveConstructor Operator">^</a> <a id="1415" href="Splice.Context.html#331" class="Generalizable">m′</a><a id="1417" class="Symbol">)</a> <a id="1419" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1421" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1423" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1425" href="Splice.Context.html#326" class="Generalizable">m</a>
+<a id="1427" href="Splice.Context.html#1360" class="Function">∋-++-,</a> <a id="1434" href="Splice.Context.html#1050" class="InductiveConstructor">Z</a> <a id="1436" class="Symbol">=</a> <a id="1438" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1440" href="Splice.Context.html#1050" class="InductiveConstructor">Z</a>
+<a id="1442" href="Splice.Context.html#1360" class="Function">∋-++-,</a> <a id="1449" class="Symbol">(</a><a id="1450" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1452" class="Symbol">(</a><a id="1453" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1455" href="Splice.Context.html#1455" class="Bound">Γ₁∋A</a><a id="1459" class="Symbol">))</a> <a id="1462" class="Symbol">=</a> <a id="1464" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1466" href="Splice.Context.html#1455" class="Bound">Γ₁∋A</a>
+<a id="1471" href="Splice.Context.html#1360" class="Function">∋-++-,</a> <a id="1478" class="Symbol">(</a><a id="1479" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1481" class="Symbol">(</a><a id="1482" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1484" href="Splice.Context.html#1484" class="Bound">Γ₂∋A</a><a id="1488" class="Symbol">))</a> <a id="1491" class="Symbol">=</a> <a id="1493" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1495" class="Symbol">(</a><a id="1496" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1498" href="Splice.Context.html#1484" class="Bound">Γ₂∋A</a><a id="1502" class="Symbol">)</a>
+
+<a id="1505" class="Comment">-- | Γ₁ ++ (Γ₂ , A′) ⊆ (Γ₁ ++ Γ₂) , A′</a>
+<a id="∋-++-,⁻¹"></a><a id="1544" href="Splice.Context.html#1544" class="Function">∋-++-,⁻¹</a> <a id="1553" class="Symbol">:</a> <a id="1555" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1558" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1561" class="Symbol">(</a><a id="1562" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1565" href="Splice.Context.html#823" class="InductiveConstructor Operator">,</a> <a id="1567" href="Splice.Context.html#491" class="Generalizable">A′</a> <a id="1570" href="Splice.Context.html#823" class="InductiveConstructor Operator">^</a> <a id="1572" href="Splice.Context.html#331" class="Generalizable">m′</a><a id="1574" class="Symbol">)</a> <a id="1576" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1578" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1580" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1582" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1584" class="Symbol">→</a> <a id="1586" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1589" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1592" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1595" href="Splice.Context.html#823" class="InductiveConstructor Operator">,</a> <a id="1597" href="Splice.Context.html#491" class="Generalizable">A′</a> <a id="1600" href="Splice.Context.html#823" class="InductiveConstructor Operator">^</a> <a id="1602" href="Splice.Context.html#331" class="Generalizable">m′</a> <a id="1605" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1607" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1609" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1611" href="Splice.Context.html#326" class="Generalizable">m</a>
+<a id="1613" href="Splice.Context.html#1544" class="Function">∋-++-,⁻¹</a> <a id="1622" class="Symbol">(</a><a id="1623" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1625" href="Splice.Context.html#1625" class="Bound">Γ₁∋A</a><a id="1629" class="Symbol">)</a> <a id="1631" class="Symbol">=</a> <a id="1633" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1635" class="Symbol">(</a><a id="1636" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1638" href="Splice.Context.html#1625" class="Bound">Γ₁∋A</a><a id="1642" class="Symbol">)</a>
+<a id="1644" href="Splice.Context.html#1544" class="Function">∋-++-,⁻¹</a> <a id="1653" class="Symbol">(</a><a id="1654" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1656" class="Symbol">(</a><a id="1657" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1659" href="Splice.Context.html#1659" class="Bound">Γ₂∋A</a><a id="1663" class="Symbol">))</a> <a id="1666" class="Symbol">=</a> <a id="1668" href="Splice.Context.html#1074" class="InductiveConstructor">S</a> <a id="1670" class="Symbol">(</a><a id="1671" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1673" href="Splice.Context.html#1659" class="Bound">Γ₂∋A</a><a id="1677" class="Symbol">)</a>
+<a id="1679" href="Splice.Context.html#1544" class="Function">∋-++-,⁻¹</a> <a id="1688" class="Symbol">(</a><a id="1689" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1691" href="Splice.Context.html#1050" class="InductiveConstructor">Z</a><a id="1692" class="Symbol">)</a> <a id="1694" class="Symbol">=</a> <a id="1696" href="Splice.Context.html#1050" class="InductiveConstructor">Z</a>
+
+<a id="1699" class="Comment">-- | (Γ₁ ++ Γ₂) ++ Γ₃ ⊆ Γ₁ ++ (Γ₂ ++ Γ₃)</a>
+<a id="∋-++-++"></a><a id="1740" href="Splice.Context.html#1740" class="Function">∋-++-++</a> <a id="1748" class="Symbol">:</a> <a id="1750" class="Symbol">(</a><a id="1751" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1754" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1757" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1760" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1763" href="Splice.Context.html#894" class="Generalizable">Γ₃</a><a id="1765" class="Symbol">)</a> <a id="1767" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1769" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1771" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1773" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1775" class="Symbol">→</a> <a id="1777" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1780" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1783" class="Symbol">(</a><a id="1784" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1787" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1790" href="Splice.Context.html#894" class="Generalizable">Γ₃</a><a id="1792" class="Symbol">)</a> <a id="1794" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1796" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1798" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1800" href="Splice.Context.html#326" class="Generalizable">m</a>
+<a id="1802" href="Splice.Context.html#1740" class="Function">∋-++-++</a> <a id="1810" class="Symbol">(</a><a id="1811" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1813" class="Symbol">(</a><a id="1814" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1816" href="Splice.Context.html#1816" class="Bound">Γ₁∋A</a><a id="1820" class="Symbol">))</a> <a id="1823" class="Symbol">=</a> <a id="1825" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1827" href="Splice.Context.html#1816" class="Bound">Γ₁∋A</a>
+<a id="1832" href="Splice.Context.html#1740" class="Function">∋-++-++</a> <a id="1840" class="Symbol">(</a><a id="1841" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1843" class="Symbol">(</a><a id="1844" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1846" href="Splice.Context.html#1846" class="Bound">Γ₂∋A</a><a id="1850" class="Symbol">))</a> <a id="1853" class="Symbol">=</a> <a id="1855" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1857" class="Symbol">(</a><a id="1858" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="1860" href="Splice.Context.html#1846" class="Bound">Γ₂∋A</a><a id="1864" class="Symbol">)</a>
+<a id="1866" href="Splice.Context.html#1740" class="Function">∋-++-++</a> <a id="1874" class="Symbol">(</a><a id="1875" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1877" href="Splice.Context.html#1877" class="Bound">Γ₃∋A</a><a id="1881" class="Symbol">)</a> <a id="1883" class="Symbol">=</a> <a id="1885" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1887" class="Symbol">(</a><a id="1888" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="1890" href="Splice.Context.html#1877" class="Bound">Γ₃∋A</a><a id="1894" class="Symbol">)</a>
+
+<a id="1897" class="Comment">-- | Γ₁ ++ (Γ₂ ++ Γ₃) ⊆ (Γ₁ ++ Γ₂) ++ Γ₃</a>
+<a id="∋-++-++⁻¹"></a><a id="1938" href="Splice.Context.html#1938" class="Function">∋-++-++⁻¹</a> <a id="1948" class="Symbol">:</a> <a id="1950" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1953" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1956" class="Symbol">(</a><a id="1957" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1960" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1963" href="Splice.Context.html#894" class="Generalizable">Γ₃</a><a id="1965" class="Symbol">)</a> <a id="1967" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1969" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1971" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1973" href="Splice.Context.html#326" class="Generalizable">m</a> <a id="1975" class="Symbol">→</a> <a id="1977" href="Splice.Context.html#888" class="Generalizable">Γ₁</a> <a id="1980" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1983" href="Splice.Context.html#891" class="Generalizable">Γ₂</a> <a id="1986" href="Splice.Context.html#764" class="InductiveConstructor Operator">++</a> <a id="1989" href="Splice.Context.html#894" class="Generalizable">Γ₃</a> <a id="1992" href="Splice.Context.html#1008" class="Datatype">∋</a> <a id="1994" href="Splice.Context.html#487" class="Generalizable">A</a> <a id="1996" href="Splice.Context.html#1008" class="Datatype">^</a> <a id="1998" href="Splice.Context.html#326" class="Generalizable">m</a>
+<a id="2000" href="Splice.Context.html#1938" class="Function">∋-++-++⁻¹</a> <a id="2010" class="Symbol">(</a><a id="2011" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="2013" href="Splice.Context.html#2013" class="Bound">Γ₁∋A</a><a id="2017" class="Symbol">)</a> <a id="2019" class="Symbol">=</a> <a id="2021" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="2023" class="Symbol">(</a><a id="2024" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="2026" href="Splice.Context.html#2013" class="Bound">Γ₁∋A</a><a id="2030" class="Symbol">)</a>
+<a id="2032" href="Splice.Context.html#1938" class="Function">∋-++-++⁻¹</a> <a id="2042" class="Symbol">(</a><a id="2043" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="2045" class="Symbol">(</a><a id="2046" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="2048" href="Splice.Context.html#2048" class="Bound">Γ₂∋A</a><a id="2052" class="Symbol">))</a> <a id="2055" class="Symbol">=</a> <a id="2057" href="Splice.Context.html#1118" class="InductiveConstructor">L</a> <a id="2059" class="Symbol">(</a><a id="2060" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="2062" href="Splice.Context.html#2048" class="Bound">Γ₂∋A</a><a id="2066" class="Symbol">)</a>
+<a id="2068" href="Splice.Context.html#1938" class="Function">∋-++-++⁻¹</a> <a id="2078" class="Symbol">(</a><a id="2079" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="2081" class="Symbol">(</a><a id="2082" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="2084" href="Splice.Context.html#2084" class="Bound">Γ₃∋A</a><a id="2088" class="Symbol">))</a> <a id="2091" class="Symbol">=</a> <a id="2093" href="Splice.Context.html#1154" class="InductiveConstructor">R</a> <a id="2095" href="Splice.Context.html#2084" class="Bound">Γ₃∋A</a></pre>
+  </body>
+</html>

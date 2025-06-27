@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>Algebra.Core</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Comment">------------------------------------------------------------------------</a>
+<a id="74" class="Comment">-- The Agda standard library</a>
+<a id="103" class="Comment">--</a>
+<a id="106" class="Comment">-- Core algebraic definitions</a>
+<a id="136" class="Comment">------------------------------------------------------------------------</a>
+
+<a id="210" class="Comment">-- The contents of this module should be accessed via `Algebra`.</a>
+
+<a id="276" class="Symbol">{-#</a> <a id="280" class="Keyword">OPTIONS</a> <a id="288" class="Pragma">--cubical-compatible</a> <a id="309" class="Pragma">--safe</a> <a id="316" class="Symbol">#-}</a>
+
+<a id="321" class="Keyword">module</a> <a id="328" href="Algebra.Core.html" class="Module">Algebra.Core</a> <a id="341" class="Keyword">where</a>
+
+<a id="348" class="Keyword">open</a> <a id="353" class="Keyword">import</a> <a id="360" href="Level.html" class="Module">Level</a> <a id="366" class="Keyword">using</a> <a id="372" class="Symbol">(</a><a id="373" href="Agda.Primitive.html#961" class="Primitive Operator">_⊔_</a><a id="376" class="Symbol">)</a>
+
+<a id="379" class="Comment">------------------------------------------------------------------------</a>
+<a id="452" class="Comment">-- Unary and binary operations</a>
+
+<a id="Op₁"></a><a id="484" href="Algebra.Core.html#484" class="Function">Op₁</a> <a id="488" class="Symbol">:</a> <a id="490" class="Symbol">∀</a> <a id="492" class="Symbol">{</a><a id="493" href="Algebra.Core.html#493" class="Bound">ℓ</a><a id="494" class="Symbol">}</a> <a id="496" class="Symbol">→</a> <a id="498" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="502" href="Algebra.Core.html#493" class="Bound">ℓ</a> <a id="504" class="Symbol">→</a> <a id="506" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="510" href="Algebra.Core.html#493" class="Bound">ℓ</a>
+<a id="512" href="Algebra.Core.html#484" class="Function">Op₁</a> <a id="516" href="Algebra.Core.html#516" class="Bound">A</a> <a id="518" class="Symbol">=</a> <a id="520" href="Algebra.Core.html#516" class="Bound">A</a> <a id="522" class="Symbol">→</a> <a id="524" href="Algebra.Core.html#516" class="Bound">A</a>
+
+<a id="Op₂"></a><a id="527" href="Algebra.Core.html#527" class="Function">Op₂</a> <a id="531" class="Symbol">:</a> <a id="533" class="Symbol">∀</a> <a id="535" class="Symbol">{</a><a id="536" href="Algebra.Core.html#536" class="Bound">ℓ</a><a id="537" class="Symbol">}</a> <a id="539" class="Symbol">→</a> <a id="541" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="545" href="Algebra.Core.html#536" class="Bound">ℓ</a> <a id="547" class="Symbol">→</a> <a id="549" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="553" href="Algebra.Core.html#536" class="Bound">ℓ</a>
+<a id="555" href="Algebra.Core.html#527" class="Function">Op₂</a> <a id="559" href="Algebra.Core.html#559" class="Bound">A</a> <a id="561" class="Symbol">=</a> <a id="563" href="Algebra.Core.html#559" class="Bound">A</a> <a id="565" class="Symbol">→</a> <a id="567" href="Algebra.Core.html#559" class="Bound">A</a> <a id="569" class="Symbol">→</a> <a id="571" href="Algebra.Core.html#559" class="Bound">A</a>
+</pre>
+  </body>
+</html>

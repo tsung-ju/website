@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>CtxTyp.Context</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="current-module">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Comment">{-|
+This module defines intrinsically well-staged types and typing contexts for λ○▷
+as described in section 3.1.
+It also re-exports context operations from the Data.StagedTree module.
+-}</a>
+
+<a id="189" class="Symbol">{-#</a> <a id="193" class="Keyword">OPTIONS</a> <a id="201" class="Pragma">--safe</a> <a id="208" class="Symbol">#-}</a>
+<a id="212" class="Keyword">module</a> <a id="219" href="CtxTyp.Context.html" class="Module">CtxTyp.Context</a> <a id="234" class="Keyword">where</a>
+
+<a id="241" class="Keyword">open</a> <a id="246" class="Keyword">import</a> <a id="253" href="Data.Nat.html" class="Module">Data.Nat</a> <a id="262" class="Keyword">using</a> <a id="268" class="Symbol">(</a><a id="269" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="270" class="Symbol">;</a> <a id="272" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a><a id="275" class="Symbol">;</a> <a id="277" href="Agda.Builtin.Nat.html#221" class="InductiveConstructor">zero</a><a id="281" class="Symbol">;</a> <a id="283" href="Data.Nat.Base.html#8799" class="Function Operator">_≥‴_</a><a id="287" class="Symbol">;</a> <a id="289" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a><a id="296" class="Symbol">;</a> <a id="298" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a><a id="305" class="Symbol">)</a>
+
+<a id="308" class="Keyword">data</a> <a id="Type"></a><a id="313" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="318" class="Symbol">(</a><a id="319" href="CtxTyp.Context.html#319" class="Bound">n</a> <a id="321" class="Symbol">:</a> <a id="323" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="324" class="Symbol">)</a> <a id="326" class="Symbol">:</a> <a id="328" href="Agda.Primitive.html#388" class="Primitive">Set</a>
+
+<a id="333" class="Comment">-- | Context is a StagedForest of Type</a>
+<a id="372" class="Keyword">open</a> <a id="377" class="Keyword">import</a> <a id="384" href="Data.StagedTree.html" class="Module">Data.StagedTree</a> <a id="400" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="405" class="Keyword">renaming</a> <a id="414" class="Symbol">(</a><a id="415" href="Data.StagedTree.html#918" class="Datatype">StagedForest</a> <a id="428" class="Symbol">to</a> <a id="431" class="Datatype">Context</a><a id="438" class="Symbol">;</a> <a id="440" href="Data.StagedTree.html#667" class="Record">StagedTree</a> <a id="451" class="Symbol">to</a> <a id="454" class="Record">ContextItem</a><a id="465" class="Symbol">)</a> <a id="467" class="Keyword">public</a>
+
+<a id="475" class="Keyword">variable</a>
+  <a id="486" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="488" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="490" href="CtxTyp.Context.html#490" class="Generalizable">A′</a> <a id="493" href="CtxTyp.Context.html#493" class="Generalizable">B′</a> <a id="496" class="Symbol">:</a> <a id="498" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="503" href="Data.StagedList.html#843" class="Generalizable">n</a>
+  <a id="507" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="509" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="511" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="514" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a> <a id="517" href="CtxTyp.Context.html#517" class="Generalizable">Γ″</a> <a id="520" href="CtxTyp.Context.html#520" class="Generalizable">Δ″</a> <a id="523" class="Symbol">:</a> <a id="525" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="533" href="Data.StagedList.html#843" class="Generalizable">n</a>
+  <a id="537" href="CtxTyp.Context.html#537" class="Generalizable">Γ₁</a> <a id="540" href="CtxTyp.Context.html#540" class="Generalizable">Γ₂</a> <a id="543" href="CtxTyp.Context.html#543" class="Generalizable">Γ₃</a> <a id="546" class="Symbol">:</a> <a id="548" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="556" href="Data.StagedList.html#843" class="Generalizable">n</a>
+  <a id="560" href="CtxTyp.Context.html#560" class="Generalizable">Δ₁</a> <a id="563" href="CtxTyp.Context.html#563" class="Generalizable">Δ₂</a> <a id="566" href="CtxTyp.Context.html#566" class="Generalizable">Δ₃</a> <a id="569" class="Symbol">:</a> <a id="571" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="579" href="Data.StagedList.html#843" class="Generalizable">n</a>
+  <a id="583" href="CtxTyp.Context.html#583" class="Generalizable">Δ₁′</a> <a id="587" href="CtxTyp.Context.html#587" class="Generalizable">Δ₂′</a> <a id="591" href="CtxTyp.Context.html#591" class="Generalizable">Δ₃′</a> <a id="595" class="Symbol">:</a> <a id="597" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="605" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+<a id="608" class="Keyword">infixl</a> <a id="615" class="Number">5</a> <a id="617" href="CtxTyp.Context.html#631" class="InductiveConstructor Operator">_,_^_</a>
+<a id="623" class="Keyword">pattern</a> <a id="_,_^_"></a><a id="631" href="CtxTyp.Context.html#631" class="InductiveConstructor Operator">_,_^_</a> <a id="637" href="CtxTyp.Context.html#645" class="Bound">Γ</a> <a id="639" href="CtxTyp.Context.html#662" class="Bound">A</a> <a id="641" href="CtxTyp.Context.html#657" class="Bound">n</a> <a id="643" class="Symbol">=</a> <a id="645" href="CtxTyp.Context.html#645" class="Bound">Γ</a> <a id="647" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="650" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a> <a id="652" class="Symbol">{</a><a id="653" class="Argument">n</a> <a id="655" class="Symbol">=</a> <a id="657" href="CtxTyp.Context.html#657" class="Bound">n</a><a id="658" class="Symbol">}</a> <a id="660" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="662" href="CtxTyp.Context.html#662" class="Bound">A</a> <a id="664" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="666" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="674" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a>
+
+<a id="677" class="Comment">{-|
+Intrinsically well-staged types.
+
+Parameters:
+  n : ℕ - The stage level of the type.
+
+Constructors:
+  [_⊢_]⇒_ - The unhygienic function type.
+  _▷_     - The unhygienic value type.
+  `Bool   - The boolean type.
+  ◯       - The code type.
+-}</a>
+<a id="922" class="Keyword">infixr</a> <a id="929" class="Number">7</a> <a id="931" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">[_⊢_]⇒_</a>
+<a id="939" class="Keyword">infixr</a> <a id="946" class="Number">8</a> <a id="948" href="CtxTyp.Context.html#1045" class="InductiveConstructor Operator">_▷_</a>
+<a id="952" class="Keyword">data</a> <a id="957" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="962" href="CtxTyp.Context.html#962" class="Bound">n</a> <a id="964" class="Keyword">where</a>
+  <a id="Type.[_⊢_]⇒_"></a><a id="972" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">[_⊢_]⇒_</a> <a id="980" class="Symbol">:</a> <a id="982" class="Symbol">(</a><a id="983" href="CtxTyp.Context.html#983" class="Bound">Δ</a> <a id="985" class="Symbol">:</a> <a id="987" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="995" class="Symbol">(</a><a id="996" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a> <a id="1000" href="CtxTyp.Context.html#962" class="Bound">n</a><a id="1001" class="Symbol">))</a> <a id="1004" class="Symbol">→</a> <a id="1006" class="Symbol">(</a><a id="1007" href="CtxTyp.Context.html#1007" class="Bound">A</a> <a id="1009" class="Symbol">:</a> <a id="1011" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1016" href="CtxTyp.Context.html#962" class="Bound">n</a><a id="1017" class="Symbol">)</a> <a id="1019" class="Symbol">→</a> <a id="1021" class="Symbol">(</a><a id="1022" href="CtxTyp.Context.html#1022" class="Bound">B</a> <a id="1024" class="Symbol">:</a> <a id="1026" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1031" href="CtxTyp.Context.html#962" class="Bound">n</a><a id="1032" class="Symbol">)</a> <a id="1034" class="Symbol">→</a> <a id="1036" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1041" href="CtxTyp.Context.html#962" class="Bound">n</a>
+  <a id="Type._▷_"></a><a id="1045" href="CtxTyp.Context.html#1045" class="InductiveConstructor Operator">_▷_</a> <a id="1049" class="Symbol">:</a> <a id="1051" class="Symbol">(</a><a id="1052" href="CtxTyp.Context.html#1052" class="Bound">Δ</a> <a id="1054" class="Symbol">:</a> <a id="1056" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="1064" class="Symbol">(</a><a id="1065" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a> <a id="1069" href="CtxTyp.Context.html#962" class="Bound">n</a><a id="1070" class="Symbol">))</a> <a id="1073" class="Symbol">→</a> <a id="1075" class="Symbol">(</a><a id="1076" href="CtxTyp.Context.html#1076" class="Bound">A</a> <a id="1078" class="Symbol">:</a> <a id="1080" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1085" href="CtxTyp.Context.html#962" class="Bound">n</a><a id="1086" class="Symbol">)</a> <a id="1088" class="Symbol">→</a> <a id="1090" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1095" href="CtxTyp.Context.html#962" class="Bound">n</a>
+  <a id="Type.`Bool"></a><a id="1099" href="CtxTyp.Context.html#1099" class="InductiveConstructor">`Bool</a> <a id="1105" class="Symbol">:</a> <a id="1107" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1112" href="CtxTyp.Context.html#962" class="Bound">n</a>
+  <a id="Type.◯"></a><a id="1116" href="CtxTyp.Context.html#1116" class="InductiveConstructor">◯</a> <a id="1118" class="Symbol">:</a> <a id="1120" class="Symbol">(</a><a id="1121" href="CtxTyp.Context.html#1121" class="Bound">A</a> <a id="1123" class="Symbol">:</a> <a id="1125" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1130" class="Symbol">(</a><a id="1131" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a> <a id="1135" href="CtxTyp.Context.html#962" class="Bound">n</a><a id="1136" class="Symbol">))</a> <a id="1139" class="Symbol">→</a> <a id="1141" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="1146" href="CtxTyp.Context.html#962" class="Bound">n</a>
+
+<a id="1149" class="Keyword">infixr</a> <a id="1156" class="Number">7</a> <a id="1158" href="CtxTyp.Context.html#1170" class="InductiveConstructor Operator">_⇒_</a>
+<a id="1162" class="Keyword">pattern</a> <a id="_⇒_"></a><a id="1170" href="CtxTyp.Context.html#1170" class="InductiveConstructor Operator">_⇒_</a> <a id="1174" href="CtxTyp.Context.html#1186" class="Bound">A</a> <a id="1176" href="CtxTyp.Context.html#1191" class="Bound">B</a> <a id="1178" class="Symbol">=</a> <a id="1180" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">[</a> <a id="1182" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a> <a id="1184" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">⊢</a> <a id="1186" href="CtxTyp.Context.html#1186" class="Bound">A</a> <a id="1188" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">]⇒</a> <a id="1191" href="CtxTyp.Context.html#1191" class="Bound">B</a>
+</pre>
+  </body>
+</html>

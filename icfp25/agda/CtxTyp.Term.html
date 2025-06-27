@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Agda.css" />
+    <title>CtxTyp.Term</title>
+    <link rel="stylesheet" href="/fonts/JuliaMono.css" />
+    <style>
+      body {
+        font-family: JuliaMono, monospace;
+        font-size: 13px;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: unset;
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      nav {
+        position: relative;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 2px;
+        margin-right: 2em;
+      }
+      nav a {
+        display: block;
+        color: unset;
+      }
+      .module-tree {
+        list-style-type: none;
+        padding-left: 2ch;
+        margin: 0;
+      }
+      nav > .module-tree {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1lh;
+      }
+      .module-tree a:any-link:hover {
+        color: #A020F0 !important;
+      }
+      .current-module {
+        color: #A020F0;
+        font-weight: bold;
+      }
+      .Agda {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Everything.html" class="">
+                Everything
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a>Data</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Data.StagedList.html" class="">
+                StagedList
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Data.StagedTree.html" class="">
+                StagedTree
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>CtxTyp</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Term.html" class="current-module">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Term.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Substitution.Properties.html" class="">
+                Properties
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="CtxTyp.Denotational.Adequacy.html" class="">
+                Adequacy
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Splice</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Splice.Context.html" class="">
+                Context
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Term.html" class="">
+                Term
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Splice.Translate.html" class="">
+                Translate
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a>Pat</a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.html" class="">
+                Context
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Context.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Term.html" class="">
+                Term
+              </a>
+            
+            
+              
+      <ul class="module-tree">
+        
+          <li>
+            
+              <a href="Pat.Term.Equality.html" class="">
+                Equality
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Matching.html" class="">
+                Matching
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Depth.html" class="">
+                Depth
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Substitution.html" class="">
+                Substitution
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Rewriting.html" class="">
+                Rewriting
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Reduction.html" class="">
+                Reduction
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Examples.html" class="">
+                Examples
+              </a>
+            
+            
+          </li>
+        
+          <li>
+            
+              <a href="Pat.Denotational.html" class="">
+                Denotational
+              </a>
+            
+            
+          </li>
+        
+      </ul>
+    
+            
+          </li>
+        
+      </ul>
+    
+    </nav>
+    <pre class="Agda"><a id="1" class="Comment">{-|
+This module defines intrinsically well-typed terms and substitutions for λ○▷
+as described in sections 3.2 and 3.3.
+It also defines renaming operations for terms and substitutions.
+
+The definitions follow the style used in the DeBruijn section of
+the PLFA book, with the exception that substitutions are defined as a concrete 
+data type rather than as functions.
+-}</a>
+
+<a id="371" class="Symbol">{-#</a> <a id="375" class="Keyword">OPTIONS</a> <a id="383" class="Pragma">--safe</a> <a id="390" class="Symbol">#-}</a>
+<a id="394" class="Keyword">module</a> <a id="401" href="CtxTyp.Term.html" class="Module">CtxTyp.Term</a> <a id="413" class="Keyword">where</a>
+
+<a id="420" class="Keyword">open</a> <a id="425" class="Keyword">import</a> <a id="432" href="Data.Nat.html" class="Module">Data.Nat</a> <a id="441" class="Keyword">using</a> <a id="447" class="Symbol">(</a><a id="448" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="449" class="Symbol">;</a> <a id="451" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a><a id="454" class="Symbol">;</a> <a id="456" href="Agda.Builtin.Nat.html#221" class="InductiveConstructor">zero</a><a id="460" class="Symbol">;</a> <a id="462" href="Data.Nat.Base.html#8799" class="Function Operator">_≥‴_</a><a id="466" class="Symbol">;</a> <a id="468" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a><a id="475" class="Symbol">;</a> <a id="477" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a><a id="484" class="Symbol">)</a>
+<a id="486" class="Keyword">open</a> <a id="491" class="Keyword">import</a> <a id="498" href="Function.html" class="Module">Function</a> <a id="507" class="Keyword">using</a> <a id="513" class="Symbol">(</a><a id="514" href="Function.Base.html#704" class="Function">id</a><a id="516" class="Symbol">;</a> <a id="518" href="Function.Base.html#1115" class="Function Operator">_∘_</a><a id="521" class="Symbol">)</a>
+
+<a id="524" class="Keyword">open</a> <a id="529" class="Keyword">import</a> <a id="536" href="CtxTyp.Context.html" class="Module">CtxTyp.Context</a>
+
+<a id="552" class="Keyword">data</a> <a id="Term"></a><a id="557" href="CtxTyp.Term.html#557" class="Datatype">Term</a> <a id="562" class="Symbol">:</a> <a id="564" class="Symbol">(</a><a id="565" href="CtxTyp.Term.html#565" class="Bound">n</a> <a id="567" class="Symbol">:</a> <a id="569" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="570" class="Symbol">)</a> <a id="572" class="Symbol">→</a> <a id="574" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="582" href="CtxTyp.Term.html#565" class="Bound">n</a> <a id="584" class="Symbol">→</a> <a id="586" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="591" href="CtxTyp.Term.html#565" class="Bound">n</a> <a id="593" class="Symbol">→</a> <a id="595" href="Agda.Primitive.html#388" class="Primitive">Set</a>
+<a id="599" class="Keyword">infix</a> <a id="605" class="Number">4</a> <a id="607" href="CtxTyp.Term.html#557" class="Datatype">Term</a>
+<a id="612" class="Keyword">syntax</a> <a id="619" href="CtxTyp.Term.html#557" class="Datatype">Term</a> <a id="624" class="Bound">n</a> <a id="626" class="Bound">Γ</a> <a id="628" class="Bound">A</a> <a id="630" class="Symbol">=</a> <a id="632" class="Bound">Γ</a> <a id="634" class="Datatype">⊢</a> <a id="636" class="Bound">A</a> <a id="638" class="Datatype">^</a> <a id="640" class="Bound">n</a>
+
+<a id="643" class="Comment">-- Substitution</a>
+
+<a id="660" class="Keyword">infix</a> <a id="666" class="Number">4</a> <a id="668" href="CtxTyp.Term.html#1380" class="Datatype Operator">_⊩_</a>
+<a id="672" class="Keyword">infix</a> <a id="678" class="Number">4</a> <a id="680" href="CtxTyp.Term.html#929" class="Datatype Operator">_⊩[_⊢_^_]</a>
+<a id="690" class="Keyword">infixl</a> <a id="697" class="Number">5</a> <a id="699" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">_,_</a>
+<a id="703" class="Keyword">infixl</a> <a id="710" class="Number">5</a> <a id="712" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">_++ˢ_</a>
+
+<a id="719" class="Comment">{-|
+Intrinsically well-typed substitution entries.
+
+Constructors:
+  term - An entry whose right-hand side is a term (rule S-Subst).
+  var - An entry whose right-hand side is a variable (rule S-Rename).
+-}</a>
+<a id="924" class="Keyword">data</a> <a id="_⊩[_⊢_^_]"></a><a id="929" href="CtxTyp.Term.html#929" class="Datatype Operator">_⊩[_⊢_^_]</a> <a id="939" href="CtxTyp.Term.html#939" class="Bound">Γ′</a> <a id="942" class="Symbol">{</a><a id="943" href="CtxTyp.Term.html#943" class="Bound">m</a><a id="944" class="Symbol">}</a> <a id="946" class="Symbol">(</a><a id="947" href="CtxTyp.Term.html#947" class="Bound">Δ</a> <a id="949" class="Symbol">:</a> <a id="951" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="959" href="CtxTyp.Term.html#943" class="Bound">m</a><a id="960" class="Symbol">)</a> <a id="962" class="Symbol">(</a><a id="963" href="CtxTyp.Term.html#963" class="Bound">A</a> <a id="965" class="Symbol">:</a> <a id="967" href="CtxTyp.Context.html#313" class="Datatype">Type</a> <a id="972" href="CtxTyp.Term.html#943" class="Bound">m</a><a id="973" class="Symbol">)</a> <a id="975" class="Symbol">(</a><a id="976" href="CtxTyp.Term.html#976" class="Bound">m≥n</a> <a id="980" class="Symbol">:</a> <a id="982" href="CtxTyp.Term.html#943" class="Bound">m</a> <a id="984" href="Data.Nat.Base.html#8799" class="Function Operator">≥‴</a> <a id="987" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="988" class="Symbol">)</a> <a id="990" class="Symbol">:</a> <a id="992" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="996" class="Keyword">where</a>
+  <a id="_⊩[_⊢_^_].term"></a><a id="1004" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a>
+    <a id="1013" class="Symbol">:</a> <a id="1015" class="Symbol">(</a><a id="1016" href="CtxTyp.Term.html#1016" class="Bound">e</a> <a id="1018" class="Symbol">:</a> <a id="1020" href="CtxTyp.Term.html#939" class="Bound">Γ′</a> <a id="1023" href="Data.StagedList.html#2458" class="Function Operator">↾≥</a> <a id="1026" href="CtxTyp.Term.html#976" class="Bound">m≥n</a> <a id="1030" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="1033" href="CtxTyp.Term.html#947" class="Bound">Δ</a> <a id="1035" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="1037" href="CtxTyp.Term.html#963" class="Bound">A</a> <a id="1039" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="1041" href="CtxTyp.Term.html#943" class="Bound">m</a><a id="1042" class="Symbol">)</a>
+      <a id="1050" class="Comment">----------------------------</a>
+    <a id="1083" class="Symbol">→</a> <a id="1085" href="CtxTyp.Term.html#939" class="Bound">Γ′</a> <a id="1088" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="1091" href="CtxTyp.Term.html#947" class="Bound">Δ</a> <a id="1093" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="1095" href="CtxTyp.Term.html#963" class="Bound">A</a> <a id="1097" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="1099" href="CtxTyp.Term.html#976" class="Bound">m≥n</a> <a id="1103" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+  <a id="_⊩[_⊢_^_].var"></a><a id="1107" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a>
+    <a id="1115" class="Symbol">:</a> <a id="1117" class="Symbol">(</a><a id="1118" href="CtxTyp.Term.html#1118" class="Bound">x</a> <a id="1120" class="Symbol">:</a> <a id="1122" href="CtxTyp.Term.html#939" class="Bound">Γ′</a> <a id="1125" href="Data.StagedList.html#5816" class="Datatype Operator">∋[</a> <a id="1128" href="CtxTyp.Term.html#947" class="Bound">Δ</a> <a id="1130" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="1132" href="CtxTyp.Term.html#963" class="Bound">A</a> <a id="1134" href="Data.StagedList.html#5816" class="Datatype Operator">^</a> <a id="1136" href="CtxTyp.Term.html#976" class="Bound">m≥n</a> <a id="1140" href="Data.StagedList.html#5816" class="Datatype Operator">]</a><a id="1141" class="Symbol">)</a>
+      <a id="1149" class="Comment">-------------------------</a>
+    <a id="1179" class="Symbol">→</a> <a id="1181" href="CtxTyp.Term.html#939" class="Bound">Γ′</a> <a id="1184" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="1187" href="CtxTyp.Term.html#947" class="Bound">Δ</a> <a id="1189" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="1191" href="CtxTyp.Term.html#963" class="Bound">A</a> <a id="1193" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="1195" href="CtxTyp.Term.html#976" class="Bound">m≥n</a> <a id="1199" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+
+<a id="1202" class="Comment">{-|
+Intrinsically well-typed substitutions.
+
+Constructors:
+  ∅ - The empty substitution.
+  _,_ - Add an entry to a substitution.
+  _++ˢ_ - Concatenate two substitutions.
+-}</a>
+<a id="1375" class="Keyword">data</a> <a id="_⊩_"></a><a id="1380" href="CtxTyp.Term.html#1380" class="Datatype Operator">_⊩_</a> <a id="1384" class="Symbol">(</a><a id="1385" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1388" class="Symbol">:</a> <a id="1390" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="1398" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="1399" class="Symbol">)</a> <a id="1401" class="Symbol">:</a> <a id="1403" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="1411" href="CtxTyp.Term.html#1398" class="Bound">n</a> <a id="1413" class="Symbol">→</a> <a id="1415" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="1419" class="Keyword">where</a>
+  <a id="_⊩_.∅"></a><a id="1427" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="1429" class="Symbol">:</a> <a id="1431" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1434" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1436" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a>
+  <a id="_⊩_._,_"></a><a id="1440" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">_,_</a> <a id="1444" class="Symbol">:</a>  <a id="1447" class="Symbol">(</a><a id="1448" href="CtxTyp.Term.html#1448" class="Bound">σ</a> <a id="1450" class="Symbol">:</a> <a id="1452" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1455" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1457" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a><a id="1458" class="Symbol">)</a> <a id="1460" class="Symbol">→</a> <a id="1462" class="Symbol">(</a><a id="1463" href="CtxTyp.Term.html#1463" class="Bound">item</a> <a id="1468" class="Symbol">:</a> <a id="1470" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1473" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="1476" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="1478" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="1480" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="1482" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="1484" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="1488" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a><a id="1489" class="Symbol">)</a> <a id="1491" class="Symbol">→</a> <a id="1493" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1496" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1498" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="1500" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="1503" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="1505" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="1507" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="1509" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="1511" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="1515" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a>
+  <a id="_⊩_._++ˢ_"></a><a id="1519" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">_++ˢ_</a> <a id="1525" class="Symbol">:</a> <a id="1527" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1530" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1532" href="CtxTyp.Context.html#537" class="Generalizable">Γ₁</a> <a id="1535" class="Symbol">→</a> <a id="1537" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1540" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1542" href="CtxTyp.Context.html#540" class="Generalizable">Γ₂</a> <a id="1545" class="Symbol">→</a>  <a id="1548" href="CtxTyp.Term.html#1385" class="Bound">Γ′</a> <a id="1551" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1553" href="CtxTyp.Context.html#537" class="Generalizable">Γ₁</a> <a id="1556" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="1559" href="CtxTyp.Context.html#540" class="Generalizable">Γ₂</a>
+
+<a id="1563" class="Comment">-- | Lookup a substitution by a variable (debruijn index).</a>
+<a id="lookup"></a><a id="1622" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1629" class="Symbol">:</a> <a id="1631" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="1634" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1636" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="1638" class="Symbol">→</a> <a id="1640" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="1642" href="Data.StagedList.html#5816" class="Datatype Operator">∋[</a> <a id="1645" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="1647" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="1649" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="1651" href="Data.StagedList.html#5816" class="Datatype Operator">^</a> <a id="1653" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="1657" href="Data.StagedList.html#5816" class="Datatype Operator">]</a> <a id="1659" class="Symbol">→</a> <a id="1661" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="1664" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="1667" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="1669" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="1671" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="1673" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="1675" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="1679" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+<a id="1681" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1688" class="Symbol">(</a><a id="1689" href="CtxTyp.Term.html#1689" class="Bound">σ</a> <a id="1691" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="1693" href="CtxTyp.Term.html#1693" class="Bound">e</a><a id="1694" class="Symbol">)</a> <a id="1696" href="Data.StagedList.html#5871" class="InductiveConstructor">Z</a> <a id="1698" class="Symbol">=</a> <a id="1700" href="CtxTyp.Term.html#1693" class="Bound">e</a>
+<a id="1702" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1709" class="Symbol">(</a><a id="1710" href="CtxTyp.Term.html#1710" class="Bound">σ</a> <a id="1712" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="1714" href="CtxTyp.Term.html#1714" class="Bound">e</a><a id="1715" class="Symbol">)</a> <a id="1717" class="Symbol">(</a><a id="1718" href="Data.StagedList.html#5906" class="InductiveConstructor">S</a> <a id="1720" href="CtxTyp.Term.html#1720" class="Bound">x</a><a id="1721" class="Symbol">)</a> <a id="1723" class="Symbol">=</a> <a id="1725" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1732" href="CtxTyp.Term.html#1710" class="Bound">σ</a> <a id="1734" href="CtxTyp.Term.html#1720" class="Bound">x</a>
+<a id="1736" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1743" class="Symbol">(</a><a id="1744" href="CtxTyp.Term.html#1744" class="Bound">σ₁</a> <a id="1747" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="1751" href="CtxTyp.Term.html#1751" class="Bound">σ₂</a><a id="1753" class="Symbol">)</a> <a id="1755" class="Symbol">(</a><a id="1756" href="Data.StagedList.html#5960" class="InductiveConstructor">L</a> <a id="1758" href="CtxTyp.Term.html#1758" class="Bound">x</a><a id="1759" class="Symbol">)</a> <a id="1761" class="Symbol">=</a> <a id="1763" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1770" href="CtxTyp.Term.html#1744" class="Bound">σ₁</a> <a id="1773" href="CtxTyp.Term.html#1758" class="Bound">x</a>
+<a id="1775" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1782" class="Symbol">(</a><a id="1783" href="CtxTyp.Term.html#1783" class="Bound">σ₁</a> <a id="1786" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="1790" href="CtxTyp.Term.html#1790" class="Bound">σ₂</a><a id="1792" class="Symbol">)</a> <a id="1794" class="Symbol">(</a><a id="1795" href="Data.StagedList.html#6006" class="InductiveConstructor">R</a> <a id="1797" href="CtxTyp.Term.html#1797" class="Bound">x</a><a id="1798" class="Symbol">)</a> <a id="1800" class="Symbol">=</a> <a id="1802" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="1809" href="CtxTyp.Term.html#1790" class="Bound">σ₂</a> <a id="1812" href="CtxTyp.Term.html#1797" class="Bound">x</a>
+
+<a id="1815" class="Comment">-- | Turn a function from variables to substitution entries into a substitution.</a>
+<a id="lookup⁻¹"></a><a id="1896" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="1905" class="Symbol">:</a> <a id="1907" class="Symbol">(</a><a id="1908" href="CtxTyp.Term.html#1908" class="Bound">f</a> <a id="1910" class="Symbol">:</a> <a id="1912" class="Symbol">∀</a> <a id="1914" class="Symbol">{</a><a id="1915" href="CtxTyp.Term.html#1915" class="Bound">m</a><a id="1916" class="Symbol">}</a> <a id="1918" class="Symbol">{</a><a id="1919" href="CtxTyp.Term.html#1919" class="Bound">Δ</a><a id="1920" class="Symbol">}</a> <a id="1922" class="Symbol">{</a><a id="1923" href="CtxTyp.Term.html#1923" class="Bound">A</a><a id="1924" class="Symbol">}</a> <a id="1926" class="Symbol">{</a><a id="1927" href="CtxTyp.Term.html#1927" class="Bound">m≥n</a> <a id="1931" class="Symbol">:</a> <a id="1933" href="CtxTyp.Term.html#1915" class="Bound">m</a> <a id="1935" href="Data.Nat.Base.html#8799" class="Function Operator">≥‴</a> <a id="1938" class="Symbol">_}</a> <a id="1941" class="Symbol">→</a> <a id="1943" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="1945" href="Data.StagedList.html#5816" class="Datatype Operator">∋[</a> <a id="1948" href="CtxTyp.Term.html#1919" class="Bound">Δ</a> <a id="1950" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="1952" href="CtxTyp.Term.html#1923" class="Bound">A</a> <a id="1954" href="Data.StagedList.html#5816" class="Datatype Operator">^</a> <a id="1956" href="CtxTyp.Term.html#1927" class="Bound">m≥n</a> <a id="1960" href="Data.StagedList.html#5816" class="Datatype Operator">]</a> <a id="1962" class="Symbol">→</a> <a id="1964" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="1967" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="1970" href="CtxTyp.Term.html#1919" class="Bound">Δ</a> <a id="1972" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="1974" href="CtxTyp.Term.html#1923" class="Bound">A</a> <a id="1976" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="1978" href="CtxTyp.Term.html#1927" class="Bound">m≥n</a> <a id="1982" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a><a id="1983" class="Symbol">)</a> <a id="1985" class="Symbol">→</a> <a id="1987" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="1990" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="1992" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a>
+<a id="1994" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="2003" class="Symbol">{</a><a id="2004" class="Argument">Γ</a> <a id="2006" class="Symbol">=</a> <a id="2008" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a><a id="2009" class="Symbol">}</a> <a id="2011" href="CtxTyp.Term.html#2011" class="Bound">f</a> <a id="2013" class="Symbol">=</a> <a id="2015" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a>
+<a id="2017" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="2026" class="Symbol">{</a><a id="2027" class="Argument">Γ</a> <a id="2029" class="Symbol">=</a> <a id="2031" href="CtxTyp.Term.html#2031" class="Bound">Γ</a> <a id="2033" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="2036" class="Symbol">_</a> <a id="2038" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="2040" class="Symbol">_</a> <a id="2042" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="2044" class="Symbol">_</a> <a id="2046" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a><a id="2047" class="Symbol">}</a> <a id="2049" href="CtxTyp.Term.html#2049" class="Bound">f</a> <a id="2051" class="Symbol">=</a> <a id="2053" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="2062" class="Symbol">(</a><a id="2063" href="CtxTyp.Term.html#2049" class="Bound">f</a> <a id="2065" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="2067" href="Data.StagedList.html#5906" class="InductiveConstructor">S</a><a id="2068" class="Symbol">)</a> <a id="2070" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="2072" href="CtxTyp.Term.html#2049" class="Bound">f</a> <a id="2074" href="Data.StagedList.html#5871" class="InductiveConstructor">Z</a>
+<a id="2076" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="2085" class="Symbol">{</a><a id="2086" class="Argument">Γ</a> <a id="2088" class="Symbol">=</a> <a id="2090" href="CtxTyp.Term.html#2090" class="Bound">Γ₁</a> <a id="2093" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="2096" href="CtxTyp.Term.html#2096" class="Bound">Γ₂</a><a id="2098" class="Symbol">}</a> <a id="2100" href="CtxTyp.Term.html#2100" class="Bound">f</a> <a id="2102" class="Symbol">=</a> <a id="2104" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="2113" class="Symbol">(</a><a id="2114" href="CtxTyp.Term.html#2100" class="Bound">f</a> <a id="2116" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="2118" href="Data.StagedList.html#5960" class="InductiveConstructor">L</a><a id="2119" class="Symbol">)</a> <a id="2121" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="2125" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="2134" class="Symbol">(</a><a id="2135" href="CtxTyp.Term.html#2100" class="Bound">f</a> <a id="2137" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="2139" href="Data.StagedList.html#6006" class="InductiveConstructor">R</a><a id="2140" class="Symbol">)</a>
+
+<a id="2143" class="Comment">-- | Flipped version of the _⊩_ type.</a>
+<a id="Subst"></a><a id="2181" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="2187" class="Symbol">:</a> <a id="2189" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="2197" href="Data.StagedList.html#843" class="Generalizable">n</a> <a id="2199" class="Symbol">→</a> <a id="2201" href="CtxTyp.Context.html#431" class="Datatype">Context</a> <a id="2209" href="Data.StagedList.html#843" class="Generalizable">n</a> <a id="2211" class="Symbol">→</a> <a id="2213" href="Agda.Primitive.html#388" class="Primitive">Set</a>
+<a id="2217" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="2223" href="CtxTyp.Term.html#2223" class="Bound">Γ</a> <a id="2225" href="CtxTyp.Term.html#2225" class="Bound">Γ′</a> <a id="2228" class="Symbol">=</a> <a id="2230" href="CtxTyp.Term.html#2225" class="Bound">Γ′</a> <a id="2233" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="2235" href="CtxTyp.Term.html#2223" class="Bound">Γ</a>
+
+<a id="2238" class="Comment">-- Term definition</a>
+
+<a id="2258" class="Keyword">infix</a> <a id="2264" class="Number">5</a> <a id="2266" href="CtxTyp.Term.html#2877" class="InductiveConstructor Operator">`λ⟨_⟩_</a>
+<a id="2273" class="Keyword">infixl</a> <a id="2280" class="Number">7</a> <a id="2282" href="CtxTyp.Term.html#3028" class="InductiveConstructor Operator">_·_</a>
+<a id="2286" class="Keyword">infixr</a> <a id="2293" class="Number">7</a> <a id="2295" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`if_`then_`else_</a>
+<a id="2312" class="Keyword">infix</a> <a id="2318" class="Number">9</a> <a id="2320" href="CtxTyp.Term.html#2467" class="InductiveConstructor Operator">`_`with_</a>
+
+<a id="2330" class="Comment">{-|
+Intrinsically well-typed terms.
+Each constructor corresponds to a rule in the type system.
+-}</a>
+<a id="2428" class="Keyword">data</a> <a id="2433" href="CtxTyp.Term.html#557" class="Datatype">Term</a> <a id="2438" class="Keyword">where</a>
+  <a id="2446" class="Comment">-- | Rule VarSubst</a>
+  <a id="Term.`_`with_"></a><a id="2467" href="CtxTyp.Term.html#2467" class="InductiveConstructor Operator">`_`with_</a>
+    <a id="2480" class="Symbol">:</a> <a id="2482" class="Symbol">(</a><a id="2483" href="CtxTyp.Term.html#2483" class="Bound">x</a> <a id="2485" class="Symbol">:</a> <a id="2487" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2489" href="Data.StagedList.html#5816" class="Datatype Operator">∋[</a> <a id="2492" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="2494" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="2496" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2498" href="Data.StagedList.html#5816" class="Datatype Operator">^</a> <a id="2500" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="2508" href="Data.StagedList.html#5816" class="Datatype Operator">]</a><a id="2509" class="Symbol">)</a>
+    <a id="2515" class="Symbol">→</a> <a id="2517" class="Symbol">(</a><a id="2518" href="CtxTyp.Term.html#2518" class="Bound">σ</a> <a id="2520" class="Symbol">:</a> <a id="2522" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2524" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="2526" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a><a id="2527" class="Symbol">)</a>
+      <a id="2535" class="Comment">----------------------</a>
+    <a id="2562" class="Symbol">→</a> <a id="2564" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2566" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2568" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2570" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2572" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="2577" class="Comment">-- | Rule True</a>
+  <a id="Term.`true"></a><a id="2594" href="CtxTyp.Term.html#2594" class="InductiveConstructor">`true</a>
+      <a id="2606" class="Comment">--------------</a>
+    <a id="2625" class="Symbol">:</a> <a id="2627" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2629" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2631" href="CtxTyp.Context.html#1099" class="InductiveConstructor">`Bool</a> <a id="2637" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2639" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="2644" class="Comment">-- | Rule False</a>
+  <a id="Term.`false"></a><a id="2662" href="CtxTyp.Term.html#2662" class="InductiveConstructor">`false</a>
+      <a id="2675" class="Comment">--------------</a>
+    <a id="2694" class="Symbol">:</a> <a id="2696" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2698" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2700" href="CtxTyp.Context.html#1099" class="InductiveConstructor">`Bool</a> <a id="2706" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2708" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="2713" class="Comment">-- | Rule If</a>
+  <a id="Term.`if_`then_`else_"></a><a id="2728" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`if_`then_`else_</a>
+    <a id="2749" class="Symbol">:</a> <a id="2751" class="Symbol">(</a><a id="2752" href="CtxTyp.Term.html#2752" class="Bound">e₁</a> <a id="2755" class="Symbol">:</a> <a id="2757" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2759" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2761" href="CtxTyp.Context.html#1099" class="InductiveConstructor">`Bool</a> <a id="2767" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2769" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="2770" class="Symbol">)</a>
+    <a id="2776" class="Symbol">→</a> <a id="2778" class="Symbol">(</a><a id="2779" href="CtxTyp.Term.html#2779" class="Bound">e₂</a> <a id="2782" class="Symbol">:</a> <a id="2784" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2786" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2788" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2790" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2792" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="2793" class="Symbol">)</a>
+    <a id="2799" class="Symbol">→</a> <a id="2801" class="Symbol">(</a><a id="2802" href="CtxTyp.Term.html#2802" class="Bound">e₃</a> <a id="2805" class="Symbol">:</a> <a id="2807" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2809" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2811" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2813" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2815" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="2816" class="Symbol">)</a>
+      <a id="2824" class="Comment">--------------</a>
+    <a id="2843" class="Symbol">→</a> <a id="2845" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2847" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2849" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2851" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2853" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="2858" class="Comment">-- | Rule CtxAbs</a>
+  <a id="Term.`λ⟨_⟩_"></a><a id="2877" href="CtxTyp.Term.html#2877" class="InductiveConstructor Operator">`λ⟨_⟩_</a>
+    <a id="2888" class="Symbol">:</a> <a id="2890" class="Symbol">∀</a> <a id="2892" href="CtxTyp.Term.html#2892" class="Bound">Δ</a>
+    <a id="2898" class="Symbol">→</a> <a id="2900" class="Symbol">(</a><a id="2901" href="CtxTyp.Term.html#2901" class="Bound">e</a> <a id="2903" class="Symbol">:</a> <a id="2905" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2907" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="2910" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="2918" href="CtxTyp.Term.html#2892" class="Bound">Δ</a> <a id="2920" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="2922" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2924" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="2926" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="2934" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a> <a id="2936" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2938" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="2940" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="2942" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="2943" class="Symbol">)</a>
+      <a id="2951" class="Comment">---------------------------</a>
+    <a id="2983" class="Symbol">→</a> <a id="2985" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="2987" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="2989" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">[</a> <a id="2991" href="CtxTyp.Term.html#2892" class="Bound">Δ</a> <a id="2993" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">⊢</a> <a id="2995" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="2997" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">]⇒</a> <a id="3000" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3002" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3004" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="3009" class="Comment">-- | Rule CtxApp</a>
+  <a id="Term._·_"></a><a id="3028" href="CtxTyp.Term.html#3028" class="InductiveConstructor Operator">_·_</a>
+    <a id="3036" class="Symbol">:</a> <a id="3038" class="Symbol">(</a><a id="3039" href="CtxTyp.Term.html#3039" class="Bound">e₁</a> <a id="3042" class="Symbol">:</a> <a id="3044" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3046" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3048" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">[</a> <a id="3050" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="3052" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">⊢</a> <a id="3054" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3056" href="CtxTyp.Context.html#972" class="InductiveConstructor Operator">]⇒</a> <a id="3059" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3061" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3063" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3064" class="Symbol">)</a>
+    <a id="3070" class="Symbol">→</a> <a id="3072" class="Symbol">(</a><a id="3073" href="CtxTyp.Term.html#3073" class="Bound">e₂</a> <a id="3076" class="Symbol">:</a> <a id="3078" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3080" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="3083" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="3091" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="3093" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3095" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3097" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3099" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3100" class="Symbol">)</a>
+      <a id="3108" class="Comment">-------------</a>
+    <a id="3126" class="Symbol">→</a> <a id="3128" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3130" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3132" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3134" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3136" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="3141" class="Comment">-- | Rule Quote</a>
+  <a id="Term.⟨_⟩"></a><a id="3159" href="CtxTyp.Term.html#3159" class="InductiveConstructor Operator">⟨_⟩</a>
+    <a id="3167" class="Symbol">:</a> <a id="3169" class="Symbol">(</a><a id="3170" href="CtxTyp.Term.html#3170" class="Bound">e</a> <a id="3172" class="Symbol">:</a> <a id="3174" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3176" href="Data.StagedList.html#2165" class="Function Operator">↾</a> <a id="3178" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3180" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3182" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3184" href="Agda.Builtin.Nat.html#234" class="InductiveConstructor">suc</a> <a id="3188" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3189" class="Symbol">)</a>
+      <a id="3197" class="Comment">-------------</a>
+    <a id="3215" class="Symbol">→</a> <a id="3217" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3219" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3221" href="CtxTyp.Context.html#1116" class="InductiveConstructor">◯</a> <a id="3223" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3225" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3227" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="3232" class="Comment">-- | Rule LetQuote</a>
+  <a id="Term.`let⟨_⟩"></a><a id="3253" href="CtxTyp.Term.html#3253" class="InductiveConstructor Operator">`let⟨_⟩</a> <a id="3261" class="Symbol">:</a> <a id="3263" class="Symbol">∀</a> <a id="3265" href="CtxTyp.Term.html#3265" class="Bound">Δ</a>
+    <a id="3271" class="Symbol">→</a> <a id="3273" class="Symbol">(</a><a id="3274" href="CtxTyp.Term.html#3274" class="Bound">e₁</a> <a id="3277" class="Symbol">:</a> <a id="3279" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3281" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="3284" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="3292" href="CtxTyp.Term.html#3265" class="Bound">Δ</a> <a id="3294" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3296" href="CtxTyp.Context.html#1116" class="InductiveConstructor">◯</a> <a id="3298" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3300" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3302" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3303" class="Symbol">)</a>
+    <a id="3309" class="Symbol">→</a> <a id="3311" class="Symbol">(</a><a id="3312" href="CtxTyp.Term.html#3312" class="Bound">e₂</a> <a id="3315" class="Symbol">:</a> <a id="3317" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3319" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="3322" href="CtxTyp.Term.html#3265" class="Bound">Δ</a> <a id="3324" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="3326" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3328" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="3330" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="3338" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="3346" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a> <a id="3348" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3350" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3352" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3354" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3355" class="Symbol">)</a>
+      <a id="3363" class="Comment">--------------------------------------</a>
+    <a id="3406" class="Symbol">→</a> <a id="3408" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3410" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3412" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3414" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3416" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+  <a id="3421" class="Comment">-- | Rule Wrap</a>
+  <a id="Term.`wrap"></a><a id="3438" href="CtxTyp.Term.html#3438" class="InductiveConstructor">`wrap</a> <a id="3444" class="Symbol">:</a> <a id="3446" class="Symbol">∀</a> <a id="3448" href="CtxTyp.Term.html#3448" class="Bound">Δ</a>
+    <a id="3454" class="Symbol">→</a> <a id="3456" class="Symbol">(</a><a id="3457" href="CtxTyp.Term.html#3457" class="Bound">e</a> <a id="3459" class="Symbol">:</a> <a id="3461" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3463" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="3466" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="3474" href="CtxTyp.Term.html#3448" class="Bound">Δ</a> <a id="3476" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3478" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3480" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3482" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3483" class="Symbol">)</a>
+      <a id="3491" class="Comment">----------------------</a>
+    <a id="3518" class="Symbol">→</a> <a id="3520" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3522" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3524" href="CtxTyp.Term.html#3448" class="Bound">Δ</a> <a id="3526" href="CtxTyp.Context.html#1045" class="InductiveConstructor Operator">▷</a> <a id="3528" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3530" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3532" href="Data.StagedList.html#843" class="Generalizable">n</a>
+  
+  <a id="3539" class="Comment">-- | Rule LetWrap</a>
+  <a id="Term.`letwrap"></a><a id="3559" href="CtxTyp.Term.html#3559" class="InductiveConstructor">`letwrap</a> <a id="3568" class="Symbol">:</a> <a id="3570" class="Symbol">∀</a> <a id="3572" href="CtxTyp.Term.html#3572" class="Bound">Δ</a>
+    <a id="3578" class="Symbol">→</a> <a id="3580" class="Symbol">(</a><a id="3581" href="CtxTyp.Term.html#3581" class="Bound">e₁</a> <a id="3584" class="Symbol">:</a> <a id="3586" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3588" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3590" href="CtxTyp.Term.html#3572" class="Bound">Δ</a> <a id="3592" href="CtxTyp.Context.html#1045" class="InductiveConstructor Operator">▷</a> <a id="3594" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3596" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3598" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3599" class="Symbol">)</a>
+    <a id="3605" class="Symbol">→</a> <a id="3607" class="Symbol">(</a><a id="3608" href="CtxTyp.Term.html#3608" class="Bound">e₂</a> <a id="3611" class="Symbol">:</a> <a id="3613" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3615" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="3618" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="3626" href="CtxTyp.Term.html#3572" class="Bound">Δ</a> <a id="3628" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="3630" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3632" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="3634" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="3642" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a> <a id="3644" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3646" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3648" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3650" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="3651" class="Symbol">)</a>
+      <a id="3659" class="Comment">--------------------------------------</a>
+    <a id="3702" class="Symbol">→</a> <a id="3704" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3706" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3708" href="CtxTyp.Context.html#488" class="Generalizable">B</a> <a id="3710" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3712" href="Data.StagedList.html#843" class="Generalizable">n</a>
+
+
+<a id="3716" class="Comment">-- Renaming</a>
+
+<a id="3729" class="Comment">-- | Rename a term.</a>
+<a id="rename"></a><a id="3749" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="3756" class="Symbol">:</a> <a id="3758" href="Data.StagedList.html#10568" class="Function">Rename</a> <a id="3765" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3767" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="3770" class="Symbol">→</a> <a id="3772" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3774" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3776" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3778" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3780" href="Data.StagedList.html#843" class="Generalizable">n</a> <a id="3782" class="Symbol">→</a> <a id="3784" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="3787" href="CtxTyp.Term.html#557" class="Datatype">⊢</a> <a id="3789" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3791" href="CtxTyp.Term.html#557" class="Datatype">^</a> <a id="3793" href="Data.StagedList.html#843" class="Generalizable">n</a>
+<a id="3795" class="Comment">-- | Rename a substitution.</a>
+<a id="renameSubst"></a><a id="3823" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="3835" class="Symbol">:</a> <a id="3837" href="Data.StagedList.html#10568" class="Function">Rename</a> <a id="3844" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3846" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="3849" class="Symbol">→</a> <a id="3851" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3853" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="3855" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="3857" class="Symbol">→</a> <a id="3859" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="3862" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="3864" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a>
+<a id="3866" class="Comment">-- | Rename a substitution entry.</a>
+<a id="renameSubstItem"></a><a id="3900" href="CtxTyp.Term.html#3900" class="Function">renameSubstItem</a> <a id="3916" class="Symbol">:</a> <a id="3918" href="Data.StagedList.html#10568" class="Function">Rename</a> <a id="3925" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3927" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="3930" class="Symbol">→</a> <a id="3932" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="3934" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="3937" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="3939" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="3941" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3943" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="3945" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="3949" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a> <a id="3951" class="Symbol">→</a> <a id="3953" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="3956" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="3959" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="3961" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="3963" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="3965" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="3967" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="3971" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+
+<a id="3974" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="3981" href="CtxTyp.Term.html#3981" class="Bound">ρ</a> <a id="3983" class="Symbol">(</a><a id="3984" href="CtxTyp.Term.html#2467" class="InductiveConstructor Operator">`</a> <a id="3986" href="CtxTyp.Term.html#3986" class="Bound">x</a> <a id="3988" href="CtxTyp.Term.html#2467" class="InductiveConstructor Operator">`with</a> <a id="3994" href="CtxTyp.Term.html#3994" class="Bound">σ</a><a id="3995" class="Symbol">)</a> <a id="3997" class="Symbol">=</a> <a id="3999" href="CtxTyp.Term.html#2467" class="InductiveConstructor Operator">`</a> <a id="4001" href="CtxTyp.Term.html#3981" class="Bound">ρ</a> <a id="4003" href="CtxTyp.Term.html#3986" class="Bound">x</a> <a id="4005" href="CtxTyp.Term.html#2467" class="InductiveConstructor Operator">`with</a> <a id="4011" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4023" href="CtxTyp.Term.html#3981" class="Bound">ρ</a> <a id="4025" href="CtxTyp.Term.html#3994" class="Bound">σ</a>
+<a id="4027" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4034" href="CtxTyp.Term.html#4034" class="Bound">ρ</a> <a id="4036" href="CtxTyp.Term.html#2594" class="InductiveConstructor">`true</a> <a id="4042" class="Symbol">=</a> <a id="4044" href="CtxTyp.Term.html#2594" class="InductiveConstructor">`true</a>
+<a id="4050" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4057" href="CtxTyp.Term.html#4057" class="Bound">ρ</a> <a id="4059" href="CtxTyp.Term.html#2662" class="InductiveConstructor">`false</a> <a id="4066" class="Symbol">=</a> <a id="4068" href="CtxTyp.Term.html#2662" class="InductiveConstructor">`false</a>
+<a id="4075" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4082" href="CtxTyp.Term.html#4082" class="Bound">ρ</a> <a id="4084" class="Symbol">(</a><a id="4085" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`if</a> <a id="4089" href="CtxTyp.Term.html#4089" class="Bound">e₁</a> <a id="4092" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`then</a> <a id="4098" href="CtxTyp.Term.html#4098" class="Bound">e₂</a> <a id="4101" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`else</a> <a id="4107" href="CtxTyp.Term.html#4107" class="Bound">e₃</a><a id="4109" class="Symbol">)</a> <a id="4111" class="Symbol">=</a> <a id="4113" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`if</a> <a id="4117" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4124" href="CtxTyp.Term.html#4082" class="Bound">ρ</a> <a id="4126" href="CtxTyp.Term.html#4089" class="Bound">e₁</a> <a id="4129" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`then</a> <a id="4135" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4142" href="CtxTyp.Term.html#4082" class="Bound">ρ</a> <a id="4144" href="CtxTyp.Term.html#4098" class="Bound">e₂</a> <a id="4147" href="CtxTyp.Term.html#2728" class="InductiveConstructor Operator">`else</a> <a id="4153" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4160" href="CtxTyp.Term.html#4082" class="Bound">ρ</a> <a id="4162" href="CtxTyp.Term.html#4107" class="Bound">e₃</a>
+<a id="4165" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4172" href="CtxTyp.Term.html#4172" class="Bound">ρ</a> <a id="4174" class="Symbol">(</a><a id="4175" href="CtxTyp.Term.html#2877" class="InductiveConstructor Operator">`λ⟨</a> <a id="4179" href="CtxTyp.Term.html#4179" class="Bound">Δ</a> <a id="4181" href="CtxTyp.Term.html#2877" class="InductiveConstructor Operator">⟩</a> <a id="4183" href="CtxTyp.Term.html#4183" class="Bound">e</a><a id="4184" class="Symbol">)</a> <a id="4186" class="Symbol">=</a> <a id="4188" href="CtxTyp.Term.html#2877" class="InductiveConstructor Operator">`λ⟨</a> <a id="4192" href="CtxTyp.Term.html#4179" class="Bound">Δ</a> <a id="4194" href="CtxTyp.Term.html#2877" class="InductiveConstructor Operator">⟩</a> <a id="4196" class="Symbol">(</a><a id="4197" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4204" class="Symbol">(</a><a id="4205" href="Data.StagedList.html#10754" class="Function">ext</a> <a id="4209" href="CtxTyp.Term.html#4172" class="Bound">ρ</a><a id="4210" class="Symbol">)</a> <a id="4212" href="CtxTyp.Term.html#4183" class="Bound">e</a><a id="4213" class="Symbol">)</a>
+<a id="4215" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4222" href="CtxTyp.Term.html#4222" class="Bound">ρ</a> <a id="4224" class="Symbol">(</a><a id="4225" href="CtxTyp.Term.html#4225" class="Bound">e₁</a> <a id="4228" href="CtxTyp.Term.html#3028" class="InductiveConstructor Operator">·</a> <a id="4230" href="CtxTyp.Term.html#4230" class="Bound">e₂</a><a id="4232" class="Symbol">)</a> <a id="4234" class="Symbol">=</a> <a id="4236" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4243" href="CtxTyp.Term.html#4222" class="Bound">ρ</a> <a id="4245" href="CtxTyp.Term.html#4225" class="Bound">e₁</a> <a id="4248" href="CtxTyp.Term.html#3028" class="InductiveConstructor Operator">·</a> <a id="4250" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4257" class="Symbol">(</a><a id="4258" href="Data.StagedList.html#10922" class="Function">ext++</a> <a id="4264" class="Symbol">_</a> <a id="4266" href="CtxTyp.Term.html#4222" class="Bound">ρ</a><a id="4267" class="Symbol">)</a> <a id="4269" href="CtxTyp.Term.html#4230" class="Bound">e₂</a>
+<a id="4272" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4279" href="CtxTyp.Term.html#4279" class="Bound">ρ</a> <a id="4281" href="CtxTyp.Term.html#3159" class="InductiveConstructor Operator">⟨</a> <a id="4283" href="CtxTyp.Term.html#4283" class="Bound">e</a> <a id="4285" href="CtxTyp.Term.html#3159" class="InductiveConstructor Operator">⟩</a> <a id="4287" class="Symbol">=</a> <a id="4289" href="CtxTyp.Term.html#3159" class="InductiveConstructor Operator">⟨</a> <a id="4291" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4298" class="Symbol">(</a><a id="4299" href="Data.StagedList.html#11301" class="Function">ext↾</a> <a id="4304" href="CtxTyp.Term.html#4279" class="Bound">ρ</a><a id="4305" class="Symbol">)</a> <a id="4307" href="CtxTyp.Term.html#4283" class="Bound">e</a> <a id="4309" href="CtxTyp.Term.html#3159" class="InductiveConstructor Operator">⟩</a>
+<a id="4311" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4318" href="CtxTyp.Term.html#4318" class="Bound">ρ</a> <a id="4320" class="Symbol">(</a><a id="4321" href="CtxTyp.Term.html#3253" class="InductiveConstructor Operator">`let⟨</a> <a id="4327" href="CtxTyp.Term.html#4327" class="Bound">Δ</a> <a id="4329" href="CtxTyp.Term.html#3253" class="InductiveConstructor Operator">⟩</a> <a id="4331" href="CtxTyp.Term.html#4331" class="Bound">e₁</a> <a id="4334" href="CtxTyp.Term.html#4334" class="Bound">e₂</a><a id="4336" class="Symbol">)</a> <a id="4338" class="Symbol">=</a> <a id="4340" href="CtxTyp.Term.html#3253" class="InductiveConstructor Operator">`let⟨</a> <a id="4346" href="CtxTyp.Term.html#4327" class="Bound">Δ</a> <a id="4348" href="CtxTyp.Term.html#3253" class="InductiveConstructor Operator">⟩</a> <a id="4350" class="Symbol">(</a><a id="4351" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4358" class="Symbol">(</a><a id="4359" href="Data.StagedList.html#10922" class="Function">ext++</a> <a id="4365" class="Symbol">(</a><a id="4366" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="4374" href="CtxTyp.Term.html#4327" class="Bound">Δ</a><a id="4375" class="Symbol">)</a> <a id="4377" href="CtxTyp.Term.html#4318" class="Bound">ρ</a><a id="4378" class="Symbol">)</a> <a id="4380" href="CtxTyp.Term.html#4331" class="Bound">e₁</a><a id="4382" class="Symbol">)</a> <a id="4384" class="Symbol">(</a><a id="4385" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4392" class="Symbol">(</a><a id="4393" href="Data.StagedList.html#10754" class="Function">ext</a> <a id="4397" href="CtxTyp.Term.html#4318" class="Bound">ρ</a><a id="4398" class="Symbol">)</a> <a id="4400" href="CtxTyp.Term.html#4334" class="Bound">e₂</a><a id="4402" class="Symbol">)</a>
+<a id="4404" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4411" href="CtxTyp.Term.html#4411" class="Bound">ρ</a> <a id="4413" class="Symbol">(</a><a id="4414" href="CtxTyp.Term.html#3438" class="InductiveConstructor">`wrap</a> <a id="4420" href="CtxTyp.Term.html#4420" class="Bound">Δ</a> <a id="4422" href="CtxTyp.Term.html#4422" class="Bound">e</a><a id="4423" class="Symbol">)</a> <a id="4425" class="Symbol">=</a> <a id="4427" href="CtxTyp.Term.html#3438" class="InductiveConstructor">`wrap</a> <a id="4433" href="CtxTyp.Term.html#4420" class="Bound">Δ</a> <a id="4435" class="Symbol">(</a><a id="4436" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4443" class="Symbol">(</a><a id="4444" href="Data.StagedList.html#10922" class="Function">ext++</a> <a id="4450" class="Symbol">(</a><a id="4451" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="4459" href="CtxTyp.Term.html#4420" class="Bound">Δ</a><a id="4460" class="Symbol">)</a> <a id="4462" href="CtxTyp.Term.html#4411" class="Bound">ρ</a><a id="4463" class="Symbol">)</a> <a id="4465" href="CtxTyp.Term.html#4422" class="Bound">e</a><a id="4466" class="Symbol">)</a>
+<a id="4468" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4475" href="CtxTyp.Term.html#4475" class="Bound">ρ</a> <a id="4477" class="Symbol">(</a><a id="4478" href="CtxTyp.Term.html#3559" class="InductiveConstructor">`letwrap</a> <a id="4487" href="CtxTyp.Term.html#4487" class="Bound">Δ</a> <a id="4489" href="CtxTyp.Term.html#4489" class="Bound">e₁</a> <a id="4492" href="CtxTyp.Term.html#4492" class="Bound">e₂</a><a id="4494" class="Symbol">)</a> <a id="4496" class="Symbol">=</a> <a id="4498" href="CtxTyp.Term.html#3559" class="InductiveConstructor">`letwrap</a> <a id="4507" href="CtxTyp.Term.html#4487" class="Bound">Δ</a> <a id="4509" class="Symbol">(</a><a id="4510" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4517" href="CtxTyp.Term.html#4475" class="Bound">ρ</a> <a id="4519" href="CtxTyp.Term.html#4489" class="Bound">e₁</a><a id="4521" class="Symbol">)</a> <a id="4523" class="Symbol">(</a><a id="4524" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4531" class="Symbol">(</a><a id="4532" href="Data.StagedList.html#10754" class="Function">ext</a> <a id="4536" href="CtxTyp.Term.html#4475" class="Bound">ρ</a><a id="4537" class="Symbol">)</a> <a id="4539" href="CtxTyp.Term.html#4492" class="Bound">e₂</a><a id="4541" class="Symbol">)</a>
+
+<a id="4544" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4556" href="CtxTyp.Term.html#4556" class="Bound">ρ</a> <a id="4558" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="4560" class="Symbol">=</a> <a id="4562" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a>
+<a id="4564" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4576" href="CtxTyp.Term.html#4576" class="Bound">ρ</a> <a id="4578" class="Symbol">(</a><a id="4579" href="CtxTyp.Term.html#4579" class="Bound">σ</a> <a id="4581" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="4583" href="CtxTyp.Term.html#4583" class="Bound">item</a><a id="4587" class="Symbol">)</a> <a id="4589" class="Symbol">=</a> <a id="4591" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4603" href="CtxTyp.Term.html#4576" class="Bound">ρ</a> <a id="4605" href="CtxTyp.Term.html#4579" class="Bound">σ</a> <a id="4607" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="4609" href="CtxTyp.Term.html#3900" class="Function">renameSubstItem</a> <a id="4625" href="CtxTyp.Term.html#4576" class="Bound">ρ</a> <a id="4627" href="CtxTyp.Term.html#4583" class="Bound">item</a>
+<a id="4632" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4644" href="CtxTyp.Term.html#4644" class="Bound">ρ</a> <a id="4646" class="Symbol">(</a><a id="4647" href="CtxTyp.Term.html#4647" class="Bound">σ₁</a> <a id="4650" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="4654" href="CtxTyp.Term.html#4654" class="Bound">σ₂</a><a id="4656" class="Symbol">)</a> <a id="4658" class="Symbol">=</a> <a id="4660" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4672" href="CtxTyp.Term.html#4644" class="Bound">ρ</a> <a id="4674" href="CtxTyp.Term.html#4647" class="Bound">σ₁</a> <a id="4677" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="4681" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="4693" href="CtxTyp.Term.html#4644" class="Bound">ρ</a> <a id="4695" href="CtxTyp.Term.html#4654" class="Bound">σ₂</a>
+
+<a id="4699" href="CtxTyp.Term.html#3900" class="Function">renameSubstItem</a> <a id="4715" class="Symbol">{</a><a id="4716" class="Argument">Δ</a> <a id="4718" class="Symbol">=</a> <a id="4720" href="CtxTyp.Term.html#4720" class="Bound">Δ</a><a id="4721" class="Symbol">}</a> <a id="4723" class="Symbol">{</a><a id="4724" class="Argument">m≥n</a> <a id="4728" class="Symbol">=</a> <a id="4730" href="CtxTyp.Term.html#4730" class="Bound">m≥n</a><a id="4733" class="Symbol">}</a> <a id="4735" href="CtxTyp.Term.html#4735" class="Bound">ρ</a> <a id="4737" class="Symbol">(</a><a id="4738" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="4743" href="CtxTyp.Term.html#4743" class="Bound">e</a><a id="4744" class="Symbol">)</a> <a id="4746" class="Symbol">=</a> <a id="4748" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="4753" class="Symbol">(</a><a id="4754" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="4761" class="Symbol">(</a><a id="4762" href="Data.StagedList.html#10922" class="Function">ext++</a> <a id="4768" href="CtxTyp.Term.html#4720" class="Bound">Δ</a> <a id="4770" class="Symbol">(</a><a id="4771" href="Data.StagedList.html#11440" class="Function">ext↾≥</a> <a id="4777" href="CtxTyp.Term.html#4730" class="Bound">m≥n</a> <a id="4781" href="CtxTyp.Term.html#4735" class="Bound">ρ</a><a id="4782" class="Symbol">))</a> <a id="4785" href="CtxTyp.Term.html#4743" class="Bound">e</a><a id="4786" class="Symbol">)</a>
+<a id="4788" href="CtxTyp.Term.html#3900" class="Function">renameSubstItem</a> <a id="4804" href="CtxTyp.Term.html#4804" class="Bound">ρ</a> <a id="4806" class="Symbol">(</a><a id="4807" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="4811" href="CtxTyp.Term.html#4811" class="Bound">x</a><a id="4812" class="Symbol">)</a> <a id="4814" class="Symbol">=</a> <a id="4816" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="4820" class="Symbol">(</a><a id="4821" href="CtxTyp.Term.html#4804" class="Bound">ρ</a> <a id="4823" href="CtxTyp.Term.html#4811" class="Bound">x</a><a id="4824" class="Symbol">)</a>
+
+<a id="4827" class="Comment">-- | Pre-compose a renaming function before a substitution.</a>
+<a id="renameSubstʳ"></a><a id="4887" href="CtxTyp.Term.html#4887" class="Function">renameSubstʳ</a> <a id="4900" class="Symbol">:</a> <a id="4902" href="Data.StagedList.html#10568" class="Function">Rename</a> <a id="4909" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a> <a id="4912" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="4914" class="Symbol">→</a> <a id="4916" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="4918" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="4920" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="4922" class="Symbol">→</a> <a id="4924" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="4926" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="4928" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a>
+<a id="4931" href="CtxTyp.Term.html#4887" class="Function">renameSubstʳ</a> <a id="4944" href="CtxTyp.Term.html#4944" class="Bound">ρ</a> <a id="4946" href="CtxTyp.Term.html#4946" class="Bound">σ</a> <a id="4948" class="Symbol">=</a> <a id="4950" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="4959" class="Symbol">(</a><a id="4960" href="CtxTyp.Term.html#1622" class="Function">lookup</a> <a id="4967" href="CtxTyp.Term.html#4946" class="Bound">σ</a> <a id="4969" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="4971" href="CtxTyp.Term.html#4944" class="Bound">ρ</a><a id="4972" class="Symbol">)</a>
+
+<a id="4975" class="Comment">-- | Lift a renaming funtion to a substitution.</a>
+<a id="lift"></a><a id="5023" href="CtxTyp.Term.html#5023" class="Function">lift</a> <a id="5028" class="Symbol">:</a> <a id="5030" href="Data.StagedList.html#10568" class="Function">Rename</a> <a id="5037" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5039" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5042" class="Symbol">→</a> <a id="5044" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5050" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5052" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a>
+<a id="5055" href="CtxTyp.Term.html#5023" class="Function">lift</a> <a id="5060" href="CtxTyp.Term.html#5060" class="Bound">ρ</a> <a id="5062" class="Symbol">=</a> <a id="5064" href="CtxTyp.Term.html#1896" class="Function">lookup⁻¹</a> <a id="5073" class="Symbol">(</a><a id="5074" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="5078" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="5080" href="CtxTyp.Term.html#5060" class="Bound">ρ</a><a id="5081" class="Symbol">)</a>
+
+<a id="5084" class="Comment">-- | Extend a substitution by an identity entry.</a>
+<a id="exts"></a><a id="5133" href="CtxTyp.Term.html#5133" class="Function">exts</a> <a id="5138" class="Symbol">:</a> <a id="5140" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5146" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5148" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5151" class="Symbol">→</a> <a id="5153" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5159" class="Symbol">(</a><a id="5160" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5162" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="5165" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="5167" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="5169" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="5171" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="5173" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="5177" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a><a id="5178" class="Symbol">)</a> <a id="5180" class="Symbol">(</a><a id="5181" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5184" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="5187" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="5189" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="5191" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="5193" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="5195" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="5199" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a><a id="5200" class="Symbol">)</a>
+<a id="5202" href="CtxTyp.Term.html#5133" class="Function">exts</a> <a id="5207" class="Symbol">{</a><a id="5208" class="Argument">Δ</a> <a id="5210" class="Symbol">=</a> <a id="5212" href="CtxTyp.Term.html#5212" class="Bound">Δ</a><a id="5213" class="Symbol">}</a> <a id="5215" class="Symbol">{</a><a id="5216" class="Argument">m≥n</a> <a id="5220" class="Symbol">=</a> <a id="5222" href="CtxTyp.Term.html#5222" class="Bound">m≥n</a><a id="5225" class="Symbol">}</a> <a id="5227" href="CtxTyp.Term.html#5227" class="Bound">σ</a> <a id="5229" class="Symbol">=</a> <a id="5231" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="5243" href="Data.StagedList.html#5906" class="InductiveConstructor">S</a> <a id="5245" href="CtxTyp.Term.html#5227" class="Bound">σ</a> <a id="5247" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="5249" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="5253" href="Data.StagedList.html#5871" class="InductiveConstructor">Z</a>
+
+<a id="5256" class="Comment">-- | Extend a substitution by multiple identity entries (id_Δ)</a>
+<a id="exts++"></a><a id="5319" href="CtxTyp.Term.html#5319" class="Function">exts++</a> <a id="5326" class="Symbol">:</a> <a id="5328" class="Symbol">∀</a> <a id="5330" href="CtxTyp.Term.html#5330" class="Bound">Δ</a> <a id="5332" class="Symbol">→</a> <a id="5334" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5340" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5342" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5345" class="Symbol">→</a> <a id="5347" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5353" class="Symbol">(</a><a id="5354" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5356" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="5359" href="CtxTyp.Term.html#5330" class="Bound">Δ</a><a id="5360" class="Symbol">)</a> <a id="5362" class="Symbol">(</a><a id="5363" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5366" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="5369" href="CtxTyp.Term.html#5330" class="Bound">Δ</a><a id="5370" class="Symbol">)</a>
+<a id="5372" href="CtxTyp.Term.html#5319" class="Function">exts++</a> <a id="5379" href="CtxTyp.Term.html#5379" class="Bound">Δ</a> <a id="5381" href="CtxTyp.Term.html#5381" class="Bound">σ</a> <a id="5383" class="Symbol">=</a> <a id="5385" href="CtxTyp.Term.html#3823" class="Function">renameSubst</a> <a id="5397" href="Data.StagedList.html#5960" class="InductiveConstructor">L</a> <a id="5399" href="CtxTyp.Term.html#5381" class="Bound">σ</a> <a id="5401" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="5405" href="CtxTyp.Term.html#5023" class="Function">lift</a> <a id="5410" href="Data.StagedList.html#6006" class="InductiveConstructor">R</a>
+
+<a id="5413" class="Comment">-- | Eliminate _↾ from _⊩[_⊢_^_].</a>
+<a id="⊩[]-↾⁻"></a><a id="5447" href="CtxTyp.Term.html#5447" class="Function">⊩[]-↾⁻</a> <a id="5454" class="Symbol">:</a> <a id="5456" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5458" href="Data.StagedList.html#2165" class="Function Operator">↾</a> <a id="5460" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="5463" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="5465" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="5467" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="5469" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="5471" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="5475" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a> <a id="5477" class="Symbol">→</a> <a id="5479" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5481" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="5484" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="5486" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="5488" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="5490" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="5492" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="5500" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="5504" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+<a id="5506" href="CtxTyp.Term.html#5447" class="Function">⊩[]-↾⁻</a> <a id="5513" class="Symbol">(</a><a id="5514" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="5519" href="CtxTyp.Term.html#5519" class="Bound">e</a><a id="5520" class="Symbol">)</a> <a id="5522" class="Symbol">=</a> <a id="5524" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="5529" href="CtxTyp.Term.html#5519" class="Bound">e</a>
+<a id="5531" href="CtxTyp.Term.html#5447" class="Function">⊩[]-↾⁻</a> <a id="5538" class="Symbol">(</a><a id="5539" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="5543" href="CtxTyp.Term.html#5543" class="Bound">x</a><a id="5544" class="Symbol">)</a> <a id="5546" class="Symbol">=</a> <a id="5548" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="5552" class="Symbol">(</a><a id="5553" href="Data.StagedList.html#6599" class="Function">∋-↾⁻</a> <a id="5558" href="CtxTyp.Term.html#5543" class="Bound">x</a><a id="5559" class="Symbol">)</a>
+
+<a id="5562" class="Comment">-- | Introduce _↾ into _⊩[_⊢_^_].</a>
+<a id="⊩[]-↾⁺"></a><a id="5596" href="CtxTyp.Term.html#5596" class="Function">⊩[]-↾⁺</a> <a id="5603" class="Symbol">:</a> <a id="5605" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5607" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="5610" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="5612" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="5614" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="5616" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="5618" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="5626" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="5630" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a> <a id="5632" class="Symbol">→</a> <a id="5634" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5636" href="Data.StagedList.html#2165" class="Function Operator">↾</a> <a id="5638" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="5641" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="5643" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="5645" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="5647" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="5649" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="5653" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+<a id="5655" href="CtxTyp.Term.html#5596" class="Function">⊩[]-↾⁺</a> <a id="5662" class="Symbol">(</a><a id="5663" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="5668" href="CtxTyp.Term.html#5668" class="Bound">e</a><a id="5669" class="Symbol">)</a> <a id="5671" class="Symbol">=</a> <a id="5673" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="5678" href="CtxTyp.Term.html#5668" class="Bound">e</a>
+<a id="5680" href="CtxTyp.Term.html#5596" class="Function">⊩[]-↾⁺</a> <a id="5687" class="Symbol">(</a><a id="5688" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="5692" href="CtxTyp.Term.html#5692" class="Bound">x</a><a id="5693" class="Symbol">)</a> <a id="5695" class="Symbol">=</a> <a id="5697" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="5701" class="Symbol">(</a><a id="5702" href="Data.StagedList.html#6966" class="Function">∋-↾⁺</a> <a id="5707" href="CtxTyp.Term.html#5692" class="Bound">x</a><a id="5708" class="Symbol">)</a>
+
+<a id="5711" class="Comment">-- | Restrict a substitution by removing entries at level n.</a>
+<a id="exts↾"></a><a id="5772" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5778" class="Symbol">:</a> <a id="5780" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5786" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5788" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5791" class="Symbol">→</a> <a id="5793" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="5799" class="Symbol">(</a><a id="5800" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="5802" href="Data.StagedList.html#2165" class="Function Operator">↾</a><a id="5803" class="Symbol">)</a> <a id="5805" class="Symbol">(</a><a id="5806" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="5809" href="Data.StagedList.html#2165" class="Function Operator">↾</a><a id="5810" class="Symbol">)</a>
+<a id="5812" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5818" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="5820" class="Symbol">=</a> <a id="5822" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a>
+<a id="5824" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5830" class="Symbol">(</a><a id="5831" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">_,_</a> <a id="5835" class="Symbol">{</a><a id="5836" class="Argument">m≥n</a> <a id="5840" class="Symbol">=</a> <a id="5842" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a><a id="5849" class="Symbol">}</a> <a id="5851" href="CtxTyp.Term.html#5851" class="Bound">σ</a> <a id="5853" href="CtxTyp.Term.html#5853" class="Bound">item</a><a id="5857" class="Symbol">)</a> <a id="5859" class="Symbol">=</a> <a id="5861" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5867" href="CtxTyp.Term.html#5851" class="Bound">σ</a>
+<a id="5869" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5875" class="Symbol">(</a><a id="5876" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">_,_</a> <a id="5880" class="Symbol">{</a><a id="5881" class="Argument">m≥n</a> <a id="5885" class="Symbol">=</a> <a id="5887" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="5895" href="CtxTyp.Term.html#5895" class="Bound">m≥n</a><a id="5898" class="Symbol">}</a> <a id="5900" href="CtxTyp.Term.html#5900" class="Bound">σ</a> <a id="5902" href="CtxTyp.Term.html#5902" class="Bound">item</a><a id="5906" class="Symbol">)</a> <a id="5908" class="Symbol">=</a> <a id="5910" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5916" href="CtxTyp.Term.html#5900" class="Bound">σ</a> <a id="5918" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="5920" href="CtxTyp.Term.html#5596" class="Function">⊩[]-↾⁺</a> <a id="5927" href="CtxTyp.Term.html#5902" class="Bound">item</a>
+<a id="5932" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5938" class="Symbol">(</a><a id="5939" href="CtxTyp.Term.html#5939" class="Bound">σ₁</a> <a id="5942" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="5946" href="CtxTyp.Term.html#5946" class="Bound">σ₂</a><a id="5948" class="Symbol">)</a> <a id="5950" class="Symbol">=</a> <a id="5952" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5958" href="CtxTyp.Term.html#5939" class="Bound">σ₁</a> <a id="5961" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="5965" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="5971" href="CtxTyp.Term.html#5946" class="Bound">σ₂</a>
+
+<a id="5975" class="Comment">-- | Restrict a substitution by removing entries below level m.</a>
+<a id="exts↾≥"></a><a id="6039" href="CtxTyp.Term.html#6039" class="Function">exts↾≥</a> <a id="6046" class="Symbol">:</a> <a id="6048" class="Symbol">(</a><a id="6049" href="CtxTyp.Term.html#6049" class="Bound">m≥n</a> <a id="6053" class="Symbol">:</a> <a id="6055" href="Data.StagedList.html#841" class="Generalizable">m</a> <a id="6057" href="Data.Nat.Base.html#8799" class="Function Operator">≥‴</a> <a id="6060" href="Data.StagedList.html#843" class="Generalizable">n</a><a id="6061" class="Symbol">)</a> <a id="6063" class="Symbol">→</a> <a id="6065" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="6071" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6073" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="6076" class="Symbol">→</a> <a id="6078" href="CtxTyp.Term.html#2181" class="Function">Subst</a> <a id="6084" class="Symbol">(</a><a id="6085" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6087" href="Data.StagedList.html#2458" class="Function Operator">↾≥</a> <a id="6090" href="CtxTyp.Term.html#6049" class="Bound">m≥n</a><a id="6093" class="Symbol">)</a> <a id="6095" class="Symbol">(</a><a id="6096" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="6099" href="Data.StagedList.html#2458" class="Function Operator">↾≥</a> <a id="6102" href="CtxTyp.Term.html#6049" class="Bound">m≥n</a><a id="6105" class="Symbol">)</a>
+<a id="6107" href="CtxTyp.Term.html#6039" class="Function">exts↾≥</a> <a id="6114" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="6122" href="CtxTyp.Term.html#6122" class="Bound">σ</a> <a id="6124" class="Symbol">=</a> <a id="6126" href="CtxTyp.Term.html#6122" class="Bound">σ</a> 
+<a id="6129" href="CtxTyp.Term.html#6039" class="Function">exts↾≥</a> <a id="6136" class="Symbol">(</a><a id="6137" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="6145" href="CtxTyp.Term.html#6145" class="Bound">sm≥n</a><a id="6149" class="Symbol">)</a> <a id="6151" href="CtxTyp.Term.html#6151" class="Bound">σ</a> <a id="6153" class="Symbol">=</a> <a id="6155" href="CtxTyp.Term.html#6039" class="Function">exts↾≥</a> <a id="6162" href="CtxTyp.Term.html#6145" class="Bound">sm≥n</a> <a id="6167" class="Symbol">(</a><a id="6168" href="CtxTyp.Term.html#5772" class="Function">exts↾</a> <a id="6174" href="CtxTyp.Term.html#6151" class="Bound">σ</a><a id="6175" class="Symbol">)</a>
+
+<a id="6178" class="Comment">-- | Eliminate _↾ from the left of _⊩_ and introduce inject₁ into the right.</a>
+<a id="⊩-↾⁻"></a><a id="6255" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6260" class="Symbol">:</a> <a id="6262" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6264" href="Data.StagedList.html#2165" class="Function Operator">↾</a> <a id="6266" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6268" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="6270" class="Symbol">→</a> <a id="6272" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6274" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6276" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="6284" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a>
+<a id="6286" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6291" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="6293" class="Symbol">=</a> <a id="6295" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a>
+<a id="6297" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6302" class="Symbol">(</a><a id="6303" href="CtxTyp.Term.html#6303" class="Bound">σ</a> <a id="6305" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="6307" href="CtxTyp.Term.html#6307" class="Bound">item</a><a id="6311" class="Symbol">)</a> <a id="6313" class="Symbol">=</a> <a id="6315" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6320" href="CtxTyp.Term.html#6303" class="Bound">σ</a> <a id="6322" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="6324" href="CtxTyp.Term.html#5447" class="Function">⊩[]-↾⁻</a> <a id="6331" href="CtxTyp.Term.html#6307" class="Bound">item</a>
+<a id="6336" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6341" class="Symbol">(</a><a id="6342" href="CtxTyp.Term.html#6342" class="Bound">σ₁</a> <a id="6345" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="6349" href="CtxTyp.Term.html#6349" class="Bound">σ₂</a><a id="6351" class="Symbol">)</a> <a id="6353" class="Symbol">=</a> <a id="6355" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6360" href="CtxTyp.Term.html#6342" class="Bound">σ₁</a> <a id="6363" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="6367" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6372" href="CtxTyp.Term.html#6349" class="Bound">σ₂</a>
+
+<a id="6376" class="Comment">-- | Eliminate inject₁ from the right of _⊩_ and introduce _↾ into the left.</a>
+<a id="⊩-↾⁺"></a><a id="6453" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6458" class="Symbol">:</a> <a id="6460" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6462" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6464" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="6472" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="6474" class="Symbol">→</a> <a id="6476" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6478" href="Data.StagedList.html#2165" class="Function Operator">↾</a> <a id="6480" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6482" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a>
+<a id="6484" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6489" class="Symbol">{</a><a id="6490" class="Argument">Δ</a> <a id="6492" class="Symbol">=</a> <a id="6494" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a><a id="6495" class="Symbol">}</a> <a id="6497" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="6499" class="Symbol">=</a> <a id="6501" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a>
+<a id="6503" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6508" class="Symbol">{</a><a id="6509" class="Argument">Δ</a> <a id="6511" class="Symbol">=</a> <a id="6513" href="CtxTyp.Term.html#6513" class="Bound">Δ</a> <a id="6515" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="6518" class="Symbol">_</a> <a id="6520" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="6522" class="Symbol">_</a> <a id="6524" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a><a id="6525" class="Symbol">}</a> <a id="6527" class="Symbol">(</a><a id="6528" href="CtxTyp.Term.html#6528" class="Bound">σ</a> <a id="6530" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="6532" href="CtxTyp.Term.html#6532" class="Bound">item</a><a id="6536" class="Symbol">)</a> <a id="6538" class="Symbol">=</a> <a id="6540" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6545" href="CtxTyp.Term.html#6528" class="Bound">σ</a> <a id="6547" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="6549" href="CtxTyp.Term.html#5596" class="Function">⊩[]-↾⁺</a> <a id="6556" href="CtxTyp.Term.html#6532" class="Bound">item</a>
+<a id="6561" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6566" class="Symbol">{</a><a id="6567" class="Argument">Δ</a> <a id="6569" class="Symbol">=</a> <a id="6571" href="CtxTyp.Term.html#6571" class="Bound">Δ₁</a> <a id="6574" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="6577" href="CtxTyp.Term.html#6577" class="Bound">Δ₂</a><a id="6579" class="Symbol">}</a> <a id="6581" class="Symbol">(</a><a id="6582" href="CtxTyp.Term.html#6582" class="Bound">σ₁</a> <a id="6585" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="6589" href="CtxTyp.Term.html#6589" class="Bound">σ₂</a><a id="6591" class="Symbol">)</a> <a id="6593" class="Symbol">=</a> <a id="6595" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6600" href="CtxTyp.Term.html#6582" class="Bound">σ₁</a> <a id="6603" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="6607" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6612" href="CtxTyp.Term.html#6589" class="Bound">σ₂</a>
+
+<a id="6616" class="Comment">-- | Eliminate _↾≥_ from the left of _⊩_ and introduce inject≥ into the right.</a>
+<a id="⊩-↾≥⁻"></a><a id="6695" href="CtxTyp.Term.html#6695" class="Function">⊩-↾≥⁻</a> <a id="6701" class="Symbol">:</a> <a id="6703" class="Symbol">∀</a> <a id="6705" href="CtxTyp.Term.html#6705" class="Bound">m≥n</a> <a id="6709" class="Symbol">→</a> <a id="6711" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6713" href="Data.StagedList.html#2458" class="Function Operator">↾≥</a> <a id="6716" href="CtxTyp.Term.html#6705" class="Bound">m≥n</a> <a id="6720" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6722" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="6724" class="Symbol">→</a> <a id="6726" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6728" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6730" href="Data.StagedList.html#2928" class="Function">inject≥</a> <a id="6738" href="CtxTyp.Term.html#6705" class="Bound">m≥n</a> <a id="6742" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a>
+<a id="6744" href="CtxTyp.Term.html#6695" class="Function">⊩-↾≥⁻</a> <a id="6750" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="6758" href="CtxTyp.Term.html#6758" class="Bound">σ</a> <a id="6760" class="Symbol">=</a> <a id="6762" href="CtxTyp.Term.html#6758" class="Bound">σ</a>
+<a id="6764" href="CtxTyp.Term.html#6695" class="Function">⊩-↾≥⁻</a> <a id="6770" class="Symbol">(</a><a id="6771" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="6779" href="CtxTyp.Term.html#6779" class="Bound">m≥n</a><a id="6782" class="Symbol">)</a> <a id="6784" href="CtxTyp.Term.html#6784" class="Bound">σ</a> <a id="6786" class="Symbol">=</a> <a id="6788" href="CtxTyp.Term.html#6255" class="Function">⊩-↾⁻</a> <a id="6793" class="Symbol">(</a><a id="6794" href="CtxTyp.Term.html#6695" class="Function">⊩-↾≥⁻</a> <a id="6800" href="CtxTyp.Term.html#6779" class="Bound">m≥n</a> <a id="6804" href="CtxTyp.Term.html#6784" class="Bound">σ</a><a id="6805" class="Symbol">)</a>
+
+<a id="6808" class="Comment">-- | Eliminate inject≥ from the right of _⊩_ and introduce _↾≥_ into the left.</a>
+<a id="⊩-↾≥⁺"></a><a id="6887" href="CtxTyp.Term.html#6887" class="Function">⊩-↾≥⁺</a> <a id="6893" class="Symbol">:</a> <a id="6895" class="Symbol">∀</a> <a id="6897" href="CtxTyp.Term.html#6897" class="Bound">m≥n</a> <a id="6901" class="Symbol">→</a> <a id="6903" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6905" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6907" href="Data.StagedList.html#2928" class="Function">inject≥</a> <a id="6915" href="CtxTyp.Term.html#6897" class="Bound">m≥n</a> <a id="6919" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a> <a id="6921" class="Symbol">→</a> <a id="6923" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="6925" href="Data.StagedList.html#2458" class="Function Operator">↾≥</a> <a id="6928" href="CtxTyp.Term.html#6897" class="Bound">m≥n</a> <a id="6932" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="6934" href="CtxTyp.Context.html#509" class="Generalizable">Δ</a>
+<a id="6936" href="CtxTyp.Term.html#6887" class="Function">⊩-↾≥⁺</a> <a id="6942" href="Data.Nat.Base.html#8770" class="InductiveConstructor">≤‴-refl</a> <a id="6950" href="CtxTyp.Term.html#6950" class="Bound">σ</a> <a id="6952" class="Symbol">=</a> <a id="6954" href="CtxTyp.Term.html#6950" class="Bound">σ</a> 
+<a id="6957" href="CtxTyp.Term.html#6887" class="Function">⊩-↾≥⁺</a> <a id="6963" class="Symbol">(</a><a id="6964" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="6972" href="CtxTyp.Term.html#6972" class="Bound">m≥n</a><a id="6975" class="Symbol">)</a> <a id="6977" href="CtxTyp.Term.html#6977" class="Bound">σ</a> <a id="6979" class="Symbol">=</a> <a id="6981" href="CtxTyp.Term.html#6887" class="Function">⊩-↾≥⁺</a> <a id="6987" href="CtxTyp.Term.html#6972" class="Bound">m≥n</a> <a id="6991" class="Symbol">(</a><a id="6992" href="CtxTyp.Term.html#6453" class="Function">⊩-↾⁺</a> <a id="6997" href="CtxTyp.Term.html#6977" class="Bound">σ</a><a id="6998" class="Symbol">)</a>
+
+<a id="7001" class="Comment">-- | Eliminate inject₁ from _⊩[_⊢_^_].</a>
+<a id="⊩[]-inject₁⁻"></a><a id="7040" href="CtxTyp.Term.html#7040" class="Function">⊩[]-inject₁⁻</a> <a id="7053" class="Symbol">:</a> <a id="7055" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="7063" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="7065" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="7068" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a> <a id="7071" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="7073" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="7075" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="7077" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="7085" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="7089" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a> <a id="7091" class="Symbol">→</a> <a id="7093" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="7095" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="7098" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a> <a id="7101" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="7103" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="7105" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="7107" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="7111" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a> 
+<a id="7114" href="CtxTyp.Term.html#7040" class="Function">⊩[]-inject₁⁻</a> <a id="7127" class="Symbol">{</a><a id="7128" class="Argument">Δ′</a> <a id="7131" class="Symbol">=</a> <a id="7133" href="CtxTyp.Term.html#7133" class="Bound">Δ′</a><a id="7135" class="Symbol">}</a> <a id="7137" class="Symbol">{</a><a id="7138" class="Argument">m≥n</a> <a id="7142" class="Symbol">=</a> <a id="7144" href="CtxTyp.Term.html#7144" class="Bound">m≥n</a><a id="7147" class="Symbol">}</a> <a id="7149" class="Symbol">(</a><a id="7150" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="7155" href="CtxTyp.Term.html#7155" class="Bound">e</a><a id="7156" class="Symbol">)</a> <a id="7158" class="Symbol">=</a> <a id="7160" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="7165" class="Symbol">(</a><a id="7166" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="7173" class="Symbol">(</a><a id="7174" href="Data.StagedList.html#10922" class="Function">ext++</a> <a id="7180" href="CtxTyp.Term.html#7133" class="Bound">Δ′</a> <a id="7183" class="Symbol">(</a><a id="7184" href="Data.StagedList.html#11440" class="Function">ext↾≥</a> <a id="7190" href="CtxTyp.Term.html#7144" class="Bound">m≥n</a> <a id="7194" class="Symbol">(</a><a id="7195" href="Data.StagedList.html#7855" class="Function">∋-inject₁⁻</a> <a id="7206" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="7208" href="Data.StagedList.html#6599" class="Function">∋-↾⁻</a><a id="7212" class="Symbol">)))</a> <a id="7216" href="CtxTyp.Term.html#7155" class="Bound">e</a><a id="7217" class="Symbol">)</a>
+<a id="7219" href="CtxTyp.Term.html#7040" class="Function">⊩[]-inject₁⁻</a> <a id="7232" class="Symbol">(</a><a id="7233" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="7237" href="CtxTyp.Term.html#7237" class="Bound">x</a><a id="7238" class="Symbol">)</a> <a id="7240" class="Symbol">=</a> <a id="7242" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="7246" class="Symbol">(</a><a id="7247" href="Data.StagedList.html#7855" class="Function">∋-inject₁⁻</a> <a id="7258" href="CtxTyp.Term.html#7237" class="Bound">x</a><a id="7259" class="Symbol">)</a>
+
+<a id="7262" class="Comment">-- | Introduce inject₁ into _⊩[_⊢_^_].</a>
+<a id="⊩[]-inject₁⁺"></a><a id="7301" href="CtxTyp.Term.html#7301" class="Function">⊩[]-inject₁⁺</a> <a id="7314" class="Symbol">:</a> <a id="7316" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="7318" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="7321" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a> <a id="7324" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="7326" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="7328" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="7330" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="7334" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a> <a id="7336" class="Symbol">→</a> <a id="7338" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="7346" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="7348" href="CtxTyp.Term.html#929" class="Datatype Operator">⊩[</a> <a id="7351" href="CtxTyp.Context.html#514" class="Generalizable">Δ′</a> <a id="7354" href="CtxTyp.Term.html#929" class="Datatype Operator">⊢</a> <a id="7356" href="CtxTyp.Context.html#486" class="Generalizable">A</a> <a id="7358" href="CtxTyp.Term.html#929" class="Datatype Operator">^</a> <a id="7360" href="Data.Nat.Base.html#8730" class="InductiveConstructor">≤‴-step</a> <a id="7368" href="Data.StagedList.html#857" class="Generalizable">m≥n</a> <a id="7372" href="CtxTyp.Term.html#929" class="Datatype Operator">]</a>
+<a id="7374" href="CtxTyp.Term.html#7301" class="Function">⊩[]-inject₁⁺</a> <a id="7387" class="Symbol">{</a><a id="7388" class="Argument">Δ′</a> <a id="7391" class="Symbol">=</a> <a id="7393" href="CtxTyp.Term.html#7393" class="Bound">Δ′</a><a id="7395" class="Symbol">}</a> <a id="7397" class="Symbol">{</a><a id="7398" class="Argument">m≥n</a> <a id="7402" class="Symbol">=</a> <a id="7404" href="CtxTyp.Term.html#7404" class="Bound">m≥n</a><a id="7407" class="Symbol">}</a> <a id="7409" class="Symbol">(</a><a id="7410" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="7415" href="CtxTyp.Term.html#7415" class="Bound">e</a><a id="7416" class="Symbol">)</a> <a id="7418" class="Symbol">=</a> <a id="7420" href="CtxTyp.Term.html#1004" class="InductiveConstructor">term</a> <a id="7425" class="Symbol">(</a><a id="7426" href="CtxTyp.Term.html#3749" class="Function">rename</a> <a id="7433" class="Symbol">(</a><a id="7434" href="Data.StagedList.html#10922" class="Function">ext++</a> <a id="7440" href="CtxTyp.Term.html#7393" class="Bound">Δ′</a> <a id="7443" class="Symbol">(</a><a id="7444" href="Data.StagedList.html#11440" class="Function">ext↾≥</a> <a id="7450" href="CtxTyp.Term.html#7404" class="Bound">m≥n</a> <a id="7454" class="Symbol">(</a><a id="7455" href="Data.StagedList.html#6966" class="Function">∋-↾⁺</a> <a id="7460" href="Function.Base.html#1115" class="Function Operator">∘</a> <a id="7462" href="Data.StagedList.html#7597" class="Function">∋-inject₁⁺</a><a id="7472" class="Symbol">)))</a> <a id="7476" href="CtxTyp.Term.html#7415" class="Bound">e</a><a id="7477" class="Symbol">)</a>
+<a id="7479" href="CtxTyp.Term.html#7301" class="Function">⊩[]-inject₁⁺</a> <a id="7492" class="Symbol">(</a><a id="7493" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="7497" href="CtxTyp.Term.html#7497" class="Bound">x</a><a id="7498" class="Symbol">)</a> <a id="7500" class="Symbol">=</a> <a id="7502" href="CtxTyp.Term.html#1107" class="InductiveConstructor">var</a> <a id="7506" class="Symbol">(</a><a id="7507" href="Data.StagedList.html#7597" class="Function">∋-inject₁⁺</a> <a id="7518" href="CtxTyp.Term.html#7497" class="Bound">x</a><a id="7519" class="Symbol">)</a>
+
+<a id="7522" class="Comment">-- | Eliminate inject₁ from both sides of _⊩_.</a>
+<a id="⊩-inject₁⁻"></a><a id="7569" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7580" class="Symbol">:</a> <a id="7582" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="7590" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="7593" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="7595" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="7603" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="7605" class="Symbol">→</a> <a id="7607" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="7610" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="7612" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a>
+<a id="7614" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7625" class="Symbol">{</a><a id="7626" class="Argument">Γ</a> <a id="7628" class="Symbol">=</a> <a id="7630" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a><a id="7631" class="Symbol">}</a> <a id="7633" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="7635" class="Symbol">=</a> <a id="7637" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a>
+<a id="7639" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7650" class="Symbol">{</a><a id="7651" class="Argument">Γ</a> <a id="7653" class="Symbol">=</a> <a id="7655" href="CtxTyp.Term.html#7655" class="Bound">Γ</a> <a id="7657" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="7660" href="CtxTyp.Term.html#7660" class="Bound">Δ</a> <a id="7662" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="7664" href="CtxTyp.Term.html#7664" class="Bound">A</a> <a id="7666" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="7668" href="CtxTyp.Term.html#7668" class="Bound">m≥n</a> <a id="7672" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a><a id="7673" class="Symbol">}</a> <a id="7675" class="Symbol">(</a><a id="7676" href="CtxTyp.Term.html#7676" class="Bound">σ</a> <a id="7678" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="7680" href="CtxTyp.Term.html#7680" class="Bound">item</a><a id="7684" class="Symbol">)</a> <a id="7686" class="Symbol">=</a> <a id="7688" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7699" href="CtxTyp.Term.html#7676" class="Bound">σ</a> <a id="7701" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="7703" href="CtxTyp.Term.html#7040" class="Function">⊩[]-inject₁⁻</a> <a id="7716" href="CtxTyp.Term.html#7680" class="Bound">item</a>
+<a id="7721" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7732" class="Symbol">{</a><a id="7733" class="Argument">Γ</a> <a id="7735" class="Symbol">=</a> <a id="7737" href="CtxTyp.Term.html#7737" class="Bound">Γ</a> <a id="7739" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="7742" href="CtxTyp.Term.html#7742" class="Bound">Δ</a><a id="7743" class="Symbol">}</a> <a id="7745" class="Symbol">(</a><a id="7746" href="CtxTyp.Term.html#7746" class="Bound">σ₁</a> <a id="7749" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="7753" href="CtxTyp.Term.html#7753" class="Bound">σ₂</a><a id="7755" class="Symbol">)</a> <a id="7757" class="Symbol">=</a> <a id="7759" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7770" href="CtxTyp.Term.html#7746" class="Bound">σ₁</a> <a id="7773" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="7777" href="CtxTyp.Term.html#7569" class="Function">⊩-inject₁⁻</a> <a id="7788" href="CtxTyp.Term.html#7753" class="Bound">σ₂</a>
+
+<a id="7792" class="Comment">-- | Introduce inject₁ into both sides of _⊩_.</a>
+<a id="⊩-inject₁⁺"></a><a id="7839" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="7850" class="Symbol">:</a> <a id="7852" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="7855" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="7857" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a> <a id="7859" class="Symbol">→</a> <a id="7861" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="7869" href="CtxTyp.Context.html#511" class="Generalizable">Γ′</a> <a id="7872" href="CtxTyp.Term.html#1380" class="Datatype Operator">⊩</a> <a id="7874" href="Data.StagedList.html#2668" class="Function">inject₁</a> <a id="7882" href="CtxTyp.Context.html#507" class="Generalizable">Γ</a>
+<a id="7884" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="7895" class="Symbol">{</a><a id="7896" class="Argument">Γ</a> <a id="7898" class="Symbol">=</a> <a id="7900" href="Data.StagedList.html#1909" class="InductiveConstructor">∅</a><a id="7901" class="Symbol">}</a> <a id="7903" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> <a id="7905" class="Symbol">=</a> <a id="7907" href="CtxTyp.Term.html#1427" class="InductiveConstructor">∅</a> 
+<a id="7910" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="7921" class="Symbol">{</a><a id="7922" class="Argument">Γ</a> <a id="7924" class="Symbol">=</a> <a id="7926" href="CtxTyp.Term.html#7926" class="Bound">Γ</a> <a id="7928" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">,[</a> <a id="7931" href="CtxTyp.Term.html#7931" class="Bound">Δ</a> <a id="7933" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">⊢</a> <a id="7935" href="CtxTyp.Term.html#7935" class="Bound">A</a> <a id="7937" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">^</a> <a id="7939" href="CtxTyp.Term.html#7939" class="Bound">m≥n</a> <a id="7943" href="Data.StagedList.html#1928" class="InductiveConstructor Operator">]</a><a id="7944" class="Symbol">}</a> <a id="7946" class="Symbol">(</a><a id="7947" href="CtxTyp.Term.html#7947" class="Bound">σ</a> <a id="7949" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="7951" href="CtxTyp.Term.html#7951" class="Bound">item</a><a id="7955" class="Symbol">)</a> <a id="7957" class="Symbol">=</a> <a id="7959" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="7970" href="CtxTyp.Term.html#7947" class="Bound">σ</a> <a id="7972" href="CtxTyp.Term.html#1440" class="InductiveConstructor Operator">,</a> <a id="7974" href="CtxTyp.Term.html#7301" class="Function">⊩[]-inject₁⁺</a> <a id="7987" href="CtxTyp.Term.html#7951" class="Bound">item</a>
+<a id="7992" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="8003" class="Symbol">{</a><a id="8004" class="Argument">Γ</a> <a id="8006" class="Symbol">=</a> <a id="8008" href="CtxTyp.Term.html#8008" class="Bound">Γ</a> <a id="8010" href="Data.StagedList.html#1994" class="InductiveConstructor Operator">++</a> <a id="8013" href="CtxTyp.Term.html#8013" class="Bound">Δ</a><a id="8014" class="Symbol">}</a> <a id="8016" class="Symbol">(</a><a id="8017" href="CtxTyp.Term.html#8017" class="Bound">σ₁</a> <a id="8020" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="8024" href="CtxTyp.Term.html#8024" class="Bound">σ₂</a><a id="8026" class="Symbol">)</a> <a id="8028" class="Symbol">=</a> <a id="8030" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="8041" href="CtxTyp.Term.html#8017" class="Bound">σ₁</a> <a id="8044" href="CtxTyp.Term.html#1519" class="InductiveConstructor Operator">++ˢ</a> <a id="8048" href="CtxTyp.Term.html#7839" class="Function">⊩-inject₁⁺</a> <a id="8059" href="CtxTyp.Term.html#8024" class="Bound">σ₂</a></pre>
+  </body>
+</html>
