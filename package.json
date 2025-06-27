@@ -14,6 +14,8 @@
     "luxon": "^3.4.4"
   },
   "dependencies": {
-    "@fontsource/playpen-sans": "^5.0.2"
+    "@fontsource/fira-code": "^5.2.6",
+    "@fontsource/playpen-sans": "^5.0.2",
+    "water.css": "^2.1.1"
   }
 }

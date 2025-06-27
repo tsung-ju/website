@@ -1,0 +1,30 @@
+<a id="1" class="Comment">{-|
+This module defines intrinsically well-staged rose trees,
+and re-exports the StagedList module with StagedList renamed to StagedForest.
+The module is parameterized by a ℕ-indexed type Item that represents the types of items stored in the tree.
+-}</a>
+
+<a id="253" class="Symbol">{-#</a> <a id="257" class="Keyword">OPTIONS</a> <a id="265" class="Pragma">--safe</a> <a id="272" class="Symbol">#-}</a>
+<a id="276" class="Keyword">open</a> <a id="281" class="Keyword">import</a> <a id="288" href="Data.Nat.html" class="Module">Data.Nat</a> <a id="297" class="Keyword">using</a> <a id="303" class="Symbol">(</a><a id="304" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="305" class="Symbol">)</a>
+<a id="307" class="Keyword">module</a> <a id="314" href="Data.StagedTree.html" class="Module">Data.StagedTree</a> <a id="330" class="Symbol">(</a><a id="331" href="Data.StagedTree.html#331" class="Bound">Item</a> <a id="336" class="Symbol">:</a> <a id="338" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a> <a id="340" class="Symbol">→</a> <a id="342" href="Agda.Primitive.html#388" class="Primitive">Set</a><a id="345" class="Symbol">)</a> <a id="347" class="Keyword">where</a>
+
+<a id="354" class="Keyword">open</a> <a id="359" class="Keyword">import</a> <a id="366" href="Data.StagedList.html" class="Module">Data.StagedList</a> <a id="382" class="Keyword">using</a> <a id="388" class="Symbol">(</a><a id="389" href="Data.StagedList.html#1876" class="Datatype">StagedList</a><a id="399" class="Symbol">)</a>
+
+<a id="402" class="Comment">{- |
+Rose tree data structure built from staged lists.
+A StagedTree n contans an item at level n, and a subtree whose items are at level n or higher.
+
+Fields:
+  children: A staged list of subtrees, each at stage ≥ n
+  item: An item at stage n
+-}</a>
+<a id="648" class="Keyword">infix</a> <a id="654" class="Number">4</a> <a id="656" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">_⊢_</a>
+<a id="660" class="Keyword">record</a> <a id="StagedTree"></a><a id="667" href="Data.StagedTree.html#667" class="Record">StagedTree</a> <a id="678" class="Symbol">(</a><a id="679" href="Data.StagedTree.html#679" class="Bound">n</a> <a id="681" class="Symbol">:</a> <a id="683" href="Agda.Builtin.Nat.html#203" class="Datatype">ℕ</a><a id="684" class="Symbol">)</a> <a id="686" class="Symbol">:</a> <a id="688" href="Agda.Primitive.html#388" class="Primitive">Set</a> <a id="692" class="Keyword">where</a>
+  <a id="700" class="Keyword">inductive</a>
+  <a id="712" class="Keyword">constructor</a> <a id="_⊢_"></a><a id="724" href="Data.StagedTree.html#724" class="InductiveConstructor Operator">_⊢_</a>
+  <a id="730" class="Keyword">field</a>
+    <a id="StagedTree.children"></a><a id="740" href="Data.StagedTree.html#740" class="Field">children</a> <a id="749" class="Symbol">:</a> <a id="751" href="Data.StagedList.html#1876" class="Datatype">StagedList</a> <a id="762" href="Data.StagedTree.html#667" class="Record">StagedTree</a> <a id="773" href="Data.StagedTree.html#679" class="Bound">n</a>
+    <a id="StagedTree.item"></a><a id="779" href="Data.StagedTree.html#779" class="Field">item</a> <a id="784" class="Symbol">:</a> <a id="786" href="Data.StagedTree.html#331" class="Bound">Item</a> <a id="791" href="Data.StagedTree.html#679" class="Bound">n</a>
+
+<a id="794" class="Comment">-- | A StagedForest n is a list of StagedTrees at level ≥ n.</a>
+<a id="855" class="Keyword">open</a> <a id="860" class="Keyword">import</a> <a id="867" href="Data.StagedList.html" class="Module">Data.StagedList</a> <a id="883" href="Data.StagedTree.html#667" class="Record">StagedTree</a> <a id="894" class="Keyword">renaming</a> <a id="903" class="Symbol">(</a><a id="904" href="Data.StagedList.html#1876" class="Datatype">StagedList</a> <a id="915" class="Symbol">to</a> <a id="918" class="Datatype">StagedForest</a><a id="930" class="Symbol">)</a> <a id="932" class="Keyword">public</a>

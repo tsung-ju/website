@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Stage Programming with Splice Variables</title>
+
+  <link rel="stylesheet" href="/node_modules/water.css/out/water.min.css">
+  <link rel="stylesheet" href="/node_modules/@fontsource/fira-code/index.css">
+  <style>
+    body {font-family: sans-serif;}
+    aside { font-size: 0.9em; color: gray; --text-bright: gray; margin-top: 1em; }
+    aside code { padding: 0; background: transparent; color: inherit; }
+
+    pre, code, .cm-scroller {font-family: "Fira Code", monospace !important; font-size: .85em;}
+
+    /* Combine the details blocks */
+    details + details {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    details:has(+ details) {
+      margin-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    /* Code highlighting */
+    .tok-keyword {color: #708;}
+    .tok-number {color: #164;}
+    .tok-typeName {color: #085;}
+    .tok-bool {color: #219;}
+  </style>
+</head>
+<body>
+  <h1>Multi-Stage Programming with Splice Variables</h1>
+
+  <p>
+    This is an interactive demonstration of the ICFP 2025 paper
+    <em><a href="./Multi-Stage Programming with Splice Variables.pdf">Multi-Stage Programming with Splice Variables</a></em>
+    by <a href="https://tsung-ju.org/">Tsung-Ju Chiang</a> and <a href="https://xnning.github.io/">Ningning Xie</a>.
+  </p>
+
+  <p>
+    <strong>What is multi-stage programming?</strong> It's a technique where programs generate other programs. 
+    Instead of writing generic code that handles all cases at runtime, you generate specialized, optimized code 
+    tailored to specific situations.
+  </p>
+
+  <p>
+    For example, instead of a power function that uses a loop, you could generate specialized code like 
+    <code>x * x * x * x * x</code> directly. This eliminates runtime overhead and creates highly optimized code.
+  </p>
+
+  <p>
+    Our approach introduces <em>splice variables</em> — a new way to make code generation predictable and safe.
+    This technique provides precise control over the generation process and seamlessly scales to advanced features like code pattern matching and rewriting.
+    The type system automatically tracks variable dependencies, ensuring that generated code is always well-formed, properly scoped, and type-checks correctly.
+  </p>
+
+  <h2>Playground</h2>
+  <p>
+    The code editor below lets you experiment with the language described in the paper.
+    Try the examples as you read through the tutorial, or experiment with your own code!
+    For more details on the type system's inner workings and implementation, please refer to <a href="./Multi-Stage Programming with Splice Variables.pdf">the paper</a>.
+  </p>  
+
+  <nav id="playground-examples">
+    <strong>Examples:</strong>
+    <a href="javascript:void(0);" data-example-key="stagedPowerFunction">Staged Power Function</a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" data-example-key="anaphoricIf">Anaphoric If</a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" data-example-key="symbolicDifferentiation">Symbolic Differentiation</a>
+  </nav>
+  <div id="editor"></div>
+  <div id="result"></div>
+
+  <aside>
+    <strong>Note:</strong> This implementation is hand-ported from the paper's Agda implementation to TypeScript for demonstration purposes.
+    While it successfully runs most examples from the paper, it is not fully optimized and may not handle all edge cases.
+    If you encounter any issues, please report them to Tsung-Ju Chiang.
+  </aside>
+
+  <aside>
+    <strong>For readers of the paper:</strong>
+    This demo uses slightly different syntax for improved readability. We write <code>s : int [x : int]</code> for dependencies 
+    (instead of <code>s : x: int |- int</code>) and <code>s[x=42]</code> for providing dependencies 
+    (instead of <code>s with x = 42</code>). In type signatures, unhygienic function types are written as 
+    <code>int [y:int] -> int</code> and wrap types as <code>int &lt;| [y: int]</code>. The core concepts remain the same.
+    The TypeScript implementation uses normalization by evaluation that follows the paper's adequacy proof.
+    The <code>let rec</code> construct is naively implemented by substituting the definition,
+    which may cause different behavior compared to OCaml when the right-hand side is not a lambda.
+  </aside>
+
+  <h2>Tutorial</h2>
+
+  <h3>The Basics</h3>
+  <p>
+    The language syntax resembles OCaml or (to a lesser extent) Haskell.
+    It includes basic types like <code>int</code> and <code>bool</code>,
+    arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), 
+    comparison (<code>==</code>), conditionals (<code>if then else</code>), 
+    functions, and let bindings.
+    Type annotations are written as <code>e : type</code> for expression <code>e</code>.
+  </p>
+
+  <h4>Quotations: Capturing Code as Data</h4>
+  <p>
+    The first key idea is <em>quotations</em>. When you write <code>&lt;1 + 2&gt;</code>, 
+    instead of computing <code>3</code>, this creates a piece of <em>code</em> that represents the expression <code>1 + 2</code>.
+  </p>
+
+  <p>
+    Try it:
+  </p>
+  <div class="example">
+    <div class="editor">&lt;1 + 2&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    The angle brackets <code>&lt; &gt;</code> tell the system "don't evaluate this yet, just treat it as data."
+    Think of it like putting code in quotes to talk about the code itself rather than running it.
+  </p>
+
+  <p>
+    Quotations can even be nested inside other quotations to create code that generates code:
+  </p>
+  <div class="example">
+    <div class="editor">&lt;if true then &lt;1&gt; else &lt;2&gt;&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <h3>Splice Variables: Injecting Code into Code</h3>
+  <p>
+    Now comes the interesting part: how can quoted code be used inside other quoted code? 
+    Consider having some code stored in a quotation, and wanting to use it as part of a larger piece of code.
+  </p>
+
+  <p>
+    The <code>let$</code> construct "unwraps" a piece of quoted code and allows its use inside other quotations:
+  </p>
+  <div class="example">
+    <div class="editor">let$ x = &lt;1&gt; in &lt;x + x&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    What happened here? The quoted code <code>&lt;1&gt;</code> was unwrapped into a variable called <code>x</code>, 
+    then <code>x</code> was used twice inside a new quotation. The result is code that adds <code>1 + 1</code>.
+  </p>
+
+  <p>
+    The variable <code>x</code> is called a <em>splice variable</em> because it "splices" the unwrapped code into the new quotation.
+  </p>
+
+  <p>
+    More interestingly, code that contains variables can also be unwrapped by declaring <em>variable dependencies</em>:
+  </p>
+
+  <div class="example">
+    <div class="editor">let$ s [x : int] = &lt;x + 1&gt; in &lt;fun x : int -> s&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, <code>s</code> is a splice variable that depends on an integer variable <code>x</code>. 
+    The square brackets <code>[x : int]</code> say "this code uses a variable called <code>x</code> of type <code>int</code>."
+    When we use <code>s</code>, it automatically captures the variable <code>x</code> from the surrounding context.
+  </p>
+
+  <p>
+    Instead of capturing the same variable, you can also explicitly provide a value for the variable:
+  </p>
+
+  <div class="example">
+    <div class="editor">let$ s [x : int] = &lt;x + 1&gt; in &lt;s [x=42]&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, we tell the system to substitute <code>x</code> with <code>42</code> when generating the code.
+    The result is code that adds <code>42 + 1</code>.
+  </p>
+
+  <h4>Why Splice Variables Are Necessary</h4>
+  <p>
+    Why do we need this special <code>let$</code> syntax instead of just using regular variables?
+    There are two fundamental reasons why splice variables are necessary for safe code generation.
+  </p>
+
+  <h5>Stage Tracking</h5>
+  <p>
+    The first reason is <em>stage tracking</em>: In our system, each variable has a <em>stage level</em> that determines 
+    how deeply nested in quotations it can be used. Regular variables exist at stage 0 (the current evaluation context), 
+    but <code>let$</code> creates splice variables at stage 1, which means they can be used inside one level of quotations 
+    to represent code fragments.
+  </p>
+
+  <p>
+    For example, with nested quotations like <code>&lt;&lt;x&gt;&gt;</code> (code that generates code that uses <code>x</code>), 
+    you need variables at different stages: stage 0 for the outermost context, stage 1 for inside the first quotation, 
+    and stage 2 for inside the nested quotation. This stage tracking ensures that variables are only used in appropriate contexts.
+  </p>
+
+  <p>
+    Let's see this in action:
+  </p>
+
+  <div class="example">
+    <pre class="editor">let$ s [x@1 : bool; y@2 : int] = &lt;if x then &lt;y + 1&gt; else &lt;y + 2&gt;&gt; in
+&lt;fun x : int -&gt; s[y=42]&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    In this example, a splice variable <code>s</code> is created that depends on a boolean variable <code>x</code> at stage 1 
+    and an integer variable <code>y</code> at stage 2. The code inside <code>s</code> uses these variables to generate 
+    code that conditionally generates either <code>y + 1</code> or <code>y + 2</code>.
+    When <code>s[y=42]</code> is used inside a function, it substitutes <code>y</code> with <code>42</code>,
+    generating code that evaluates to either <code>42 + 1</code> or <code>42 + 2</code> based on the value of <code>x</code>. 
+  </p>
+
+  <p>
+    This demonstrates how stage tracking works in practice: <code>x</code> is used inside the first quotation, 
+    <code>y</code> is used inside the nested quotation, and <code>s</code> brings code into quotations. 
+    The type system ensures each variable is only used at the quotation level it belongs to.
+  </p>
+
+  <h5>Dependency Tracking</h5>
+  <p>
+    The second reason is <em>dependency tracking</em>: When you create a piece of code like <code>&lt;x + 1&gt;</code>, it contains a reference to variable <code>x</code>.
+    This code only makes sense if there's actually a variable <code>x</code> available when the code runs.
+    The challenge is keeping track of these dependencies as code gets moved around, put inside functions, or extracted from functions.
+  </p>
+
+  <p>
+    Consider what happens when code with variables is used in different contexts:
+  </p>
+
+  <div class="example">
+    <div class="editor">let$ s [x : int] = &lt;x + 1&gt; in &lt;fun x : int -> s&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, <code>s</code> depends on <code>x</code>, and we use it inside a function that has a parameter named <code>x</code>. 
+    The system automatically captures the function's <code>x</code> parameter to satisfy the dependency, 
+    so we get a function that adds 1 to its input.
+  </p>
+
+  <div class="example">
+    <div class="editor">let$ s [x : int] = &lt;x + 1&gt; in &lt;fun y : int -> s&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    But here, the function parameter is named <code>y</code>, not <code>x</code>. Since <code>s</code> needs a variable <code>x</code> 
+    that doesn't exist in this context, the system reports an error. This prevents you from accidentally 
+    generating code with undefined variables.
+  </p>
+
+  <p>
+    To fix this, you explicitly provide the missing dependency:
+  </p>
+
+  <div class="example">
+    <div class="editor">let$ s [x : int] = &lt;x + 1&gt; in &lt;fun y : int -> s[x=y]&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    You can provide any valid expression for the dependency:
+  </p>
+
+  <div class="example">
+    <div class="editor">let$ s [x : int] = &lt;x + 1&gt; in &lt;fun y : int -> s[x=y * y]&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This dependency tracking is also relevant when pattern matching on code.
+    (We'll see how code pattern matching works later in the tutorial.)
+    If you extract the body from <code>&lt;fun x -> x + 1&gt;</code>, that extracted code 
+    now depends on the variable <code>x</code> from the function. Our type system 
+    automatically tracks these dependencies, ensuring all generated code has correct scoping.
+  </p>
+
+  <p>
+    Our type system automatically tracks both stage levels and variable dependencies, 
+    ensuring that all generated code is well-formed, properly scoped, and type-checks correctly.
+    This makes code generation predictable and safe.
+  </p>
+
+  <h3>A Practical Example: The Power Function</h3>
+  <p>
+    Let's see how these ideas work together in a practical example. We'll build a function that creates 
+    optimized power functions — instead of using loops, we'll generate code that does direct multiplication.
+  </p>
+
+  <div class="example">
+    <pre class="editor">let rec power : int code -> int -> int code = fun x -> fun n ->
+  if n == 0 then &lt;1&gt;
+  else
+    let$ s1 = x in
+    let$ s2 = power x (n - 1) in
+    &lt;s1 * s2&gt;
+in power &lt;2&gt; 3</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This function takes some quoted code <code>x</code> and a number <code>n</code>, then builds code that 
+    multiplies <code>x</code> by itself <code>n</code> times. Try it with <code>power &lt;2&gt; 3</code> to see how it generates <code>2 * 2 * 2 * 1</code>.
+  </p>
+
+  <h3>Making Code Reusable</h3>
+  <p>
+    What if we want to create a power function that can work with different inputs? 
+    This is where <em>dependency variables</em> come in. They let us create code templates with placeholders.
+  </p>
+
+  <div class="example">
+    <pre class="editor">let rec power : int code -> int -> int code = fun x -> fun n ->
+  if n == 0 then &lt;1&gt;
+  else
+    let$ s1 = x in
+    let$ s2 = power x (n - 1) in
+    &lt;s1 * s2&gt; in
+let$ power5 [x : int] = power &lt;x&gt; 5 in
+  &lt;fun x : int -> power5&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, <code>power5</code> is a splice variable that depends on <code>x</code>. The square brackets <code>[x : int]</code> 
+    say "this code fragment uses a variable called <code>x</code> that will be provided later." When we use <code>power5</code> 
+    inside the function, it automatically gets the <code>x</code> from the function parameter.
+  </p>
+
+  <p>
+    The result is a function that directly multiplies its input five times — no loops, no recursion at runtime!
+  </p>
+
+  <h3>Code Pattern Matching</h3>
+  <p>
+    Our language also supports pattern matching on code, which allows you to inspect and transform 
+    code structures. This is useful for optimizations and code analysis.
+  </p>
+
+  <div class="example">
+    <pre class="editor">let swap_add : int code -> int code = fun e ->
+  match$ e with
+    | (x + y) -> &lt;y + x&gt;
+    | _ -> e
+in
+  swap_add &lt;1 + 2&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This function takes a piece of code and, if it's an addition, swaps the operands. The pattern <code>(x + y)</code> 
+    matches any addition where <code>x</code> and <code>y</code> become pattern variables that can be used in the result.
+  </p>
+
+  <h4>Working with Functions</h4>
+  <p>
+    Pattern matching becomes more tricky when dealing with code that contains variables. 
+    This is where the variable dependency tracking we discussed earlier becomes crucial.
+    Our system automatically handles the binding structure:
+  </p>
+
+  <div class="example">
+    <div class="editor">match$ &lt;fun x : int -> x + 1&gt; with 
+| (fun x -> body) -> &lt;body [x=42]&gt;</div>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, <code>body</code> captures the function body <code>x + 1</code> and remembers that it uses a variable <code>x</code>. 
+    We can then substitute <code>x</code> with <code>42</code> to get <code>42 + 1</code>.
+    The system knows that <code>body</code> depends on <code>x</code> and handles the substitution correctly.
+  </p>
+
+  <p>
+    Code generation often produces unoptimized expressions with redundant operations. 
+    For example, when generating mathematical code, you might end up with expressions like 
+    <code>x * 0</code> or <code>1 * y</code> that could be simplified. 
+    Code rewriting lets you automatically clean up these patterns.
+  </p>
+
+  <p>
+    The <code>rewrite</code> operator applies transformation rules to simplify generated code:
+  </p>
+
+  <div class="example">
+    <pre class="editor">&lt;42 + (0 * 5)&gt;
+  rewrite (0 * z) -> &lt;0&gt;
+  rewrite (z + 0) -> &lt;z&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This applies two simplification rules to the expression <code>42 + (0 * 5)</code>:
+    first it replaces <code>0 * 5</code> with <code>0</code>, then it replaces <code>42 + 0</code> with <code>42</code>.
+    Each rewrite rule says "whenever you see this pattern anywhere in the code, replace it with that expression."
+  </p>
+
+  <p>
+    The key difference from <code>match$</code> is that <code>rewrite</code> searches through the entire 
+    code structure and applies transformations wherever patterns match, not just at the top level. 
+    This makes it perfect for cleanup operations that need to work throughout a complex expression.
+  </p>
+
+  <p>
+    Again, we use splice variables to handle code patterns that contain variable bindings.
+    The system automatically tracks variable dependencies, so you can write transformations that 
+    manipulate binding structures safely:
+  </p>
+
+  <div class="example">
+    <pre class="editor">&lt;(fun y : int -> y * 2) ((fun x : int -> x + 1) 5)&gt;
+  rewrite ((fun arg : int -> body : int) expr) -> &lt;body [arg=expr]&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This rewrite rule performs beta reduction — it finds function applications and substitutes 
+    the argument into the function body. The pattern <code>(fun arg -> body) expr</code> matches 
+    any function being applied to an argument. The system knows that <code>body</code> depends on 
+    the variable <code>arg</code>, so when we write <code>body [arg=expr]</code>, it correctly 
+    substitutes all occurrences of <code>arg</code> in the body with the provided expression.
+  </p>
+
+  <p>
+    This kind of transformation would be error-prone to write manually, but our dependency tracking 
+    system handles all the variable scoping automatically, ensuring the result is always well-formed.
+  </p>
+
+  <h3>Advanced Features</h3>
+
+  <h4>Unhygienic Functions: Intentional Variable Capture</h4>
+  
+  <p>
+    Most programming languages try to prevent accidental variable capture — when a macro or function 
+    accidentally uses a variable from the surrounding context, or defines a variable that conflicts with 
+    the context where the macro is expanded. This can lead to bugs that are hard to track down.
+    This property is called <em>hygiene</em>, and it's generally a good thing. But sometimes you actually
+    <em>want</em> to define a variable that can be used within the arguments given to a function.
+  </p>
+
+  <p>
+    Our language supports <em>unhygienic functions</em> — functions whose arguments can use variables
+    that are not defined in the current scope but are provided by the function itself. This allows you
+    to write code generation patterns that intentionally introduce or capture variables.
+  </p>
+
+  <p>
+    The simplest example is a function that expects its argument to use a specific variable:
+  </p>
+
+  <div class="example">
+    <pre class="editor">let with_x_42 : int code [x : int] -&gt; int code = fun c -&gt; c[x=42] in
+  with_x_42 &lt;x + 1&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, <code>with_x_42</code> is a function that takes a piece of code that depends on a variable <code>x</code>
+    and substitutes <code>x</code> with <code>42</code>. The type signature <code>int code [x : int] -&gt; int code</code>
+    tells us that the function accepts code that may refer to a variable <code>x</code> and produces regular code.
+    When we call <code>with_x_42 &lt;x + 1&gt;</code>, the system allows the argument to reference <code>x</code> 
+    even though <code>x</code> isn't defined in the current scope — because the function promises to provide it.
+  </p>
+
+  <p>
+    This becomes especially useful when creating functions that act like new binding constructs. 
+    A classic example is an <em>anaphoric conditional</em> — a conditional that binds the test expression 
+    to a variable <code>it</code> that can be used in both branches:
+  </p>
+
+  <div class="example">
+    <pre class="editor">let aif : bool code -&gt; int code [it : bool] -&gt; int code [it : bool] -&gt; int code = 
+  fun cond -&gt; fun then_branch -&gt; fun else_branch -&gt;
+    let$ s1 = cond in
+    let$ s2 [it : bool] = then_branch in
+    let$ s3 [it : bool] = else_branch in
+    &lt;let it = s1 in if it then s2 else s3&gt;
+in
+  aif &lt;true&gt; &lt;42&gt; &lt;43&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This <code>aif</code> function takes three arguments: a condition, a then-branch, and an else-branch. 
+    The key insight is that both branches can refer to a variable <code>it</code> that will be bound to 
+    the result of evaluating the condition. The type signatures <code>int code [it : bool]</code> tell 
+    the type system that these arguments are allowed to use this variable.
+  </p>
+
+  <p>
+    The implementation uses splice variables to construct the final code: it evaluates the condition once, 
+    binds it to <code>it</code>, and then uses <code>it</code> in the appropriate branch. This avoids 
+    re-evaluating the condition and gives both branches access to its value.
+  </p>
+
+  <p>
+    You can also declare normal variables (not splice variables) with dependencies:
+  </p>
+
+  <div class="example">
+    <pre class="editor">let x : int code [y : int] = &lt;y + 1&gt; in
+  x[y=2]</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, <code>x</code> is a normal variable that depends on <code>y</code>. Unlike splice variables created 
+    with <code>let$</code>, normal variables stay at the same stage level — they don't get "unwrapped" for 
+    use in quotations. The variable <code>x</code> holds the code value <code>&lt;y + 1&gt;</code>, and when 
+    we write <code>x[y=2]</code>, it substitutes <code>y</code> with <code>2</code> to produce <code>&lt;2 + 1&gt;</code>.
+  </p>
+
+  <h4>Wrap Types</h4>
+
+  <p>
+    Most of the time, <code>let$</code> and <code>let</code> provide convenient ways to create variables 
+    with dependencies. But sometimes you need more control over when and how dependencies are introduced. 
+    The <code>wrap</code> construct lets you create values with dependencies without immediately binding 
+    them to variables.
+  </p>
+
+  <p>
+    Most importantly, <code>let$</code> and <code>let</code> only allow declaring dependencies for <em>variables</em>,
+    while <code>wrap</code> allows you to declare dependencies for <em>values</em>.
+    This enables you to declare dependencies for the output of a function,
+    or store a value with dependencies in a data structure.
+  </p>
+
+  <p>
+    Think of <code>wrap</code> as creating a value that uses some symbolic variables.
+    It creates a value of type <code>type &lt;| [dependencies]</code> without binding it to a variable,
+    where <code>type</code> is the type of the value and <code>[dependencies]</code> are the declared dependencies.
+  </p>
+
+  <div class="example">
+    <pre class="editor">wrap [x : int] &lt;x + 1&gt;</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    This wraps a <code>int code</code> value that depends on the variable <code>x</code>. The result has type 
+    <code>int code &lt;| [x : int]</code> — this is called a <em>wrap type</em>. The <code>&lt;|</code>
+    notation (<code>&lt</code> followed by <code>|</code>)
+    indicates that this is a wrapped value that, when unwrapped, will require the dependencies
+    to be provided.
+    Wrap types are useful when you want to store a value with dependencies in data structures
+    or pass it around without immediately providing the dependencies.
+  </p>
+
+  <p>
+    To use a wrapped value, you can unwrap it into a variable using <code>let wrap</code>:
+  </p>
+
+  <div class="example">
+    <pre class="editor">let wrap_s : int code &lt;| [x : int] = wrap [x : int] &lt;x + 1&gt; in
+let wrap s : int code [x : int] = wrap_s in
+  s[x=42]</pre>
+    <div class="result"></div>
+  </div>
+
+  <p>
+    Here, the first line creates a wrapped value without binding it to any variable. The second line 
+    uses <code>let wrap</code> to turn the wrapped value into a regular variable <code>s</code> that 
+    depends on <code>x</code>. Finally, we provide the dependency <code>x=42</code> to get the concrete 
+    code <code>&lt;42 + 1&gt;</code>.
+  </p>
+
+  <script src="./editor.bundle.min.js"></script>
+</body>
+</html>
