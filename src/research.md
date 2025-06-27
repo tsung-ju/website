@@ -23,6 +23,13 @@ My current research focuses on modal type theory and its use in typed meta-progr
 
 ## Publications
 
+- Multi-Stage Programming with Splice Variables.
+  **Tsung-Ju Chiang** and Ningning Xie\
+  [ICFP2025](https://icfp25.sigplan.org/)
+  [\[web demo\]](/icfp25)
+  [\[pdf\]](/icfp25/Multi-Stage%20Programming%20with%20Splice%20Variables.pdf)
+  [\[formalization\]](/icfp25/agda/Everything.html)
+
 - Typed Meta-Programming with Splice Variables.\
   **Tsung-Ju Chiang**\
   Master's thesis
