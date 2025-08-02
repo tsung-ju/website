@@ -5,16 +5,16 @@ layout: page
 
 # Research
 
-I am a master's student
-in the [PLSE group](https://www.cs.toronto.edu/~prose/)
-at the [University of Toronto](https://www.utoronto.ca/),
-working with [Prof. Ningning Xie](https://xnning.github.io).
-
 I am interested in programming languages, logic, and type theory.
 I enjoy exploring the connections between these areas,
 and applying the techniques for precise program modeling.
 
-My current research focuses on modal type theory and its use in typed meta-programming.
+I was a master's student
+in the [PLSE group](https://www.cs.toronto.edu/~prose/)
+at the [University of Toronto](https://www.utoronto.ca/),
+working with [Prof. Ningning Xie](https://xnning.github.io).
+
+My research focuses on modal type theory and its use in typed meta-programming.
 
 ## Talks
 
@@ -23,12 +23,13 @@ My current research focuses on modal type theory and its use in typed meta-progr
 
 ## Publications
 
-- Multi-Stage Programming with Splice Variables.
+- Multi-Stage Programming with Splice Variables.\
   **Tsung-Ju Chiang** and Ningning Xie\
-  [ICFP2025](https://icfp25.sigplan.org/)
-  [\[web demo\]](/icfp25)
+  [ICFP 2025](https://icfp25.sigplan.org/)
+  [\[web intro\]](/icfp25)
   [\[pdf\]](/icfp25/Multi-Stage%20Programming%20with%20Splice%20Variables.pdf)
-  [\[formalization\]](/icfp25/agda/Everything.html)
+  [\[formalization\]](/icfp25/agda/Everything.html)\
+  ACM SIGPLAN Distinguished Paper Award
 
 - Typed Meta-Programming with Splice Variables.\
   **Tsung-Ju Chiang**\
